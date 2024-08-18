@@ -1,0 +1,701 @@
+@charset "UTF-8";
+
+/* ーーーー */
+/* 共通要素 */
+/* ーーーー */
+
+html{
+  width: 1536px;
+  background-color: #fff;
+}
+
+body {
+  font-size: 14px
+}
+
+.range {
+  width: 100%;
+  max-width: 1024px; /* コンテンツの最大幅を1024pxに設定 */
+  padding: 96px 256px; /* 上下に96px、左右に256pxのパディング */
+  margin: 0 auto;
+}
+
+a {
+  color: #007FC6; /* リンクの色を黒に設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+}
+
+.logo img {
+  width: 227px;
+  height: 52px;
+  margin: 20px; /* 右側に余白を追加 */
+}
+
+.ul{
+  list-style: none; /* リストのマーカーを削除 */
+}
+
+
+.title{
+  font-size: 32px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 51px;
+}
+
+.subtitle{
+  font-size: 24px;
+  line-height: 43.2px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ーーーー */
+/* ダウンロードフォーム */
+/* ーーーー */
+
+.main__entry {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.main__entry h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.main__entry label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.main__entry input[type="text"],
+.main__entry input[type="email"],
+.main__entry input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.main__entry .privacy-note {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.main__entry button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.main__entry button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+
+header {
+  height: 96px; /* ヘッダーの高さを96pxに設定 */
+  display: flex; /* Flexboxレイアウトを使用 */
+  justify-content: space-between; /* 要素を左右に配置 */
+  align-items: center; /* 要素を縦方向の中央に揃える */
+}
+
+.header__symbol {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex; /* メニュー項目を横並びにする */
+  height: inherit;
+  align-items: center;
+}
+
+.header__menu ul {
+  display: flex; /* リスト項目を横並びにする */
+  height: inherit;
+  align-items: center;
+}
+
+.header__menu li {
+  display: flex; /* リスト項目を横並びにする */
+  height: inherit;
+  align-items: center;
+}
+
+.header__menu li a {
+  display: flex; /* リスト項目を横並びにする */
+  height: inherit;
+  align-items: center;
+  padding: 0 13px; /* 左右に13pxのパディングを追加して合計26pxの間隔を確保 */
+}
+
+.header__info {
+  margin-left: 0; /* 左側の余白を削除 */
+  flex-shrink: 0; /* フレックスアイテムの縮小を防ぐ */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 中央に揃える */
+  width: 189px; /* リンクボタンの幅を189pxに設定 */
+  height: 96px; /* リンクボタンの高さを96pxに設定 */
+  background-color: #007FC6; /* ボタンの背景色を青に設定 */
+  text-align: center; /* テキストを中央に揃える */
+  color: #fff; /* テキストの色を白に設定 */
+  font-size: 16px; /* テキストのサイズを16pxに設定 */
+}
+
+.header__info a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.header__info img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px; /* 画像とテキストの間に余白を追加 */
+}
+
+
+
+/* ーーーーーーーー */
+/* main */
+/* ファーストビュー */
+/* ーーーーーーーー */
+
+.main{
+  height: 754px;
+  width: 100vw;
+  object-fit: cover;
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+}
+.main__inner{
+  display: flex;
+  align-items: flex-start; 
+  padding: 96px 168px; /* 上下に20px、左右に192pxのパディング */
+  }
+
+  .main__index{
+    width: 100%;
+    padding-left: 24px;
+  }
+  
+
+.main .sub{
+  font-size: 20px;
+  color: #fff;
+}
+
+.main .toptitle{
+  font-size: 56px;
+  font-weight: bold;
+  color: #fff;
+  padding:20px 0;
+}
+
+
+.index__circle {
+  display: flex;
+  column-gap: 22px;
+  padding:20px 0;
+}
+
+.circle__entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.circle__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007FC6;
+}
+
+.circle__main {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007FC6;
+  position: relative;
+}
+
+.small {
+  font-size: 12px;
+  color: #888888; 
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+.main__index__note{
+  font-size: 12px;
+  color: #fff; 
+  padding-top: 7px;
+}
+
+.main__index__note img{
+  width: 360px;
+  height: 202px;
+  position: absolute; /* 追加 */
+  top: 650px;
+  left: 600px; /* さらに左に移動 */
+}
+
+
+/* ーー */
+/* achievement */
+/* 多くのお客様に選ばれ続けています */
+/* ーー */
+
+
+.achievement{
+  width: 100%;
+  height: 460px;
+}
+
+.achievement__main {
+  height: 216px;
+  padding-top: 80px;
+  padding-bottom: 64px;
+}
+
+.achievement__top.title {
+  padding-bottom: 40px;
+}
+
+.achievement__image{
+  width: 940px;
+  display: flex;
+  column-gap: 84px;
+}
+
+.achievement__image img{
+  width: 428px;
+  height: 146px;
+}
+
+.achievement__other {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.achievement__other img{
+  width: 248px;
+  height: 99px;
+}
+
+
+/* ーー */
+/* about */
+/* CareSendについて */
+/* ーー */
+
+.about__concept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.about__concept__top {
+  padding-bottom: 34px;
+}
+
+.about__concept__text{
+  margin-bottom: 25px;
+}
+
+
+.about__concept__image {
+  width: 562px;
+  height: 316px; 
+  background: #F9F9F9; 
+  padding: 0 120px;
+}
+
+.about__concept__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__index__flex{
+  display: grid; /* グリッドレイアウトを使用 */
+  grid-template-columns: 1fr 1fr; /* 2列のグリッドに設定 */
+  gap: 24px;
+  justify-content: space-between; /* 要素を左右に均等に配置 */
+}
+
+.index__flex__license{
+  width: 466px;
+  height: 325px;
+  display: flex;
+  padding: 14px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #007FC6
+}
+
+.license__title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #F47500;
+  padding: 18px 0;
+}
+
+.license__text{
+  font-size: 16px;
+  padding: 0 32px;
+  line-height: 180%;
+}
+
+.index__flex__license img{
+  width: 116px;
+  height: 77px;
+}
+
+.about__caregiver{
+  width: auto;
+  height: 240px;
+  background-image: url(./img/background-4876988_1280\ 1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.caregiver__title{
+  color: #fff;
+  font-weight: normal;
+  padding-top: 60px;
+  padding-bottom: 24px;
+}
+
+.caregiver__materials{
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.caregiver__materials a {
+  color: #007FC6;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 50px; /* 背景を大きくするためのパディング */
+  display: inline-block; /* パディングを適用するためにインラインブロックに変更 */
+  border-radius: 50px; 
+}
+
+
+/* ーー */
+/* case */
+/* 導入事例 */
+/* ーー */
+
+
+.case__index__area{
+  display: flex;
+  column-gap: 20px;
+}
+
+.case__index{
+  display: flex;
+  column-gap: 70px;
+}
+.case__index img{
+width: 164px;
+height: 64px;
+}
+
+.case__index__resource {
+  border: solid 1px #fff;
+  box-shadow: 0px 5px 8px 3px #33333340;
+  padding: 20px;
+  border-top-left-radius: 30px; 
+  border-bottom-right-radius: 30px;
+}
+
+.resource__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%; 
+}
+
+.resource__top {
+  text-align: left;
+  margin-top: 30px;
+  justify-content: left;
+  width: 100%; 
+}
+
+.resource__text {
+  font-size: 14px;
+  line-height: 180%;
+  margin: 24px 0;
+  width: 100%; 
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button{
+  color: #fff;
+  background-color: #007FC6;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border: none; 
+}
+
+
+/* ーー */
+/* commission */
+/* 料金は成約手数料のみ */
+/* ーー */
+
+.commission{
+  background: #F9F9F9;
+}
+
+.commission__pattern{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pattern__first{
+  padding: 44px 100px 90px 100px;
+  border: solid 1px #000;
+  border-radius: 5px;
+  border-top: 12px solid #007FC6;
+}
+
+
+.pattern__first__top{
+  padding-bottom: 25px;
+}
+
+
+.pattern__first__text{
+  display: flex;
+  text-align: end;
+}
+
+.amount {
+  font-size: 96px;
+  color: #007FC6;
+  font-weight: bold;
+  line-height: 1; /* 追加 */
+}
+
+.price {
+  font-size: 48px; /* 必要に応じて調整 */
+  align-self: flex-end; /* 追加 */
+  margin-left: 5px; /* 必要に応じて調整 */
+}
+
+.commission__text{
+  margin-top: 48px;  
+}
+
+.commission__text ul{
+  padding: 0;
+  list-style: none;
+  line-height: 25.2px;
+}
+
+
+/* ーー */
+/* faq */
+/* よくある質問 */
+/* ーー */
+
+.faq{
+  background: #F9F9F9;
+}
+
+.faq__list{
+  display: block;
+}
+
+.faq__box{
+  margin: 24px 0;
+  border: solid 1px #000;
+  border-radius: 10px;
+}
+.faq__question{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq__answer {
+  font-size: 16px;
+  margin: 16px 0;
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+.question__mark{
+  margin-left: 36px;
+  font-family: goldman;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  background-color: #007FC6;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  border: none; 
+}
+
+.question__text{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 32px 0;
+}
+
+.question__btn{
+  margin-right: 24px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+/* ーー */
+/* download */
+/* 介護派遣に関する資料を無料でダウンロード */
+/* ーー */
+
+.download{
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+}
+
+.download__inner{
+  display: block;
+}
+
+.download__main__area{
+  display: flex;
+  column-gap: 35px;
+  padding: 0 88px;
+}
+
+.download__top{
+  color: #fff;
+}
+
+.download__site {
+  width: 100%;
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.site__text{
+  font-family: Noto Sans JP;
+  font-size: 16px;
+  line-height: 28.8px;
+  text-align: left;
+  color: #fff;
+}
+
+.site__image {
+}
+
+.site__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ーー */
+/* footer */
+/* フッター */
+/* ーー */
+
+
+footer{
+  width: 100%;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* ーー */
+/* ディスプレイ対応 */
+/* ーー */
+
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header, .main, .achievement, .about ,.case ,.commission ,.faq ,.download {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+
+
