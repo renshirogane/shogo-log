@@ -5,7 +5,6 @@
 /* ーーーー */
 
 html{
-  width: 1536px;
   background-color: #fff;
 }
 
@@ -13,12 +12,29 @@ body {
   font-size: 14px
 }
 
+*{
+  font-family: Noto Sans Jp;
+  box-sizing: border-box;
+  margin: 0; /* 【重要】初期設定で０にしとく */
+  padding: 0; /* 【重要】初期設定で０にしとく */
+}
+
 .range {
   width: 100%;
-  max-width: 1024px; /* コンテンツの最大幅を1024pxに設定 */
-  padding: 96px 256px; /* 上下に96px、左右に256pxのパディング */
+  max-width: 1024px;
+  padding: 0 25px ;
+  padding-top: 96px;
   margin: 0 auto;
 }
+
+.range2 {
+  width: 100%;
+  max-width: 932px;
+  padding-top: 96px;
+  margin: 0 auto;
+}
+
+
 
 a {
   color: #007FC6; /* リンクの色を黒に設定 */
@@ -28,7 +44,7 @@ a {
 .logo img {
   width: 227px;
   height: 52px;
-  margin: 20px; /* 右側に余白を追加 */
+  margin: 20px;
 }
 
 .ul{
@@ -53,9 +69,7 @@ a {
   font-weight: bold;
   color: #333333;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 
@@ -63,26 +77,38 @@ a {
 /* ダウンロードフォーム */
 /* ーーーー */
 
-.main__entry {
-  width: 100%;
-  max-width: 360px;
+.main__entry form {
+  background-color: #f4f8fb;
+  border: 2px solid #6db5e1;
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
 .main__entry h2 {
+  background-color: #3e89c7;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #fff;
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.main__entry .name__field {
+  display: flex;
+  column-gap: 18px;
+  justify-content: space-between;
+  margin-top: 24px;
 }
 
 .main__entry label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #333;
 }
 
 .main__entry input[type="text"],
@@ -92,8 +118,26 @@ a {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
   box-sizing: border-box;
+}
+
+.main__entry .name__field label {
+  width: 48%;
+}
+
+.main__entry .name__field input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.main__entry input[type="text"]::placeholder,
+.main__entry input[type="email"]::placeholder,
+.main__entry input[type="tel"]::placeholder {
+  color: #ccc;
 }
 
 .main__entry .privacy-note {
@@ -104,18 +148,20 @@ a {
 
 .main__entry button {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  max-width: 320px;
+  background-color: #3e89c7;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
+  font-size: 20px;
   cursor: pointer;
-  font-size: 16px;
+  margin: 28px 0;
 }
 
 .main__entry button:hover {
-  background-color: #0056b3;
+  background-color: #3273a6;
 }
+
 
 
 
@@ -197,19 +243,21 @@ header {
 
 .main{
   height: 754px;
-  width: 100vw;
   object-fit: cover;
   background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+  position: relative;
 }
 .main__inner{
   display: flex;
   align-items: flex-start; 
-  padding: 96px 168px; /* 上下に20px、左右に192pxのパディング */
+  max-width: 1176px;
+  padding-top: 96px;
+  padding-left: 0;
+  padding-right: 0;
   }
 
-  .main__index{
+  .main__area{
     width: 100%;
-    padding-left: 24px;
   }
   
 
@@ -226,7 +274,7 @@ header {
 }
 
 
-.index__circle {
+.area__circle {
   display: flex;
   column-gap: 22px;
   padding:20px 0;
@@ -254,29 +302,27 @@ header {
   font-size: 32px;
   font-weight: bold;
   color: #007FC6;
-  position: relative;
 }
 
 .small {
   font-size: 12px;
   color: #888888; 
-  position: absolute;
-  top: -10px;
-  right: 0;
+  vertical-align: top;
 }
 
-.main__index__note{
+.main__area__note{
   font-size: 12px;
   color: #fff; 
   padding-top: 7px;
 }
 
-.main__index__note img{
+.main__inner img{
   width: 360px;
-  height: 202px;
-  position: absolute; /* 追加 */
-  top: 650px;
-  left: 600px; /* さらに左に移動 */
+  height: 202px;  
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
@@ -288,11 +334,9 @@ header {
 
 .achievement{
   width: 100%;
-  height: 460px;
 }
 
 .achievement__main {
-  height: 216px;
   padding-top: 80px;
   padding-bottom: 64px;
 }
@@ -314,7 +358,8 @@ header {
 
 .achievement__other {
   display: flex;
-  justify-content: space-between;
+  column-gap: 80px;
+  justify-content: center;
   width: 100%;
 }
 
@@ -333,7 +378,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
 }
 
 .about__concept__top {
@@ -344,10 +388,8 @@ header {
   margin-bottom: 25px;
 }
 
-
 .about__concept__image {
-  width: 562px;
-  height: 316px; 
+  height: 316px;
   background: #F9F9F9; 
   padding: 0 120px;
 }
@@ -355,7 +397,10 @@ header {
 .about__concept__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.about__index{
+  margin-bottom: 31px;
 }
 
 .about__index__flex{
@@ -365,8 +410,7 @@ header {
   justify-content: space-between; /* 要素を左右に均等に配置 */
 }
 
-.index__flex__license{
-  width: 466px;
+.index__flex__square{
   height: 325px;
   display: flex;
   padding: 14px;
@@ -375,20 +419,20 @@ header {
   border: 1px solid #007FC6
 }
 
-.license__title{
+.square__title{
   font-size: 20px;
   font-weight: bold;
   color: #F47500;
   padding: 18px 0;
 }
 
-.license__text{
+.square__text__index{
   font-size: 16px;
-  padding: 0 32px;
+  padding: 0 18px;
   line-height: 180%;
 }
 
-.index__flex__license img{
+.index__flex__square img{
   width: 116px;
   height: 77px;
 }
@@ -433,6 +477,10 @@ header {
 /* ーー */
 
 
+.case__inner{
+  padding-bottom: 55px;
+}
+
 .case__index__area{
   display: flex;
   column-gap: 20px;
@@ -443,11 +491,11 @@ header {
   column-gap: 70px;
 }
 .case__index img{
-width: 164px;
 height: 64px;
 }
 
-.case__index__resource {
+.case__index__square {
+  max-width: 405px;
   border: solid 1px #fff;
   box-shadow: 0px 5px 8px 3px #33333340;
   padding: 20px;
@@ -455,21 +503,24 @@ height: 64px;
   border-bottom-right-radius: 30px;
 }
 
-.resource__content {
+.square__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%; 
 }
 
-.resource__top {
-  text-align: left;
+.square__top {
   margin-top: 30px;
-  justify-content: left;
   width: 100%; 
+  text-align: left;
 }
 
-.resource__text {
+.top__main{
+  color: #007FC6;
+}
+
+.square__text__case {
   font-size: 14px;
   line-height: 180%;
   margin: 24px 0;
@@ -502,38 +553,48 @@ button{
   background: #F9F9F9;
 }
 
+.commission__top{
+  padding-bottom: 70px;
+}
+
 .commission__pattern{
   display: flex;
+  gap: 12px;
   justify-content: space-between;
 }
 
-.pattern__first{
-  padding: 44px 100px 90px 100px;
+.pattern__square{
+  padding-top: 44px;
+  padding-bottom: 90px;
+  width: 100%;
+  max-width: 296px;
   border: solid 1px #000;
   border-radius: 5px;
   border-top: 12px solid #007FC6;
 }
 
 
-.pattern__first__top{
+.pattern__square__top{
   padding-bottom: 25px;
+  white-space: nowrap;
 }
 
 
-.pattern__first__text{
+.pattern__square__text{
   display: flex;
-  text-align: end;
+  justify-content: center;
 }
 
-.amount {
+.pattern__amount {
   font-size: 96px;
   color: #007FC6;
   font-weight: bold;
   line-height: 1; /* 追加 */
 }
 
-.price {
-  font-size: 48px; /* 必要に応じて調整 */
+.pattern__price {
+  font-size: 32px; /* 必要に応じて調整 */
+  font-weight: bold;
   align-self: flex-end; /* 追加 */
   margin-left: 5px; /* 必要に応じて調整 */
 }
@@ -558,15 +619,28 @@ button{
   background: #F9F9F9;
 }
 
+.faq__inner{
+  padding-bottom: 72px;
+}
+
+.faq__top{
+  padding-bottom: 70px;
+}
+
 .faq__list{
   display: block;
 }
 
 .faq__box{
-  margin: 24px 0;
+  margin-bottom: 24px;
   border: solid 1px #000;
   border-radius: 10px;
 }
+
+.faq__box:last-child {
+  margin-bottom: 0;
+}
+
 .faq__question{
   display: flex;
   align-items: center;
@@ -618,12 +692,13 @@ button{
 
 .download__inner{
   display: block;
+  padding-bottom: 57px;
 }
 
 .download__main__area{
   display: flex;
   column-gap: 35px;
-  padding: 0 88px;
+  padding: 0 42px;
 }
 
 .download__top{
@@ -631,31 +706,48 @@ button{
 }
 
 .download__site {
+  position: relative; /* 子要素の絶対位置を基準にする */
   width: 100%;
-  display: flex;
-  gap: 48px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
+  max-width: 413px; /* 必要に応じて調整 */
+  margin: 0 auto; /* 中央揃え */
+  border-radius: 8px; /* 角を丸くする */
+  margin-top: 32px;
 }
 
-.site__text{
-  font-family: Noto Sans JP;
+/* テキスト部分のスタイル */
+.site__text {
+  flex: 1;
   font-size: 16px;
-  line-height: 28.8px;
-  text-align: left;
+  line-height: 1.5;
   color: #fff;
+  margin-bottom: 48px;
 }
 
+/* 親要素の設定 */
 .site__image {
+  position: relative; /* 子要素の絶対位置の基準にする */
+  width: 500px; /* 必要に応じて調整 */
+  height: auto;
 }
 
-.site__image img {
-  width: 100%;
+/* 1枚目の画像の設定 */
+.image1 {
+  position: absolute;
+  top: -8px; /* 1枚目の画像の上に少しずらして配置 */
+  left: 70px; /* 左に少しずらす */
+  width: 70%; /* 画像のサイズを1枚目より小さく */
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 6px 3px #33333340;
+}
+
+/* 2枚目の画像の設定 */
+.image2 {
+  position: absolute; /* 絶対位置に設定 */
+  top: 70px; /* 1枚目の画像の上に少しずらして配置 */
+  left: 0;
+  width: 70%; /* 画像のサイズを1枚目より小さく */
+  height: auto;
+  box-shadow: 0px 3px 6px 3px #33333340;
 }
 
 
@@ -682,17 +774,16 @@ footer{
 
 
 @media screen and (max-width: 768px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .range {
+    padding-left: 15px; /* 左側に15pxの余白を追加 */
+    padding-right: 15px; /* 右側に15pxの余白を追加 */
+    padding: 0; /* 余白をリセット */
   }
-
   header, .main, .achievement, .about ,.case ,.commission ,.faq ,.download {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    margin: 0;
+    padding-left: 16px; /* 左側に16pxの余白を追加 */
+    padding-right: 16px; /* 右側に16pxの余白を追加 */
   }
 
 }
