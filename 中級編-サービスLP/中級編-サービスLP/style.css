@@ -390,9 +390,21 @@ header {
 
 .about__concept__image {
   height: 316px;
-  background: #F9F9F9; 
   padding: 0 120px;
+  position: relative;
 }
+
+.company__about__concept__image::before {
+  content: ""; /* 擬似要素を追加 */
+  position: absolute; /* 絶対位置に配置 */
+  top: -100px; /* 上に100px移動 */
+  left: 0; /* 左に0移動 */
+  right: -200px; /* 右に200px移動 */
+  bottom: -100px; /* 下に100px移動 */
+  background: #F9F9F9; 
+  z-index: -1; /* 背景をテキストの背後に配置 */
+}
+
 
 .about__concept__image img {
   width: 100%;
@@ -652,6 +664,11 @@ button{
   margin: 16px 0;
   padding: 16px;
   background-color: #f9f9f9;
+  display: none;
+}
+
+.faq__answer._emergent{
+  display: block;
 }
 
 .question__mark{
