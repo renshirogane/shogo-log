@@ -1,0 +1,790 @@
+@charset "UTF-8";
+
+/* ーーーー */
+/* 共通要素 */
+/* ーーーー */
+
+html{
+  background-color: #fff;
+}
+
+body {
+  font-size: 14px
+}
+
+*{
+  font-family: Noto Sans Jp;
+  box-sizing: border-box;
+  margin: 0; /* 【重要】初期設定で０にしとく */
+  padding: 0; /* 【重要】初期設定で０にしとく */
+}
+
+.range {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 25px ;
+  padding-top: 96px;
+  margin: 0 auto;
+}
+
+.range2 {
+  width: 100%;
+  max-width: 932px;
+  padding-top: 96px;
+  margin: 0 auto;
+}
+
+
+
+a {
+  color: #007FC6; /* リンクの色を黒に設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+}
+
+.logo img {
+  width: 227px;
+  height: 52px;
+  margin: 20px;
+}
+
+.ul{
+  list-style: none; /* リストのマーカーを削除 */
+}
+
+
+.title{
+  font-size: 32px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 51px;
+}
+
+.subtitle{
+  font-size: 24px;
+  line-height: 43.2px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+
+}
+
+
+/* ーーーー */
+/* ダウンロードフォーム */
+/* ーーーー */
+
+.main__entry form {
+  background-color: #f4f8fb;
+  border: 2px solid #6db5e1;
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.main__entry h2 {
+  background-color: #3e89c7;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.main__entry .name__field {
+  display: flex;
+  column-gap: 18px;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.main__entry label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main__entry input[type="text"],
+.main__entry input[type="email"],
+.main__entry input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.main__entry .name__field label {
+  width: 48%;
+}
+
+.main__entry .name__field input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.main__entry input[type="text"]::placeholder,
+.main__entry input[type="email"]::placeholder,
+.main__entry input[type="tel"]::placeholder {
+  color: #ccc;
+}
+
+.main__entry .privacy-note {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.main__entry button {
+  width: 100%;
+  max-width: 320px;
+  background-color: #3e89c7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 28px 0;
+}
+
+.main__entry button:hover {
+  background-color: #3273a6;
+}
+
+
+
+
+
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+
+header {
+  height: 96px; /* ヘッダーの高さを96pxに設定 */
+  display: flex; /* Flexboxレイアウトを使用 */
+  justify-content: space-between; /* 要素を左右に配置 */
+  align-items: center; /* 要素を縦方向の中央に揃える */
+}
+
+.header__symbol {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex; /* メニュー項目を横並びにする */
+  height: inherit;
+  align-items: center;
+}
+
+.header__menu ul {
+  display: flex; /* リスト項目を横並びにする */
+  height: inherit;
+  align-items: center;
+}
+
+.header__menu li {
+  display: flex; /* リスト項目を横並びにする */
+  height: inherit;
+  align-items: center;
+}
+
+.header__menu li a {
+  display: flex; /* リスト項目を横並びにする */
+  height: inherit;
+  align-items: center;
+  padding: 0 13px; /* 左右に13pxのパディングを追加して合計26pxの間隔を確保 */
+}
+
+.header__info {
+  margin-left: 0; /* 左側の余白を削除 */
+  flex-shrink: 0; /* フレックスアイテムの縮小を防ぐ */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 中央に揃える */
+  width: 189px; /* リンクボタンの幅を189pxに設定 */
+  height: 96px; /* リンクボタンの高さを96pxに設定 */
+  background-color: #007FC6; /* ボタンの背景色を青に設定 */
+  text-align: center; /* テキストを中央に揃える */
+  color: #fff; /* テキストの色を白に設定 */
+  font-size: 16px; /* テキストのサイズを16pxに設定 */
+}
+
+.header__info a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.header__info img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px; /* 画像とテキストの間に余白を追加 */
+}
+
+
+
+/* ーーーーーーーー */
+/* main */
+/* ファーストビュー */
+/* ーーーーーーーー */
+
+.main{
+  height: 754px;
+  object-fit: cover;
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+  position: relative;
+}
+.main__inner{
+  display: flex;
+  align-items: flex-start; 
+  max-width: 1176px;
+  padding-top: 96px;
+  padding-left: 0;
+  padding-right: 0;
+  }
+
+  .main__area{
+    width: 100%;
+  }
+  
+
+.main .sub{
+  font-size: 20px;
+  color: #fff;
+}
+
+.main .toptitle{
+  font-size: 56px;
+  font-weight: bold;
+  color: #fff;
+  padding:20px 0;
+}
+
+
+.area__circle {
+  display: flex;
+  column-gap: 22px;
+  padding:20px 0;
+}
+
+.circle__entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.circle__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007FC6;
+}
+
+.circle__main {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007FC6;
+}
+
+.small {
+  font-size: 12px;
+  color: #888888; 
+  vertical-align: top;
+}
+
+.main__area__note{
+  font-size: 12px;
+  color: #fff; 
+  padding-top: 7px;
+}
+
+.main__inner img{
+  width: 360px;
+  height: 202px;  
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* ーー */
+/* achievement */
+/* 多くのお客様に選ばれ続けています */
+/* ーー */
+
+
+.achievement{
+  width: 100%;
+}
+
+.achievement__main {
+  padding-top: 80px;
+  padding-bottom: 64px;
+}
+
+.achievement__top.title {
+  padding-bottom: 40px;
+}
+
+.achievement__image{
+  width: 940px;
+  display: flex;
+  column-gap: 84px;
+}
+
+.achievement__image img{
+  width: 428px;
+  height: 146px;
+}
+
+.achievement__other {
+  display: flex;
+  column-gap: 80px;
+  justify-content: center;
+  width: 100%;
+}
+
+.achievement__other img{
+  width: 248px;
+  height: 99px;
+}
+
+
+/* ーー */
+/* about */
+/* CareSendについて */
+/* ーー */
+
+.about__concept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__concept__top {
+  padding-bottom: 34px;
+}
+
+.about__concept__text{
+  margin-bottom: 25px;
+}
+
+.about__concept__image {
+  height: 316px;
+  background: #F9F9F9; 
+  padding: 0 120px;
+}
+
+.about__concept__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.about__index{
+  margin-bottom: 31px;
+}
+
+.about__index__flex{
+  display: grid; /* グリッドレイアウトを使用 */
+  grid-template-columns: 1fr 1fr; /* 2列のグリッドに設定 */
+  gap: 24px;
+  justify-content: space-between; /* 要素を左右に均等に配置 */
+}
+
+.index__flex__square{
+  height: 325px;
+  display: flex;
+  padding: 14px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #007FC6
+}
+
+.square__title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #F47500;
+  padding: 18px 0;
+}
+
+.square__text__index{
+  font-size: 16px;
+  padding: 0 18px;
+  line-height: 180%;
+}
+
+.index__flex__square img{
+  width: 116px;
+  height: 77px;
+}
+
+.about__caregiver{
+  width: auto;
+  height: 240px;
+  background-image: url(./img/background-4876988_1280\ 1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.caregiver__title{
+  color: #fff;
+  font-weight: normal;
+  padding-top: 60px;
+  padding-bottom: 24px;
+}
+
+.caregiver__materials{
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.caregiver__materials a {
+  color: #007FC6;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 50px; /* 背景を大きくするためのパディング */
+  display: inline-block; /* パディングを適用するためにインラインブロックに変更 */
+  border-radius: 50px; 
+}
+
+
+/* ーー */
+/* case */
+/* 導入事例 */
+/* ーー */
+
+
+.case__inner{
+  padding-bottom: 55px;
+}
+
+.case__index__area{
+  display: flex;
+  column-gap: 20px;
+}
+
+.case__index{
+  display: flex;
+  column-gap: 70px;
+}
+.case__index img{
+height: 64px;
+}
+
+.case__index__square {
+  max-width: 405px;
+  border: solid 1px #fff;
+  box-shadow: 0px 5px 8px 3px #33333340;
+  padding: 20px;
+  border-top-left-radius: 30px; 
+  border-bottom-right-radius: 30px;
+}
+
+.square__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%; 
+}
+
+.square__top {
+  margin-top: 30px;
+  width: 100%; 
+  text-align: left;
+}
+
+.top__main{
+  color: #007FC6;
+}
+
+.square__text__case {
+  font-size: 14px;
+  line-height: 180%;
+  margin: 24px 0;
+  width: 100%; 
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button{
+  color: #fff;
+  background-color: #007FC6;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border: none; 
+}
+
+
+/* ーー */
+/* commission */
+/* 料金は成約手数料のみ */
+/* ーー */
+
+.commission{
+  background: #F9F9F9;
+}
+
+.commission__top{
+  padding-bottom: 70px;
+}
+
+.commission__pattern{
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.pattern__square{
+  padding-top: 44px;
+  padding-bottom: 90px;
+  width: 100%;
+  max-width: 296px;
+  border: solid 1px #000;
+  border-radius: 5px;
+  border-top: 12px solid #007FC6;
+}
+
+
+.pattern__square__top{
+  padding-bottom: 25px;
+  white-space: nowrap;
+}
+
+
+.pattern__square__text{
+  display: flex;
+  justify-content: center;
+}
+
+.pattern__amount {
+  font-size: 96px;
+  color: #007FC6;
+  font-weight: bold;
+  line-height: 1; /* 追加 */
+}
+
+.pattern__price {
+  font-size: 32px; /* 必要に応じて調整 */
+  font-weight: bold;
+  align-self: flex-end; /* 追加 */
+  margin-left: 5px; /* 必要に応じて調整 */
+}
+
+.commission__text{
+  margin-top: 48px;  
+}
+
+.commission__text ul{
+  padding: 0;
+  list-style: none;
+  line-height: 25.2px;
+}
+
+
+/* ーー */
+/* faq */
+/* よくある質問 */
+/* ーー */
+
+.faq{
+  background: #F9F9F9;
+}
+
+.faq__inner{
+  padding-bottom: 72px;
+}
+
+.faq__top{
+  padding-bottom: 70px;
+}
+
+.faq__list{
+  display: block;
+}
+
+.faq__box{
+  margin-bottom: 24px;
+  border: solid 1px #000;
+  border-radius: 10px;
+}
+
+.faq__box:last-child {
+  margin-bottom: 0;
+}
+
+.faq__question{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq__answer {
+  font-size: 16px;
+  margin: 16px 0;
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+.question__mark{
+  margin-left: 36px;
+  font-family: goldman;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  background-color: #007FC6;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  border: none; 
+}
+
+.question__text{
+  font-size: 16px;
+  font-weight: bold;
+  margin: 32px 0;
+}
+
+.question__btn{
+  margin-right: 24px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+/* ーー */
+/* download */
+/* 介護派遣に関する資料を無料でダウンロード */
+/* ーー */
+
+.download{
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+}
+
+.download__inner{
+  display: block;
+  padding-bottom: 57px;
+}
+
+.download__main__area{
+  display: flex;
+  column-gap: 35px;
+  padding: 0 42px;
+}
+
+.download__top{
+  color: #fff;
+}
+
+.download__site {
+  position: relative; /* 子要素の絶対位置を基準にする */
+  width: 100%;
+  max-width: 413px; /* 必要に応じて調整 */
+  margin: 0 auto; /* 中央揃え */
+  border-radius: 8px; /* 角を丸くする */
+  margin-top: 32px;
+}
+
+/* テキスト部分のスタイル */
+.site__text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+/* 親要素の設定 */
+.site__image {
+  position: relative; /* 子要素の絶対位置の基準にする */
+  width: 500px; /* 必要に応じて調整 */
+  height: auto;
+}
+
+/* 1枚目の画像の設定 */
+.image1 {
+  position: absolute;
+  top: -8px; /* 1枚目の画像の上に少しずらして配置 */
+  left: 70px; /* 左に少しずらす */
+  width: 70%; /* 画像のサイズを1枚目より小さく */
+  height: auto;
+}
+
+/* 2枚目の画像の設定 */
+.image2 {
+  position: absolute; /* 絶対位置に設定 */
+  top: 70px; /* 1枚目の画像の上に少しずらして配置 */
+  left: 0;
+  width: 70%; /* 画像のサイズを1枚目より小さく */
+  height: auto;
+}
+
+
+
+/* ーー */
+/* footer */
+/* フッター */
+/* ーー */
+
+
+footer{
+  width: 100%;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* ーー */
+/* ディスプレイ対応 */
+/* ーー */
+
+
+@media screen and (max-width: 768px) {
+  .range {
+    padding-left: 15px; /* 左側に15pxの余白を追加 */
+    padding-right: 15px; /* 右側に15pxの余白を追加 */
+    padding: 0; /* 余白をリセット */
+  }
+  header, .main, .achievement, .about ,.case ,.commission ,.faq ,.download {
+    display: block;
+    margin: 0;
+    padding-left: 16px; /* 左側に16pxの余白を追加 */
+    padding-right: 16px; /* 右側に16pxの余白を追加 */
+  }
+
+}
+
+
+
