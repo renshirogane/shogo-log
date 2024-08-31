@@ -191,59 +191,68 @@ form {
 /* ハンバーガーメニュー */
 /* ーーーー */
 
-.menu-container {
-  display: none; /* デフォルトで非表示に設定 */
-  position: relative; /* 相対位置に配置 */
-  width: 64px; /* 幅を64pxに設定 */
-  height: 64px; /* 高さを64pxに設定 */
-  background-color: #000; /* 背景色を黒に設定 */
-  color: #fff; /* テキスト色を白に設定 */
+.hamburger {
+  width: 40px;
+  aspect-ratio: 1;
+	aspect-ratio: 1;
+	cursor: pointer;
+	height: inherit;
+	position: relative; /*ボタン内側の基点となるためrelativeを指定*/
 }
 
-.menu-container input{
-  display: none; /* 入力フィールドを非表示に設定 */
+/*ボタン内側*/
+
+.hamburger span {
+	background: #140B0B;
+	border-radius: .125rem;
+	display: inline-block;
+	height: .125rem;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	transition: all 0.4s; /*アニメーションの設定*/
+	width: 45%;
 }
 
-/* メニューアイコン（ハンバーガーメニュー）のスタイル */
-.menu-icon {
-  display: inline-block; /* インラインブロック要素に設定 */
-  cursor: pointer; /* カーソルをポインターに変更 */
-  height: 100%; /* 高さを100%に設定 */
+.hamburger span:nth-of-type(1) {
+	top: 65%;
 }
 
-.menu-icon span {
-  display: block; /* スパンをブロック要素に設定 */
-  width: 100%; /* 幅を100%に設定 */
-  height: 4px; /* 高さを4pxに設定 */
-  background-color: #fff; /* 背景色を白に設定 */
-  margin: 4px 0; /* 上下に4pxのマージンを設定 */
-  transition: all 0.3s ease; /* すべてのプロパティのトランジションを設定 */
+.hamburger span:nth-of-type(2) {
+	top: 50%;
 }
 
-/* メニューを隠すためのスタイル */
+.hamburger span:nth-of-type(3) {
+	top: 35%;
+}
+
+/*clickedクラスが付与されると線が回転して×に*/
+
+.hamburger._emergent span:nth-of-type(1) {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hamburger._emergent span:nth-of-type(2) {
+	opacity: 0; /*真ん中の線は透過*/
+}
+
+.hamburger._emergent span:nth-of-type(3) {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
 .menu {
-  display: none; /* デフォルトで非表示に設定 */
-  position: absolute; /* 絶対位置に配置 */
-  top: 100%; /* 親要素の下に配置 */
-  left: 0; /* 左端に配置 */
-  background-color: #f9f9f9; /* 背景色を淡いグレーに設定 */
-  width: 100%; /* 幅を100%に設定 */
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
 }
-
-.menu ul {
-  list-style: none; /* リストマーカーを削除 */
-  padding: 0; /* パディングをリセット */
-  margin: 0; /* マージンをリセット */
-}
-
-.menu ul li {
-  text-align: center; /* テキストを中央に揃える */
-  padding: 10px 0; /* 上下に10pxのパディングを設定 */
-}
-
-.menu ul li a {
-  text-decoration: none; /* リンクの下線を削除 */
-  color: #333; /* リンクのテキスト色を濃いグレーに設定 */
+.menu._emergent {
+  opacity: 1;
+  visibility: visible;
+  transition: all .5s;
 }
 
 /* ーーーー */
@@ -794,6 +803,8 @@ header {
 }
 
 .question__mark{
+  display: flex;
+  align-items: center;
   font-family: goldman; /* フォントファミリーをGoldmanに設定 */
   font-size: 32px; /* フォントサイズを32pxに設定 */
   padding: 6px 9px; /* 上下に6px、左右に9pxのパディングを設定 */
