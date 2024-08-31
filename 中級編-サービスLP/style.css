@@ -191,6 +191,10 @@ form {
 /* ハンバーガーメニュー */
 /* ーーーー */
 
+.menu-container{
+  display: none;
+}
+
 .hamburger {
   width: 40px;
   aspect-ratio: 1;
@@ -245,6 +249,7 @@ form {
 }
 
 .menu {
+  position: absolute;
   opacity: 0;
   visibility: hidden;
   transition: all .5s;
@@ -276,6 +281,12 @@ header {
   display: flex; /* メニュー項目を横並びにする */
   height: inherit; /* 高さを親要素に揃える */
   align-items: center; /* 垂直方向の中央に揃える */
+}
+
+@media screen and (max-width: 980px) {
+  .header__menu {
+  display: none;
+  }
 }
 
 .header__menu ul {
@@ -413,6 +424,12 @@ header {
   bottom: 0; /* 親要素の下に配置 */
   left: 50%; /* 左端から50%の位置に配置 */
   transform: translateX(-50%); /* 要素を水平中央に揃える */
+}
+
+@media screen and (max-width: 1080px) {
+  .main__inner img {
+  display: none;
+  }
 }
 
 /* ーー */
