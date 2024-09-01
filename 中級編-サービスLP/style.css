@@ -90,7 +90,6 @@ form {
   background-color: #007FC6; /* 見出しの背景色を青に設定 */
   font-size: 20px; /* フォントサイズを20pxに設定 */
   font-weight: normal; /* フォントウェイトを通常に設定 */
-  white-space: nowrap; /* テキストを1行で表示 */
   padding: 14px 16px; /* 上下に14px、左右に16pxのパディングを設定 */
   color: #fff; /* テキストの色を白に設定 */
   text-align: center; /* テキストを中央に揃える */
@@ -449,7 +448,7 @@ header {
 }
 
 .main__inner img{
-  width: 360px; /* 画像の幅を360pxに設定 */
+  max-width: 360px; /* 画像の幅を360pxに設定 */
   height: 202px; /* 画像の高さを202pxに設定 */
   position: absolute; /* 絶対位置に配置 */
   bottom: 0; /* 親要素の下に配置 */
@@ -934,16 +933,14 @@ header {
 
 /* 親要素の設定 */
 .site__image {
-  position: relative; /* 相対位置に配置 */
   max-width: 500px; /* 最大幅を500pxに設定 */
   height: auto; /* 高さを自動調整に設定 */
+  float: right
 }
 
 /* 1枚目の画像の設定 */
 .image1 {
-  position: absolute; /* 絶対位置に配置 */
-  top: 0px; /* 上に0pxの位置を設定 */
-  left: 90px; /* 左に90pxの位置を設定 */
+  position: relative; /* 相対位置に配置 */
   max-width: 312px; /* 最大幅を312pxに設定 */
   height: auto; /* 高さを自動調整に設定 */
 }
@@ -951,7 +948,7 @@ header {
 /* 2枚目の画像の設定 */
 .image2 {
   position: absolute; /* 絶対位置に設定 */
-  top: 80px; /* 上に80pxの位置を設定 */
+  top: 195px; /* 上に195pxの位置を設定 */
   left: 0; /* 左に配置 */
   max-width: 312px; /* 最大幅を312pxに設定 */
   height: auto; /* 高さを自動調整に設定 */
@@ -1126,6 +1123,7 @@ footer{
   .main__inner img {
     display: block; /* ブロック要素に設定 */
     position: relative; /* 相対位置に配置 */
+    width: 120vw;
   }
 
   /* ーーーー */
@@ -1316,6 +1314,16 @@ footer{
     flex-direction: column; /* 子要素を縦方向に並べる */
     padding: 0;
 
+  }
+
+  .download__site{
+    margin-bottom: 140px;
+    padding: 0;
+  }
+
+  .site__image img{
+    min-width: 200px;
+    width: 30vw;
   }
 
 
