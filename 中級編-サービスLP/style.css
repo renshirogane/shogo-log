@@ -42,7 +42,7 @@ a {
 .logo img {
   max-width: 227px; /* 画像の最大幅を227pxに設定 */
   max-height: 52px; /* 画像の最大高さを52pxに設定 */
-  margin: 20px; /* 画像に20pxのマージンを設定 */
+  margin: 22px 0 22px 20px;
 }
 
 .ul{
@@ -73,10 +73,10 @@ a {
 /* ーーーー */
 
 form {
-  background-color: #f4f8fb; /* フォームの背景色を淡い青に設定 */
+  background-color: #fff; /* フォームの背景色を淡い青に設定 */
   border: 2px solid #6db5e1; /* 外枠を青色で2pxの実線に設定 */
   border-radius: 10px; /* 外枠の角を丸めて10pxに設定 */
-  padding: 8px; /* フォーム内に8pxのパディングを設定 */
+  padding: 8px 8px 8px 9px; /* フォーム内に8pxのパディングを設定 */
   max-width: 400px; /* 最大幅を400pxに設定 */
   width: 100%; /* 幅を100%に設定 */
   margin: 0 auto; /* フォームを中央に配置 */
@@ -90,11 +90,12 @@ form {
   background-color: #007FC6; /* 見出しの背景色を青に設定 */
   font-size: 20px; /* フォントサイズを20pxに設定 */
   font-weight: normal; /* フォントウェイトを通常に設定 */
-  padding: 14px 16px; /* 上下に14px、左右に16pxのパディングを設定 */
+  padding:12px 16px 12px 13px;
   color: #fff; /* テキストの色を白に設定 */
   text-align: center; /* テキストを中央に揃える */
   border-radius: 8px; /* 外枠の角を8px丸める */
   position: relative; /* 相対的に位置を設定 */
+  white-space: nowrap; /* テキストを1行で表示 */
 }
 
 .main__entry h2::before {
@@ -110,8 +111,9 @@ form {
 
 .main__entry .name__field {
   display: flex; /* フレックスボックスで配置 */
+  max-width: 364px;
   justify-content: space-between; /* 要素間を均等に配置 */
-  margin-top: 24px; /* 上に24pxのマージンを設定 */
+  margin:16px 0 0 0;
 }
 
 .main__entry .name__field > div {
@@ -128,7 +130,7 @@ form {
 
 .main__entry label {
   display: block; /* ラベルをブロック要素に設定 */
-  margin-bottom: 5px; /* 下に5pxのマージンを設定 */
+  margin:0 0 5px 8px;
   font-weight: bold; /* フォントを太字に設定 */
   color: #333; /* テキストの色を濃いグレーに設定 */
 }
@@ -136,9 +138,13 @@ form {
 .main__entry input[type="text"],
 .main__entry input[type="email"],
 .main__entry input[type="tel"] {
+  font-size: 16px;
+  background-color:#F5F8FA;
+  height: 48px;
+  max-width: 365px;
   width: 100%; /* 入力フィールドの幅を100%に設定 */
-  padding: 10px; /* 入力フィールドに10pxのパディングを設定 */
-  margin-bottom: 15px; /* 下に15pxのマージンを設定 */
+  padding: 12px 0 12px 8px; /*  */
+  margin:0 8px 13px 8px;
   border: 1px solid #ccc; /* 外枠を灰色で1pxの実線に設定 */
   border-radius: 5px; /* 外枠の角を丸めて5pxに設定 */
   box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
@@ -150,7 +156,6 @@ form {
 
 .main__entry .name__field input[type="text"] {
   width: 100%; /* 入力フィールドの幅を100%に設定 */
-  padding: 10px; /* 入力フィールドに10pxのパディングを設定 */
   border: 1px solid #ccc; /* 外枠を灰色で1pxの実線に設定 */
   border-radius: 5px; /* 外枠の角を丸めて5pxに設定 */
   box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
@@ -163,9 +168,9 @@ form {
 }
 
 .main__entry .privacy-note {
-  font-size: 12px; /* フォントサイズを12pxに設定 */
+  font-size: 14px; /*  */
   color: #666; /* テキストの色を濃い灰色に設定 */
-  margin-bottom: 20px; /* 下に20pxのマージンを設定 */
+  margin: 14px 0 31px 8px;
 }
 
 .main__entry button {
@@ -178,7 +183,7 @@ form {
   font-size: 20px; /* フォントサイズを20pxに設定 */
   cursor: pointer; /* カーソルをポインターに変更 */
   padding: 10px 20px; /* パディングを上下10px、左右20pxに設定 */
-  margin: 0 auto 28px auto; /* 上下に28pxのマージンを設定し、中央揃え */
+  margin: 0 auto 20px auto; /* 上下に28pxのマージンを設定し、中央揃え */
   display: block; /* ボタンをブロック要素に設定して中央揃え */
 }
 
@@ -285,12 +290,13 @@ form {
 }
 
 .menu ul :last-child {
+  font-size: 16px;
   border-bottom: none;
 }
 
 .menu ul img {
-  width: 32px; /* 画像の幅を32pxに設定 */
-  height: 32px; /* 画像の高さを32pxに設定 */
+  width: 24px; /*  */
+  height: 24px; /*  */
   margin-right: 7px; /* 画像とテキストの間に7pxのマージンを追加 */
 }
 
@@ -304,22 +310,28 @@ form {
 header {
   height: inherit; /* 親要素の高さに揃える */
   display: flex; /* フレックスボックスで配置 */
-  justify-content: space-between; /* 要素を左右に配置 */
   align-items: center; /* 垂直方向の中央に揃える */
+  justify-content: space-between;
 }
 
 .header__symbol {
+  max-height: 96px;
   display: flex; /* フレックスボックスで配置 */
+  justify-content: center;
   align-items: center; /* 垂直方向の中央に揃える */
 }
 
 .header__menu {
+  font-size: 16px;
+  font-weight: bold;
+  transform: translateX(-30px);
   display: flex; /* メニュー項目を横並びにする */
   height: inherit; /* 高さを親要素に揃える */
   align-items: center; /* 垂直方向の中央に揃える */
 }
 
 .header__menu ul {
+  gap: 28px;
   display: flex; /* リスト項目を横並びにする */
   height: inherit; /* 高さを親要素に揃える */
   align-items: center; /* 垂直方向の中央に揃える */
@@ -335,7 +347,6 @@ header {
   display: flex; /* リスト項目を横並びにする */
   height: inherit; /* 高さを親要素に揃える */
   align-items: center; /* 垂直方向の中央に揃える */
-  padding: 0 13px; /* 左右に13pxのパディングを設定して合計26pxの間隔を確保 */
 }
 
 .header__info {
@@ -382,11 +393,11 @@ header {
 }
 
 .main__inner{
+  transform: translateX(12px);
   display: flex; /* フレックスボックスで配置 */
   align-items: flex-start; /* 子要素を上部に揃える */
   max-width: 1176px; /* 最大幅を1176pxに設定 */
-  padding-left: 0; /* 左側のパディングをリセット */
-  padding-right: 0; /* 右側のパディングをリセット */
+  padding:84px 25px 0 0;
 }
 
 .main__area{
@@ -396,23 +407,26 @@ header {
 .main .sub{
   font-size: 20px; /* フォントサイズを20pxに設定 */
   color: #fff; /* テキストの色を白に設定 */
+  font-weight: lighter;
 }
 
 .main .toptitle{
+  line-height: 150%;
   font-size: 56px; /* フォントサイズを56pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
   color: #fff; /* テキストの色を白に設定 */
-  padding: 20px 0; /* 上下に20pxのパディングを設定 */
+  padding: 12px 0 16px 0;
 }
 
 .area__circle {
   display: flex; /* フレックスボックスで配置 */
   column-gap: 22px; /* 要素間に22pxの間隔を設定 */
-  padding: 20px 0; /* 上下に20pxのパディングを設定 */
+  padding: 37px 0 20px 5px;
 }
 
 .circle__entry {
   display: flex; /* フレックスボックスで配置 */
+  gap: 14px;
   flex-direction: column; /* 子要素を縦方向に並べる */
   justify-content: center; /* 子要素を中央に配置 */
   width: 164px; /* 幅を164pxに設定 */
@@ -425,7 +439,6 @@ header {
 .circle__title {
   font-size: 24px; /* フォントサイズを24pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
-  margin-bottom: 10px; /* 下に10pxのマージンを設定 */
   color: #007FC6; /* テキストの色を青に設定 */
 }
 
@@ -433,6 +446,10 @@ header {
   font-size: 32px; /* フォントサイズを32pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
   color: #007FC6; /* テキストの色を青に設定 */
+}
+
+.medium{
+  font-size: 24px;
 }
 
 .small {
@@ -451,12 +468,11 @@ header {
   max-width: 360px; /* 画像の幅を360pxに設定 */
   height: 202px; /* 画像の高さを202pxに設定 */
   position: absolute; /* 絶対位置に配置 */
-  bottom: 0; /* 親要素の下に配置 */
-  left: 50%; /* 左端から50%の位置に配置 */
-  transform: translateX(-50%); /* 要素を水平中央に揃える */
+  top: 552px;
+  left: 396px;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1120px) {
   .main__inner img {
   display: none;
   }
@@ -472,20 +488,18 @@ header {
 }
 
 .achievement__main {
-  padding-top: 80px; /* 上に80pxのパディングを設定 */
-  padding-bottom: 64px; /* 下に64pxのパディングを設定 */
+  padding-top: 73px; /* 上に73pxのパディングを設定 */
 }
 
-.achievement__top.title {
-  padding-bottom: 40px; /* 下に40pxのパディングを設定 */
+.achievement__top {
+  padding-bottom: 34px; /* 下に34pxのパディングを設定 */
 }
 
 .achievement__image{
-  max-width: 940px; /* 最大幅を940pxに設定 */
   display: flex; /* フレックスボックスで配置 */
   column-gap: 84px; /* 要素間に84pxの間隔を設定 */
-  text-align: center; /* テキストを中央に揃える */
-  margin-bottom: 39px; /* 下に39pxのマージンを設定 */
+  justify-content: center;
+  margin-bottom: 65px; 
 }
 
 .achievement__image img{
@@ -494,17 +508,32 @@ header {
 }
 
 .achievement__other {
-  display: flex; /* フレックスボックスで配置 */
-  column-gap: 80px; /* 要素間に80pxの間隔を設定 */
-  justify-content: center; /* 要素を中央に揃える */
-  width: 100%; /* 幅を100%に設定 */
   overflow: hidden; /* はみ出た部分を非表示 */
 }
 
-.achievement__other img{
+.achievement__logos {
+  display: flex; /* フレックスボックスで配置 */
+  column-gap: 80px; /* 要素間に80pxの間隔を設定 */
+  justify-content: center; /* 要素を中央に揃える */
+  width: 200%; /* 幅を200%に設定 */
+  animation: scroll 20s linear infinite; /* スクロールアニメーションを追加 */
+}
+
+.achievement__logos img{
   width: 248px; /* 画像の幅を248pxに設定 */
   height: 99px; /* 画像の高さを99pxに設定 */
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 
 /* ーー */
 /* about */
@@ -517,13 +546,10 @@ header {
   align-items: center; /* 子要素を中央に揃える */
 }
 
-.about__concept__top {
-  padding-bottom: 34px; /* 下に34pxのパディングを設定 */
-}
-
 .about__concept__text{
   margin-bottom: 25px; /* 下に25pxのマージンを設定 */
   max-width: 592px; /* 最大幅を592pxに設定 */
+  line-height: 48px;
 }
 
 .about__concept__text span{
@@ -564,6 +590,8 @@ header {
 }
 
 .about__index{
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 31px; /* 下に31pxのマージンを設定 */
 }
 
@@ -575,7 +603,7 @@ header {
 }
 
 .index__flex__box{
-  max-height: 325px; /* 最大高さを325pxに設定 */
+  height: 325px; /* 最大高さを325pxに設定 */
   display: flex; /* フレックスボックスで配置 */
   padding: 14px; /* 全体に14pxのパディングを設定 */
   flex-direction: column; /* 子要素を縦方向に並べる */
@@ -627,7 +655,7 @@ header {
   background-color: #fff; /* 背景色を白に設定 */
   font-size: 20px; /* フォントサイズを20pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
-  padding: 16px 50px; /* 上下に16px、左右に50pxのパディングを設定 */
+  padding: 12px 50px; /* 上下に16px、左右に50pxのパディングを設定 */
   display: inline-block; /* パディングを適用するためにインラインブロックに設定 */
   border-radius: 50px; /* 要素の角を丸めて50pxに設定 */
 }
@@ -638,17 +666,17 @@ header {
 /* ーー */
 
 .case__inner{
-  padding: 96px 0 55px 0; /* 上に96px、下に55pxのパディングを設定 */
+  padding: 96px 0 34px 0; /* 上に96px、下に55pxのパディングを設定 */
 }
 
 .case__page{
-  padding: 8px; /* 全体に8pxのパディングを設定 */
+  padding: 18px; /*  */
   display: flex; /* フレックスボックスで配置 */
   max-width: 1024px;
 }
 
 .case__index{
-  column-gap: 70px;
+  display: flex; /* ボックスを横並びにする */
 }
 
 .case__index img{
@@ -662,6 +690,21 @@ header {
   padding: 20px; /* 全体に20pxのパディングを設定 */
   border-top-left-radius: 30px; /* 左上の角を30px丸める */
   border-bottom-right-radius: 30px; /* 右下の角を30px丸める */
+  margin-right: 0; /* デフォルトでは右のマージンを0にしておく */
+}
+
+/* 奇数のボックスに 70px のマージンを設定 */
+.case__index__box:nth-child(odd) {
+  margin-right: 70px;
+}
+
+/* 偶数のボックスに 90px のマージンを設定 */
+.case__index__box:nth-child(even) {
+  margin-right: 140px;
+}
+
+.case__index__box:last-child {
+  margin-right: 0; /* 最後のボックスのマージンは必要ないので0に設定 */
 }
 
 .box__content {
@@ -711,8 +754,14 @@ header {
   background: #F9F9F9; /* 背景色を淡いグレーに設定 */
 }
 
+.commission__inner{
+  padding-top: 88px;
+  padding-bottom: 50px;
+  max-width: 912px;
+}
+
 .commission__top{
-  padding-bottom: 70px; /* 下に70pxのパディングを設定 */
+  padding-bottom: 61px; 
 }
 
 .commission__pattern{
@@ -722,7 +771,7 @@ header {
 }
 
 .pattern__box{
-  padding-top: 44px; /* 上に44pxのパディングを設定 */
+  padding-top: 21px; /* 上に44pxのパディングを設定 */
   padding-bottom: 90px; /* 下に90pxのパディングを設定 */
   width: 100%; /* 幅を100%に設定 */
   max-width: 296px; /* 最大幅を296pxに設定 */
@@ -734,13 +783,14 @@ header {
 }
 
 .pattern__box__top{
-  padding-bottom: 25px; /* 下に25pxのパディングを設定 */
+  padding-bottom: 14px;
   white-space: nowrap; /* テキストを1行で表示 */
 }
 
 .pattern__box__text{
   display: flex; /* フレックスボックスで配置 */
   justify-content: center; /* 子要素を中央に揃える */
+
 }
 
 .pattern__amount {
@@ -751,20 +801,25 @@ header {
 }
 
 .pattern__price {
+  transform: translateY(3px);
   font-size: 32px; /* フォントサイズを32pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
   align-self: flex-end; /* 垂直方向の最後に揃える */
-  margin-left: 5px; /* 左に5pxのマージンを設定 */
 }
 
 .commission__text{
   margin-top: 48px; /* 上に48pxのマージンを設定 */
+  font-weight: normal;
+  margin-left: 16px;
 }
 
 .commission__text ul{
   padding: 0; /* パディングをリセット */
-  list-style: none; /* リストマーカーを削除 */
   line-height: 25.2px; /* 行の高さを25.2pxに設定 */
+}
+
+.commission__text ul li::marker {
+  font-size: 0.6em; /* サイズを小さく設定 */
 }
 
 /* ーー */
@@ -777,11 +832,12 @@ header {
 }
 
 .faq__inner{
-  padding-bottom: 72px; /* 下に72pxのパディングを設定 */
+  padding: 0;
+  padding:96px 0 72px 0;
 }
 
 .faq__top{
-  padding-bottom: 70px; /* 下に70pxのパディングを設定 */
+  padding-bottom: 64px; /* 下に70pxのパディングを設定 */
 }
 
 .faq__list{
@@ -801,10 +857,17 @@ header {
 }
 
 .faq__question{
+  max-height: 80px;
   display: flex; /* フレックスボックスで配置 */
   align-items: center; /* 垂直方向の中央に揃える */
   justify-content: space-between; /* 子要素を左右に均等に配置 */
-  padding: 0 24px 0 36px; /* 左右にパディングを設定 */
+  padding: 0 23px 0 36px; /* 左右にパディングを設定 */
+}
+
+.left-element{
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .faq__question._emergent{
@@ -819,8 +882,8 @@ header {
 .faq__answer {
   display: none; /* デフォルトで非表示に設定 */
   font-size: 16px; /* フォントサイズを16pxに設定 */
-  margin: 16px 0; /* 上下に16pxのマージンを設定 */
-  padding: 16px; /* 全体に16pxのパディングを設定 */
+  line-height: 180%;
+  padding: 24px 36px;
   border-bottom-left-radius: 10px; /* 左下の角を10px丸める */
   border-bottom-right-radius: 10px; /* 右下の角を10px丸める */
   background-color: #fff; /* 背景色を白に設定 */
@@ -884,7 +947,9 @@ header {
 }
 
 .question__btn{
-  font-size: 42px; /* フォントサイズを42pxに設定 */
+  transform: translateY(-6px);
+  flex-direction: column;
+  font-size: 64px; /* フォントサイズを42pxに設定 */
   font-weight: lighter; /* フォントウェイトを軽く設定 */
   cursor: pointer; /* カーソルをポインターに変更 */
 }
@@ -900,7 +965,7 @@ header {
 
 .download__inner{
   display: block; /* ブロック要素に設定 */
-  padding-bottom: 57px; /* 下に57pxのパディングを設定 */
+  padding: 90px 0 53px 0;
 }
 
 .download__main__area{
@@ -911,6 +976,7 @@ header {
 
 .download__top{
   color: #fff; /* テキストの色を白に設定 */
+  padding-bottom: 68px;
 }
 
 .download__site {
@@ -919,14 +985,15 @@ header {
   max-width: 413px; /* 最大幅を413pxに設定 */
   margin: 0 auto; /* 要素を中央に配置 */
   border-radius: 8px; /* 角を8px丸める */
-  margin-top: 32px; /* 上に32pxのマージンを設定 */
+  margin-top: 36px; /*  */
 }
 
 /* テキスト部分のスタイル */
 .site__text {
   flex: 1; /* 要素がフレックスボックス内で伸縮するよう設定 */
   font-size: 16px; /* フォントサイズを16pxに設定 */
-  line-height: 1.5; /* 行の高さを1.5に設定 */
+  font-weight: lighter;
+  line-height: 180%;
   color: #fff; /* テキストの色を白に設定 */
   margin-bottom: 48px; /* 下に48pxのマージンを設定 */
 }
@@ -941,17 +1008,18 @@ header {
 /* 1枚目の画像の設定 */
 .image1 {
   position: relative; /* 相対位置に配置 */
-  max-width: 312px; /* 最大幅を312pxに設定 */
+  transform: translateX(3px);
+  max-width: 296px; /*  */
   height: auto; /* 高さを自動調整に設定 */
 }
 
 /* 2枚目の画像の設定 */
 .image2 {
-  position: absolute; /* 絶対位置に設定 */
-  top: 195px; /* 上に195pxの位置を設定 */
-  left: 0; /* 左に配置 */
-  max-width: 312px; /* 最大幅を312pxに設定 */
-  height: auto; /* 高さを自動調整に設定 */
+  position: absolute;
+  top: 207px;
+  right: 92px;
+  max-width: 330px;
+  height: auto;
 }
 
 /* ーー */
@@ -965,17 +1033,34 @@ footer{
   display: flex; /* フレックスボックスで配置 */
   flex-direction: column; /* 子要素を縦方向に並べる */
   align-items: center; /* 子要素を中央に揃える */
-  justify-content: center; /* 垂直方向の中央に揃える */
   margin: auto; /* 要素を中央に配置 */
+}
+
+.footer__symbol.logo{
+  margin-top: 26px;
+}
+
+.footer__symbol.logo img {
+  max-width: 227px;
+  max-height: 52px;
+  margin:0;
+}
+
+.footer__text{
+  font-family: Goldman;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  margin-top: 34px;
 }
 
 /* ーー */
 /* ディスプレイ対応 */
 /* ーー */
 
-@media screen and (max-width: 1015px) {
+@media screen and (max-width: 1025px) {
 
-  /* 1015からtoptitleが改行され始めるため。 */
+  /* 1025からtoptitleが改行され始めるため。 */
 
   /* フォントサイズをビューポート幅に基づいて調整 */
   /* font-size: 9vw; ビューポート幅の9%に基づいたフォントサイズ */
@@ -988,6 +1073,11 @@ footer{
   /* =デザインカンプ：14px */
   /* font-size: 3vw; ビューポート幅の3%に基づいたフォントサイズ */
   /* =デザインカンプ：12px */
+
+  *{
+    font-size: 3.5vw;
+  }
+
 
   .range {
     padding: 0; /* パディングをリセット */
@@ -1025,6 +1115,7 @@ footer{
   }
 
   .header__symbol {
+    height: 100%;
     padding: 16px; /* 全体に16pxのパディングを設定 */
   }
 
@@ -1121,9 +1212,12 @@ footer{
   }
 
   .main__inner img {
-    display: block; /* ブロック要素に設定 */
-    position: relative; /* 相対位置に配置 */
-    width: 120vw;
+    display: block; /* 画像を再表示 */
+    position: static; /* 絶対位置を解除 */
+    margin: 0 auto; /* 中央揃え */
+    width: 80vw;
+    height: auto;
+    padding-bottom: 44px;
   }
 
   /* ーーーー */
@@ -1158,8 +1252,17 @@ footer{
   }
 
   .achievement__image{
-    display: block; /* ブロック要素に設定 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .achievement__other img {
+    animation: scroll 10s linear infinite;
+  }
+  
+
 
   .achievement__image img{
     max-width: 280px; /* 画像の最大幅を280pxに設定 */
@@ -1195,7 +1298,9 @@ footer{
   }
 
   .index__flex__box {
-    max-height: 800px;
+    margin: 0 auto;
+    max-width: 450px;
+    height: 100%;
     margin-bottom: 24px; /* 下に24pxのマージンを設定 */
   }
 
@@ -1216,13 +1321,34 @@ footer{
     padding-bottom: 45px;
   }
 
-  .case__index {
-    justify-content: flex-start; /* スライドを左揃えにする */
-    align-items: center; /* スライドを垂直方向に中央揃え */
+  .case__index{
+    max-width:50vw;
+    gap: 80px;
   }
 
-  .splide__slide {
-    width: 100%; /* スライドの幅を100%にする */
+  .case__index__box{
+    max-width: 405px;
+    min-width: 311px;
+  }
+
+  .case__index__box:nth-child(odd),
+  .case__index__box:nth-child(even)  {
+  margin: 0;
+  }
+
+  .box__top{
+    font-size: 3.5vw; 
+    line-height: 180%;
+  }
+
+  .controls button {
+    width: 6vw; 
+    height: 6vw;
+  }
+
+  .splide__arrows{
+    width: 3.5vw; 
+    height: 3.5vw;
   }
 
   /* ーーーー */
@@ -1250,6 +1376,11 @@ footer{
 
   .pattern__price{
     font-size: 3vw; /* ビューポート幅の3%に基づいたフォントサイズに設定 */
+  }
+
+  .commission__text ul{
+    font-size: 3vw;
+    line-height: 6vw;
   }
 
   /* ーーーー */

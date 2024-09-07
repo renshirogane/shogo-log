@@ -1,25 +1,25 @@
 "use strict"
-new Splide('.splide', {
-  type: 'loop',
-  perPage: 2,
-  speed: 400,
-  spaceBetween: 20,
-  pagination: {
-      el: '.splide__pagination',
-      type: 'bullets'
-  },
-  navigation: true,
+const splide = new Splide(".splide", {
+  type: "loop", // スライダーをループさせる
+  pauseOnHover: false, // カーソルが乗っても停止しない
+  pauseOnFocus: false, // フォーカスを当てても停止しない
+  interval: 2000, // 自動再生の間隔
+  speed: 1000, // スライドの移動速度
+  perPage: 2, // デフォルトの表示枚数
   breakpoints: {
     1015: {
-      perPage: 1, // 1015px未満の表示枚数
+      perPage: 1, // 1015px未満では1枚だけ表示
+      focus: 'center', // スライドを中央に配置
     },
   },
 }).mount();
 
+
 // Accordionとハンバーガーメニューのイベントリスナーはそのまま
-$(".accordion_force_clicked").click(function () {
-  $(".accordion_action_clicked_icon").toggleClass('_emergent');
-  $(".accordion_action_clicked").slideToggle();
+$(".question__btn").click(function () {
+  var faqBox = $(this).closest(".faq__box");
+  faqBox.find(".accordion_action_clicked_icon").toggleClass('_emergent');
+  faqBox.find(".accordion_action_clicked").slideToggle();
 });
 
 $(".hamburger_force_clicked").click(function () {
