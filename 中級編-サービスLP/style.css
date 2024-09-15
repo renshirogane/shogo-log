@@ -89,12 +89,10 @@ form {
   background-color: #fff; /* フォームの背景色を淡い青に設定 */
   border: 2px solid #6db5e1; /* 外枠を青色で2pxの実線に設定 */
   border-radius: 5px; /*  */
-  padding: 7px 8px 8px 8px; /* フォーム内に8pxのパディングを設定 */
+  padding: 7px 8px 6px 8px ; /*  */
   width: 100%; /* 幅を100%に設定 */
   margin: 0 auto; /* フォームを中央に配置 */
   font-family: Arial, sans-serif; /* フォントをArialに設定 */
-  justify-content: center; /* フレックスボックス内で中央に配置 */
-  align-items: center; /* フレックスボックス内で垂直方向に中央に配置 */
 }
 
 .caution{
@@ -108,13 +106,14 @@ form {
   background-color: #007FC6;
   font-size: 20px;
   font-weight: normal;
-  max-width: 100%; /* 親要素の幅に合わせて最大幅を設定 */
+  width: 100%;
+  max-width: 384px; /* 親要素の幅に合わせて最大幅を設定 */
   height: 52px;
   color: #fff;
   border-radius: 5px;
   white-space: nowrap;
   position: relative;
-  padding: 0 14px;
+  padding: 15px 14px 16px 14px;
 }
 
 .main__entry h2 .responsive{
@@ -134,9 +133,9 @@ form {
 
 .main__entry .name__field {
   display: flex; /* フレックスボックスで配置 */
-  max-width: 364px;
+  max-width: 368px;
   justify-content: space-between; /* 要素間を均等に配置 */
-  margin:21px 0 0 0;
+  margin:20px 0 0 0;
 }
 
 .main__entry .name__field > div {
@@ -153,7 +152,7 @@ form {
 
 .main__entry label {
   display: block; /* ラベルをブロック要素に設定 */
-  margin:0 0 5px 8px;
+  margin:0 0 6px 7px;
   font-weight: bold; /* フォントを太字に設定 */
   color: #333; /* テキストの色を濃いグレーに設定 */
 }
@@ -162,15 +161,15 @@ form {
 .main__entry input[type="email"],
 .main__entry input[type="tel"] {
   font-size: 16px;
-  background-color:#F5F8FA;
+  background-color: #F5F8FA;
   height: 48px;
-  max-width: 365px;
-  width: 100%; /* 入力フィールドの幅を100%に設定 */
-  padding: 12px 0 12px 8px; /*  */
-  margin:0 8px 12px 7px;
-  border: 1px solid #ccc; /* 外枠を灰色で1pxの実線に設定 */
-  border-radius: 5px; /* 外枠の角を丸めて5pxに設定 */
-  box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
+  max-width: 368px;
+  width: 100%;
+  padding: 12px 0 12px 8px;
+  margin: 0 12px 11px 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .main__entry .name__field label {
@@ -193,7 +192,7 @@ form {
 .main__entry .privacy-note {
   font-size: 14px; /*  */
   color: #666; /* テキストの色を濃い灰色に設定 */
-  margin: 14px 0 31px 8px;
+  margin: 14px 10px 32px 8px;
 }
 
 .main__entry button {
@@ -205,8 +204,8 @@ form {
   border-radius: 28px; /* ボタンの角を丸めて28pxに設定 */
   font-size: 20px; /* フォントサイズを20pxに設定 */
   cursor: pointer; /* カーソルをポインターに変更 */
-  padding: 10px 20px; /* パディングを上下10px、左右20pxに設定 */
-  margin: 0 auto 20px auto; /* 上下に28pxのマージンを設定し、中央揃え */
+  padding: 12px 20px 11px; /*  */
+  margin: 0 auto 18px auto; /* 上下に28pxのマージンを設定し、中央揃え */
   display: block; /* ボタンをブロック要素に設定して中央揃え */
 }
 
@@ -455,7 +454,7 @@ header {
 
 .area__circle {
   display: flex; /* フレックスボックスで配置 */
-  column-gap: 22px; /* 要素間に22pxの間隔を設定 */
+  column-gap: 23px; /*  */
   padding: 37px 0 20px 5px;
 }
 
@@ -464,8 +463,8 @@ header {
   gap: 14px;
   flex-direction: column; /* 子要素を縦方向に並べる */
   justify-content: center; /* 子要素を中央に配置 */
-  width: 164px; /* 幅を164pxに設定 */
-  height: 164px; /* 高さを164pxに設定 */
+  width: 163px; /*  */
+  height: 163px; /*  */
   border-radius: 50%; /* 要素を円形に設定 */
   background-color: #ffffff; /* 背景色を白に設定 */
   text-align: center; /* テキストを中央に揃える */
@@ -484,7 +483,8 @@ header {
   color: #007FC6;
   display: flex;
   justify-content: center;
-  align-items: baseline; /* ベースラインで揃える */}
+  align-items: baseline; /* ベースラインで揃える */
+}
 
 .medium{
   font-size: 24px;
@@ -498,8 +498,19 @@ header {
   margin-top: 4px; /* ここで高さを下げる */
 }
 
+.circle__entry:nth-of-type(3) .circle__main {
+  position: relative;
+}
+
+.circle__entry:nth-of-type(3) .circle__main .small {
+  position: absolute;
+  right: 24px; /* Align to the right */
+}
+
 .main__area__note{
-  font-size: 12px; /* フォントサイズを12pxに設定 */
+  font-size: 12.2px; /* フォントサイズを12pxに設定 */
+  line-height: 18px;
+  font-weight: lighter;
   color: #fff; /* テキストの色を白に設定 */
   padding-top: 7px; /* 上に7pxのパディングを設定 */
 }
@@ -660,7 +671,7 @@ header {
 
 .about__index__flex{
   display: grid; /* グリッドレイアウトを使用 */
-  min-width: 984px;
+  max-width: 984px;
   grid-template-columns: 1fr 1fr; /* 2列のグリッドに設定 */
   gap: 24px; /* 要素間に24pxの間隔を設定 */
   justify-content: space-between; /* 要素を左右に均等に配置 */
@@ -761,7 +772,7 @@ header {
   max-height: 488px;
   border: solid 1px #fff; /* 白色で1pxの実線ボーダーを設定 */
   box-shadow: 0px 5px 8px 3px #33333340; /* ボックスシャドウを設定 */
-  padding: 20px; /* 全体に20pxのパディングを設定 */
+  padding: 20px 19px 20px 20px;; /*  */
   border-top-left-radius: 30px; /* 左上の角を30px丸める */
   border-bottom-right-radius: 30px; /* 右下の角を30px丸める */
   margin-right: 0; /* デフォルトでは右のマージンを0にしておく */
@@ -1023,15 +1034,8 @@ header {
 }
 
 .question__mark._emergent{
-  font-family: goldman; /* フォントファミリーをGoldmanに設定 */
-  font-size: 32px; /* フォントサイズを32pxに設定 */
-  text-align: center; /* テキストを中央に揃える */
   color: #007FC6; /* テキストの色を青に設定 */
   background-color: #fff; /* 背景色を白に設定 */
-  border-radius: 50%; /* 要素を円形に設定 */
-  width: 44px; /* 幅を44pxに設定 */
-  height: 44px; /* 高さを44pxに設定 */
-  border: none; /* ボーダーを削除 */
 }
 
 .question__text{
@@ -1041,9 +1045,6 @@ header {
 }
 
 .question__text._emergent{
-  font-size: 16px; /* フォントサイズを16pxに設定 */
-  font-weight: bold; /* フォントを太字に設定 */
-  margin: 32px 0; /* 上下に32pxのマージンを設定 */
   color: #fff; /* テキストの色を白に設定 */
 }
 
@@ -1058,7 +1059,7 @@ header {
 
 .download__inner{
   display: block; /* ブロック要素に設定 */
-  padding: 90px 0 53px 0;
+  padding: 90px 0 61px 0;
 }
 
 .download__main__area{
@@ -1083,12 +1084,12 @@ header {
 
 /* テキスト部分のスタイル */
 .site__text {
-  flex: 1; /* 要素がフレックスボックス内で伸縮するよう設定 */
-  font-size: 16px; /* フォントサイズを16pxに設定 */
+  font-size: 16px;
   font-weight: lighter;
   line-height: 180%;
-  color: #fff; /* テキストの色を白に設定 */
-  margin-bottom: 48px; /* 下に48pxのマージンを設定 */
+  color: #fff;
+  margin-bottom: 48px;
+  text-align: left; /* Ensure the text is left-aligned */
 }
 
 /* 親要素の設定 */
@@ -1100,19 +1101,27 @@ header {
 
 /* 1枚目の画像の設定 */
 .image1 {
-  position: relative; /* 相対位置に配置 */
-  transform: translateX(3px);
-  max-width: 296px; /*  */
-  height: auto; /* 高さを自動調整に設定 */
+  position: relative;
+  transform: translateX(4px);
+  max-width: 297px;
+  max-height: 175px;
+  height: auto;
 }
 
 /* 2枚目の画像の設定 */
 .image2 {
   position: absolute;
-  top: 207px;
-  right: 92px;
+  top: 206px;
+  right: 91px;
   max-width: 330px;
   height: auto;
+}
+
+/* 2枚目の画像の設定 */
+.image3 {
+  display: none;
+  max-width: 240px;
+  max-height: 149px;
 }
 
 /* ーー */
@@ -1272,8 +1281,8 @@ footer{
   .main__inner{
     display: block; /* ブロック要素に設定 */
     transform: none; /* translateXを解除 */
-    padding-top: 40px; /* 上に40pxのパディングを設定 */
-    padding-bottom: 26px; /* 下に26pxのパディングを設定 */
+    padding-top: 42px; /*  */
+    padding-bottom: 22px; /*  */
   }
 
   .main__area__top{
@@ -1282,14 +1291,19 @@ footer{
   }
 
   .main__area .sub {
-    font-size: 3.5vw
+    font-size: 3.5vw;
+    letter-spacing: 0.25vw;
+  }
+
+  .caresend-1 {
+    letter-spacing:0.2vw ; /*  */
   }
 
   .main__area__top .toptitle {
     font-size: 6.4vw; /*  */
     font-weight: bold; /* フォントを太字に設定 */
     color: #fff; /* テキストの色を白に設定 */
-    padding: 20px 0 25px 0; /*  */
+    padding: 18px 0 25px 0; /*  */
     text-align: left;
     line-height: 11.5vw;
   }
@@ -1318,17 +1332,34 @@ footer{
     }
 
   .circle__main{
-    font-size: 5vw;
-    text-align: center;;
+    font-size: 4.8vw;
+    display: inline-block;
+    vertical-align: top;
     }
 
   .circle__main .medium{
     font-size: 4.5vw;
   }
 
+  .circle__main .small{
+    margin: 0;
+    font-size: 3.25vw;
+  }
+
+  .circle__entry:nth-of-type(3) .circle__main .small{
+    position: static;
+  }
+
   .main__area__note{
-    font-size: 3.5vw;
-    position: relative;
+    line-height: 5.2vw;
+  }
+
+  .main__area__note .note1, .note2{
+    font-size: 3.2vw ;
+  }
+
+  .main__area__note .caresend-1{
+    font-size: 3.2vw ;
   }
 
   .main__inner img {
@@ -1384,7 +1415,7 @@ footer{
 
   .achievement__main{
     display: block; /* ブロック要素に設定 */
-    padding-top: 37px; /*  */
+    padding-top: 36px; /*  */
   }
 
   .achievement__top{
@@ -1426,15 +1457,23 @@ footer{
     padding-bottom: 65px;
   }
 
-  .about__concept__text{
-    font-size: 5vw;
-    letter-spacing: 0.3vw;
-    line-height: 9.4vw;
-    margin: 0 35px 54px 36px; /* マージンを設定 */
+  .about__concept__text
+  {
+    font-size: 5.2vw;
+    letter-spacing: 0.1vw;
+    line-height: 9.5vw;
+    margin: 0 35px 59px 36px; /* マージンを設定 */
+  }
+
+  .about__concept__text p
+  {
+    font-size: 5.2vw;
+    letter-spacing: 0.1vw;
   }
 
   .about__concept__text span{
-    line-height: 12vw;
+    line-height: 13vw;
+    letter-spacing: 0.4vw;
     font-size: 6vw; /*  */
   }
 
@@ -1452,14 +1491,19 @@ footer{
 
   .index__flex__box {
     margin: 0 auto;
-    max-width: 450px;
+    max-width: 341px;
     height: 100%;
-    padding: 14px 14px 24px 14px;
+    padding: 13px 14px 22px 14px;
     margin-bottom: 24px; /* 下に24pxのマージンを設定 */
   }
 
+  .box__title {
+    line-height: 7.8vw;
+  }
+
   .box__text__index{
-    padding: 0 16px;
+    padding: 0 15px;
+    line-height: 7.8vw;
   }
 
   .about__caregiver{
@@ -1468,7 +1512,9 @@ footer{
 
   .caregiver__title{
     font-size: 6vw; /* ビューポート幅の6%に基づいたフォントサイズに設定 */
-    padding: 0 0 24px 0; /* 下に24pxのパディングを設定 */
+    line-height: 11.55vw;
+    letter-spacing: 0.4vw;
+    padding: 0 0 38px 0; /*  */
   }
 
   /* ーーーー */
@@ -1476,21 +1522,46 @@ footer{
   /* ーーーー */
 
   .case__inner{
-    padding-bottom: 45px;
+    padding:72px 0 24px 0;
+    max-height: 681px;
   }
 
-  .case__index{
+  .case__top{
+    padding-bottom: 35px;
+  }
+
+  .splide__list{
     max-width: 100%;
+  }
+
+  .splide__track{
+  }
+
+  .splide__slide{
+    max-width: 311px;
+    max-height: 471px;
+    padding: 19px 10px 20px 9px;
   }
 
   .case__index__box:nth-child(odd),
   .case__index__box:nth-child(even)  {
-  margin: 0;
+    margin-right: 11vw;
   }
 
-  .box__top{
-    font-size: 3.5vw; 
-    line-height: 180%;
+  /* フォントpx指定
+  vwだと900〜1000pxで大きすぎるため */
+
+  .box__top,
+  .box__top span{
+    font-size: 18px; 
+    line-height:32px;
+    letter-spacing: 0;
+  }
+
+  .box__text__case{
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 48px;
   }
 
   .controls button {
@@ -1503,36 +1574,57 @@ footer{
     height: 3.5vw;
   }
 
+  .case__inner .splide__pagination {
+    display: none;
+  }
+
   /* ーーーー */
   /* commission */
   /* ーーーー */
 
+  .commission__inner{
+    padding: 66px 30px 0 31px;
+  }
+
+  .commission__top  {
+    letter-spacing: -0.4px;
+    padding-bottom: 26px;
+  }
+
   .pattern__box{
-    padding: 14px 24px 17px 24px; /* 上に14px、左右に24px、下に17pxのパディングを設定 */
-    aspect-ratio: 1 / 1; /* ボックスを正方形に設定 */
+    padding: 13px 0 15px 0;
     display: flex; /* フレックスボックスで配置 */
     justify-content: center; /* 子要素を中央に配置 */
     align-items: center; /* 垂直方向の中央に揃える */
     text-align: center; /* テキストを中央に揃える */
     flex-direction: column; /* 子要素を縦方向に並べる */
+    border-top: 6px solid #007FC6;
   }
 
   .pattern__box__top{
+    padding-bottom: 18px;
     font-size: 3vw; /* ビューポート幅の3%に基づいたフォントサイズに設定 */
     line-height: 0; /* 行の高さを0に設定 */
+    letter-spacing: 0.2vw;
   }
 
-  .pattern__amount{
-    font-size: 9vw; /* ビューポート幅の9%に基づいたフォントサイズに設定 */
-  }
+  .pattern__box__text {
 
-  .pattern__price{
+  }
+  
+  .pattern__amount {
+    font-size: 10vw; /* ビューポート幅の10%に基づいたフォントサイズに設定 */
+  }
+  
+  .pattern__price {
     font-size: 3vw; /* ビューポート幅の3%に基づいたフォントサイズに設定 */
+    margin-bottom: 3px;
   }
 
-  .commission__text ul{
+  .commission__text li{
     font-size: 3vw;
     line-height: 6vw;
+    letter-spacing: 0.3vw;
   }
 
   /* ーーーー */
@@ -1540,42 +1632,56 @@ footer{
   /* ーーーー */
 
   .faq__inner{
-    padding: 89px 16px 72px 16px; /* 全体にパディングを設定 */
+    padding: 80px 16px 72px 16px; /* 全体にパディングを設定 */
+  }
+
+  .faq__top{
+    padding-bottom: 43px;
   }
 
   .faq__box{
-    padding: 0 10px 0 10px; /* 左右に10pxのパディングを設定 */
+    margin-bottom: 16px;
   }
 
   .faq__question{
-    column-gap: 14px; /* 要素間に14pxの間隔を設定 */
-    padding: 0; /* パディングをリセット */
+    height: 64px;
+    padding: 0 10px 0 10px;
+    }
+
+  .faq__answer {
+    font-size: 14px;
+    padding: 10px;
   }
 
-  .faq__question._emergent {
-    width: calc(100% + 20px); /* 幅を100%+20pxに設定 */
-    margin-left: -10px; /* 左に-10pxのマージンを設定 */
-    padding: 0 10px 0 10px; /* 左右に10pxのパディングを設定 */
+  .left-element{
+    gap: 10px;
   }
 
-  .question__mark{
-    padding: 8px 10px; /* 上下に8px、左右に10pxのパディングを設定 */
+  /* カンプの整列ミスかもしれないが修正 */
+  .faq__box[data-faq-id="3"] .left-element,
+  .faq__box[data-faq-id="4"] .left-element,
+  .faq__box[data-faq-id="5"] .left-element {
+    gap: 14px;
   }
 
-  .question__text{
-    font-size: 3.5vw; /* ビューポート幅の3.5%に基づいたフォントサイズに設定 */
+  .question__mark,
+  .question__mark._emergent{
+    font-size: 16px;
+  }
+
+  .question__text,
+  .question__text._emergent{
+    font-size: 14px; /*  */
+    margin: 9px 0;
   }
 
   .faq__answer ol {
     padding-left: 16px;
   }
 
-  .question__text._emergent{
-    font-size: 3.5vw; /* ビューポート幅の3.5%に基づいたフォントサイズに設定 */
-  }
-
-  .question__btn{
+  .question__btn span{
     margin: 0; /* マージンをリセット */
+    width: 17px;
   }
 
   /* ーーーー */
@@ -1583,13 +1689,15 @@ footer{
   /* ーーーー */
 
   .download__inner{
-    display: block; /* ブロック要素に設定 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 72px 16px 42px 16px; /* 全体にパディングを設定 */
   }
 
   .download__top{
-    margin: 0 40px;
     padding: 0;
+    font-size: 24px;
   }
 
   .download__main__area{
@@ -1600,19 +1708,38 @@ footer{
   }
 
   .download__site{
-    margin-bottom: 140px;
+    margin: 0;
     padding: 0;
   }
 
+  .site__text,
+  .site__text .caresend-1{
+    font-size: 12px;
+    text-align: center;
+    margin: 26px 0 16px 0;
+  }
+
   .site__image{
+    display: flex;
+    justify-content: center;
     float: none;
-    
+    margin-bottom: 40px;
   }
 
-  .site__image img{
-    min-width: 200px;
-    width: 30vw;
+  .image1,.image2{
+    display: none;
   }
 
+  .image3 {
+    display: block;
+  }
+
+  /* ーーーー */
+  /* フッター */
+  /* ーーーー */
+
+  .footer__symbol.logo {
+    margin-top: 24px;
+  }
 
 }
