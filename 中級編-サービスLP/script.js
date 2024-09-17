@@ -16,7 +16,7 @@ const splide = new Splide(".splide", {
 
 
 // Accordionとハンバーガーメニューのイベントリスナーはそのまま
-$(".question__btn").click(function () {
+$(".accordion_force_clicked").click(function () {
   var faqBox = $(this).closest(".faq__box");
   faqBox.find(".accordion_action_clicked_icon").toggleClass('_emergent');
   faqBox.find(".accordion_action_clicked").slideToggle();

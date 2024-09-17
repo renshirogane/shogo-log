@@ -107,7 +107,6 @@ form {
   font-size: 20px;
   font-weight: normal;
   width: 100%;
-  max-width: 384px; /* 親要素の幅に合わせて最大幅を設定 */
   height: 52px;
   color: #fff;
   border-radius: 5px;
@@ -133,7 +132,6 @@ form {
 
 .main__entry .name__field {
   display: flex; /* フレックスボックスで配置 */
-  max-width: 368px;
   justify-content: space-between; /* 要素間を均等に配置 */
   margin:20px 0 0 0;
 }
@@ -163,7 +161,6 @@ form {
   font-size: 16px;
   background-color: #F5F8FA;
   height: 48px;
-  max-width: 368px;
   width: 100%;
   padding: 12px 0 12px 8px;
   margin: 0 12px 11px 7px;
@@ -232,15 +229,16 @@ form {
   align-items: center; /* Center the lines horizontally */
   background-color: #333; /* Background color as seen in the image */
   cursor: pointer;
+  position: relative;
 }
 
 .hamburger span {
+  position: absolute;
   background: #fff; /* White color for the bars */
   border-radius: .125rem;
   display: block;
   height: 1px; /* Thickness of the bars */
-  width: 33px; /* Width of the bars */
-  margin: 4px 0; /* Space between the bars */
+  width: 32px; /* Width of the bars */
   transform: translateY(-2px);
   transition: all 0.4s; /* Animation transition */
 }
@@ -249,25 +247,30 @@ form {
   color: #fff; /* White color for the text */
   font-size: 10px; /* Adjust font size for better visibility */
   text-align: center;
+  margin-top: 25px;
 }
 
-
 .hamburger span:nth-of-type(1) {
-  top: 20%;
+  top: 23%;
 }
 
 .hamburger span:nth-of-type(2) {
-  top: 50%;
+  top: 37%;
 }
 
 .hamburger span:nth-of-type(3) {
-  top: 80%;
+  top: 51%;
+}
+
+.hamburger._emergent span{
+  margin:0;
+
 }
 
 /* clickedクラスが付与されると線が回転して×に */
 .hamburger._emergent span:nth-of-type(1) {
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
@@ -277,13 +280,13 @@ form {
 
 .hamburger._emergent span:nth-of-type(3) {
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* メニューのスタイル */
 .menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0; /* 左端に揃える */
   width: 100%; /* ヘッダーの横幅に合わせる */
@@ -349,9 +352,9 @@ header {
 
 .header__menu {
   font-size: 16px;
-  width: 568px;
+  max-width: 568px;
   font-weight: bold;
-  transform: translateX(-29px);
+  margin-right: 58px;
   display: flex; /* メニュー項目を横並びにする */
   height: inherit; /* 高さを親要素に揃える */
   align-items: center; /* 垂直方向の中央に揃える */
@@ -424,13 +427,14 @@ header {
   display: flex; /* フレックスボックスで配置 */
   align-items: flex-start; /* 子要素を上部に揃える */
   max-width: 1176px; /* 最大幅を1176pxに設定 */
-  padding: 84px 0 0 0;
+  padding: 84px 0px 0 0px;
 }
 
 /* ダウンロードフォームがはみ出ない対策 */
 @media (max-width: 1236px) {
   .main__inner {
     transform: none;
+    padding: 84px 30px 0 30px;
   }
 }
 
@@ -516,14 +520,14 @@ header {
 }
 
 .main__inner img{
+  aspect-ratio: 360/201;
   max-width: 360px; /* 画像の幅を360pxに設定 */
-  height: 202px; /* 画像の高さを202pxに設定 */
   position: absolute; /* 絶対位置に配置 */
   top: 552px;
   left: 396px;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1140px) {
   .main__inner img {
   display: none;
   }
@@ -1160,9 +1164,9 @@ footer{
 /* ディスプレイ対応 */
 /* ーー */
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1080px) {
 
-  /* 1025からtoptitleが改行され始めるため。 */
+  /* 1080からtoptitleが改行され始めるため。 */
 
   /* フォントサイズをビューポート幅に基づいて調整 */
   /* font-size: 9vw; ビューポート幅の9%に基づいたフォントサイズ */
@@ -1363,12 +1367,12 @@ footer{
   }
 
   .main__inner img {
-    display: block; /* 画像を再表示 */
+    display: flex;
+    max-width: 96vw;
     position: static; /* 絶対位置を解除 */
-    margin: 0 auto; /* 左右のマージンを自動設定で中央揃え */
-    height: auto;
-    padding-bottom: 35px;
-    max-width: 100%; /* 画像の横幅を親要素にフィットさせる */
+    margin: 0 auto;
+    margin-top: -16px; /* 左右のマージンを自動設定で中央揃え */
+    margin-left: -2vw;
   }
 
   /* ーーーー */
@@ -1534,8 +1538,7 @@ footer{
     max-width: 100%;
   }
 
-  .splide__track{
-  }
+
 
   .splide__slide{
     max-width: 311px;
@@ -1608,9 +1611,6 @@ footer{
     letter-spacing: 0.2vw;
   }
 
-  .pattern__box__text {
-
-  }
   
   .pattern__amount {
     font-size: 10vw; /* ビューポート幅の10%に基づいたフォントサイズに設定 */
