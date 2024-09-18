@@ -89,7 +89,7 @@ form {
   background-color: #fff; /* フォームの背景色を淡い青に設定 */
   border: 2px solid #6db5e1; /* 外枠を青色で2pxの実線に設定 */
   border-radius: 5px; /*  */
-  padding: 7px 8px 6px 8px ; /*  */
+  padding: 7px 7px 6px 8px ; /*  */
   width: 100%; /* 幅を100%に設定 */
   margin: 0 auto; /* フォームを中央に配置 */
   font-family: Arial, sans-serif; /* フォントをArialに設定 */
@@ -102,7 +102,7 @@ form {
 .main__entry h2 {
   display: flex;
   align-items: center; /* 垂直方向の中央揃え */
-  justify-content: center; /* 水平方向の中央揃え（必要に応じて） */
+  text-align: center;
   background-color: #007FC6;
   font-size: 20px;
   font-weight: normal;
@@ -112,7 +112,7 @@ form {
   border-radius: 5px;
   white-space: nowrap;
   position: relative;
-  padding: 15px 14px 16px 14px;
+  padding: 16px 15px 16px 14px;
 }
 
 .main__entry h2 .responsive{
@@ -120,20 +120,26 @@ form {
 }
 
 .main__entry h2::before {
-  content: ""; /* 擬似要素を使用して空の内容を生成 */
-  position: absolute; /* 絶対位置に配置 */
-  bottom: -19px; /*  */
-  left: 50%; /* 左端から50%の位置に設定 */
-  transform: translateX(-50%); /* 要素を中央に揃える */
-  border-width: 10px; /* ボーダーの幅を10pxに設定 */
-  border-style: solid; /* ボーダーのスタイルを実線に設定 */
-  border-color: #007FC6 transparent transparent transparent; /* ボーダーの色を青と透明に設定 */
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 17px 10px 0 10px;
+  border-style: solid;
+  border-color: #007FC6 transparent transparent transparent;
+}
+
+.form__field{
+  margin-top: 8px;
+  padding: 0 7px 0 8px;
 }
 
 .main__entry .name__field {
   display: flex; /* フレックスボックスで配置 */
   justify-content: space-between; /* 要素間を均等に配置 */
-  margin:20px 0 0 0;
+
+
 }
 
 .main__entry .name__field > div {
@@ -150,7 +156,8 @@ form {
 
 .main__entry label {
   display: block; /* ラベルをブロック要素に設定 */
-  margin:0 0 6px 7px;
+  margin-top: 12px;
+
   font-weight: bold; /* フォントを太字に設定 */
   color: #333; /* テキストの色を濃いグレーに設定 */
 }
@@ -162,8 +169,8 @@ form {
   background-color: #F5F8FA;
   height: 48px;
   width: 100%;
-  padding: 12px 0 12px 8px;
-  margin: 0 12px 11px 7px;
+  margin-top: 5px;
+  padding: 12px 0 12px 7px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
@@ -189,7 +196,7 @@ form {
 .main__entry .privacy-note {
   font-size: 14px; /*  */
   color: #666; /* テキストの色を濃い灰色に設定 */
-  margin: 14px 10px 32px 8px;
+  margin-top: 25px;
 }
 
 .main__entry button {
@@ -202,7 +209,7 @@ form {
   font-size: 20px; /* フォントサイズを20pxに設定 */
   cursor: pointer; /* カーソルをポインターに変更 */
   padding: 12px 20px 11px; /*  */
-  margin: 0 auto 18px auto; /* 上下に28pxのマージンを設定し、中央揃え */
+  margin: 32px auto 20px auto; /* 上下に28pxのマージンを設定し、中央揃え */
   display: block; /* ボタンをブロック要素に設定して中央揃え */
 }
 
@@ -1380,33 +1387,45 @@ footer{
   /* ーーーー */
 
   form{
-    padding: 8px 6px 8px 6px;
+    margin-top: 44px;
+    padding: 1.87VW;
+  }
+
+  .form__field{
+    padding: 0;
   }
 
   .main__entry h2 {
-    font-size: clamp(10px, 4vw, 19px); /* 最小10px、最大19px、理想4vw */
-    padding: 14px 20px 15px;
-    letter-spacing: 1px;
+    font-size: clamp(10px, 4.27vw, 19px); /* 最小10px、最大19px、理想4vw */
+    justify-content: center;
+    
   }
 
   .main__entry label {
-    margin: 0 0 5px 0px;
+    font-size: clamp(10px, 3.73vw, 24px); /* 最小10px、最大19px、理想4vw */
+    margin-top: 12px;
   }
 
-  .main__entry input[type="text"],
-  .main__entry input[type="email"],
-  .main__entry input[type="tel"] {
-    margin: 0 8px 13px 0px;
-  }
+  .main__entry .name__field > div:first-child {
+    margin-right: 1.2vw;
+  } 
 
-  .main__entry .name__field {
-    margin: 23px 0 0 0;
+  .main__entry .name__field > div:last-child {
+   margin-left: 1.2vw;
+  }
+  .main__entry .privacy-note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 25px;
   }
 
   .main__entry button {
-    max-width: 264px; /* ボタンの最大幅を264pxに設定 */
+    padding: 0;
+    margin: 40px auto 14px auto;
+    padding: 10px 27px;
+    width: auto; /* または適切な他の値に変更 */
+    
     font-size: 16px; /* フォントサイズを16pxに設定 */
-    margin: 0 auto 10px auto; /* 上下に10pxのマージンを設定し、中央に配置 */
   }
 
   .achievement{
@@ -1732,6 +1751,10 @@ footer{
 
   .image3 {
     display: block;
+  }
+
+  .download form{
+    margin: 0;
   }
 
   /* ーーーー */
