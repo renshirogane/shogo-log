@@ -7,7 +7,7 @@ const splide = new Splide(".splide", {
   speed: 1000, // スライドの移動速度
   perPage: 2, // デフォルトの表示枚数
   breakpoints: {
-    1015: {
+    1080: {
       perPage: 1, // 1015px未満では1枚だけ表示
       focus: 'center', // スライドを中央に配置
     },

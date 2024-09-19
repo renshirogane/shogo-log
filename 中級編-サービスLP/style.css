@@ -842,6 +842,17 @@ header {
   border: none; /* ボタンの外枠を削除 */
 }
 
+.splide__arrow{
+  opacity: 1 !important;
+}
+
+.splide__arrow--prev {
+  left: 1.2vw !important;
+}
+
+.splide__arrow--next {
+  right: 1.2vw !important;
+}
 
 /* ーー */
 /* commission */
@@ -1207,11 +1218,12 @@ footer{
   }
 
   .headline{
-    font-size: 6.5vw; /*  */
+    font-size: clamp(10px, 6.5vw, 32px); /* 最小Xpx、最大Cpx、理想Bvw */
   }
 
   .subtitle{
     font-size: 5vw; /* ビューポート幅の5%に基づいたフォントサイズに設定 */
+    font-size: clamp(10px, 5vw, 20px); /* 最小Xpx、最大Cpx、理想Bvw */
     line-height: 9vw; /* ビューポート幅の9%に基づいた行の高さに設定 */
   }
 
@@ -1442,7 +1454,7 @@ footer{
   }
 
   .achievement__top{
-    font-size: 5.3vw; /*  */
+    font-size: clamp(10px, 5.3vw, 32px); /*  */
     padding-bottom: 25px;
   }
 
@@ -1482,7 +1494,7 @@ footer{
 
   .about__concept__text
   {
-    font-size: 5.2vw;
+    font-size: clamp(10px, 5.2vw, 24px);
     letter-spacing: 0.1vw;
     line-height: 9.5vw;
     margin: 0 35px 59px 36px; /* マージンを設定 */
@@ -1490,14 +1502,14 @@ footer{
 
   .about__concept__text p
   {
-    font-size: 5.2vw;
+    font-size: clamp(10px, 5.2vw, 24px);
     letter-spacing: 0.1vw;
   }
 
   .about__concept__text span{
     line-height: 13vw;
     letter-spacing: 0.4vw;
-    font-size: 6vw; /*  */
+    font-size: clamp(10px, 6vw, 32px); /*  */
   }
 
   .about__concept__image{
@@ -1506,6 +1518,10 @@ footer{
 
   .about__concept__image_sp{
     display: block; /* 表示状態に設定 */
+  }
+
+  .about__index__top {
+    padding-bottom: 52px;
   }
 
   .about__index__flex{
@@ -1521,12 +1537,12 @@ footer{
   }
 
   .box__title {
-    line-height: 7.8vw;
+    line-height: clamp(10px, 7.8vw, 30px);
   }
 
   .box__text__index{
     padding: 0 15px;
-    line-height: 7.8vw;
+    line-height: clamp(10px, 7.8vw, 30px);
   }
 
   .about__caregiver{
@@ -1534,8 +1550,8 @@ footer{
   }
 
   .caregiver__title{
-    font-size: 6vw; /* ビューポート幅の6%に基づいたフォントサイズに設定 */
-    line-height: 11.55vw;
+    font-size: clamp(10px, 6vw, 24px); /* ビューポート幅の6%に基づいたフォントサイズに設定 */
+    line-height: 43.2px;
     letter-spacing: 0.4vw;
     padding: 0 0 38px 0; /*  */
   }
@@ -1591,11 +1607,6 @@ footer{
     height: 6vw;
   }
 
-  .splide__arrows{
-    width: 3.5vw; 
-    height: 3.5vw;
-  }
-
   .case__inner .splide__pagination {
     display: none;
   }
@@ -1613,26 +1624,35 @@ footer{
     padding-bottom: 26px;
   }
 
+  .commission__pattern {
+    max-width: 83.2vw;
+  }
+
   .pattern__box{
-    padding: 13px 0 15px 0;
+    padding: 3.47VW 0 19px 0;
+    max-height: 24.27VW;
     display: flex; /* フレックスボックスで配置 */
     justify-content: center; /* 子要素を中央に配置 */
     align-items: center; /* 垂直方向の中央に揃える */
     text-align: center; /* テキストを中央に揃える */
     flex-direction: column; /* 子要素を縦方向に並べる */
-    border-top: 6px solid #007FC6;
+    border-top: 1.6vw solid #007FC6;
   }
 
   .pattern__box__top{
     padding-bottom: 18px;
-    font-size: 3vw; /* ビューポート幅の3%に基づいたフォントサイズに設定 */
+    font-size: clamp(10px, 3vw, 24px); /*  */
     line-height: 0; /* 行の高さを0に設定 */
     letter-spacing: 0.2vw;
   }
 
+  .pattern__box__text {
+    margin: 0 auto;
+  }
+
   
   .pattern__amount {
-    font-size: 10vw; /* ビューポート幅の10%に基づいたフォントサイズに設定 */
+    font-size: 9.6vw; /* ビューポート幅の10%に基づいたフォントサイズに設定 */
   }
   
   .pattern__price {
@@ -1640,9 +1660,13 @@ footer{
     margin-bottom: 3px;
   }
 
+  .commission__text {
+    margin-top: 47px;
+  }
+
   .commission__text li{
-    font-size: 3vw;
-    line-height: 6vw;
+    font-size: clamp(10px, 3vw, 14px); /*  */
+    line-height: clamp(10px, 5.86vw, 24px);
     letter-spacing: 0.3vw;
   }
 
@@ -1651,7 +1675,7 @@ footer{
   /* ーーーー */
 
   .faq__inner{
-    padding: 80px 16px 72px 16px; /* 全体にパディングを設定 */
+    padding: 83px 16px 72px 16px; /* 全体にパディングを設定 */
   }
 
   .faq__top{
