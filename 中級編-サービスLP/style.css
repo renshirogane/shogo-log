@@ -246,7 +246,7 @@ form {
   display: block;
   height: 1px; /* Thickness of the bars */
   width: 32px; /* Width of the bars */
-  transform: translateY(-2px);
+  margin-top: -2px;
   transition: all 0.4s; /* Animation transition */
 }
 
@@ -430,10 +430,10 @@ header {
 }
 
 .main__inner{
-  transform: translateX(12px);
-  display: flex; /* フレックスボックスで配置 */
-  align-items: flex-start; /* 子要素を上部に揃える */
-  max-width: 1176px; /* 最大幅を1176pxに設定 */
+  transform: translateX(12px);/* 相対位置に設定する画像の位置まで変化するため */
+  display: flex; /*  */
+  align-items: flex-start; /*  */
+  max-width: 1176px; /*  */
   padding: 84px 0px 0 0px;
 }
 
@@ -449,13 +449,13 @@ header {
   width: 100%; /* 幅を100%に設定 */
 }
 
-.main .sub{
+.main-sub{
   font-size: 20px; /* フォントサイズを20pxに設定 */
   color: #fff; /* テキストの色を白に設定 */
   font-weight: lighter; /* フォントの太さをlighterに設定 */
 }
 
-.main .toptitle{
+.main-toptitle{
   line-height: 150%;
   font-size: 56px; /* フォントサイズを56pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
@@ -596,39 +596,38 @@ header {
 }
 
 
-
 /* ーー */
 /* about */
 /* CareSendについて */
 /* ーー */
 
-.about__concept {
+.about__inner {
   display: flex; /* フレックスボックスで配置 */
   flex-direction: column; /* 子要素を縦方向に並べる */
   align-items: center; /* 子要素を中央に揃える */
 }
 
-.about__concept__text{
+.about__text{
   margin-bottom: 34px; /*  */
   max-width: 592px; /* 最大幅を592pxに設定 */
 }
 
-.about__concept__text span{
+.about__text span{
   font-size: 32px; /* フォントサイズを32pxに設定 */
   color: #007FC6; /* テキストの色を青に設定 */
   line-height: 68px; /*  */
 }
 
-.about__concept__text p {
+.about__text p {
   line-height: 25px; /* ここでline-heightを設定 */
 }
 
-.about__concept__image {
+.about__image {
   height: 316px; /* 高さを316pxに設定 */
   position: relative; /* 相対位置に配置 */
 }
 
-.about__concept__image::before {
+.about__image::before {
   content: ""; /* 擬似要素を追加 */
   position: absolute; /* 絶対位置に配置 */
   top: 20px; /* 上に20pxの位置を設定 */
@@ -639,12 +638,12 @@ header {
   z-index: -1; /* 背景をテキストの背後に配置 */
 }
 
-.about__concept__image img {
+.about__image img {
   width: 100%; /* 画像の幅を100%に設定 */
   height: 100%; /* 画像の高さを100%に設定 */
 }
 
-.about__concept__image_sp{
+.about__image_sp{
   display: none; /* デフォルトで非表示に設定 */
   background: #F9F9F9; /* 背景色を淡いグレーに設定 */
   max-width: 315px;
@@ -652,7 +651,7 @@ header {
   position: relative;
 }
 
-.about__concept__image_sp::before {
+.about__image_sp::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -663,24 +662,29 @@ header {
   z-index: -1;
 }
 
-.about__concept__image_sp img {
+.about__image_sp img {
   width: 100%; /* 画像の幅を100%に設定 */
   height: 100%; /* 画像の高さを100%に設定 */
 }
 
+/* ーー */
+/* feature */
+/* CareSendの特徴 */
+/* ーー */
 
-.about__index{
+
+.feature{
   padding-top: 98px;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 31px;
 }
 
-.about__index__top{
+.feature__top{
   padding-bottom: 51px;
 }
 
-.about__index__flex{
+.feature__flex{
   display: grid; /* グリッドレイアウトを使用 */
   max-width: 984px;
   grid-template-columns: 1fr 1fr; /* 2列のグリッドに設定 */
@@ -721,8 +725,13 @@ header {
   max-height: 77px; /* 画像の高さを77pxに設定 */
 }
 
+  /* ーーーー */
+  /* caregiver */
+  /*介護士の登録情報の閲覧 */
+  /* ーーーー */
 
-.about__caregiver{
+
+.caregiver{
   width: auto; /* 幅を自動調整に設定 */
   background-image: url(./img/background-4876988_1280\ 1.png); /* 背景画像を設定 */
   background-size: cover; /* 画像サイズをカバーに設定 */
@@ -911,7 +920,7 @@ header {
 }
 
 .pattern__price {
-  transform: translateY(3px);
+  transform: translateY(3px); /* flex-endで下揃えがあるため。 */
   font-size: 32px; /* フォントサイズを32pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
   align-self: flex-end; /* 垂直方向の最後に揃える */
@@ -937,7 +946,7 @@ header {
 }
 
 .commission__text ul li:last-child {
-  transform: translateX(-14px);
+  margin-left: -14px;
 }
 
 /* ーー */
@@ -1123,7 +1132,7 @@ header {
 /* 1枚目の画像の設定 */
 .image1 {
   position: relative;
-  transform: translateX(4px);
+  transform: translateX(4px); /* margin leftで反応しなかったため */
   max-width: 297px;
   max-height: 175px;
   height: auto;
@@ -1183,7 +1192,7 @@ footer{
 
 @media screen and (max-width: 1080px) {
 
-  /* 1080からtoptitleが改行され始めるため。 */
+  /* 1080からmain-toptitleが改行され始めるため。 */
 
   /* フォントサイズをビューポート幅に基づいて調整 */
   /* font-size: 9vw; ビューポート幅の9%に基づいたフォントサイズ */
@@ -1312,7 +1321,7 @@ footer{
     padding: 0 39px 0 40px; /* 左右にパディングを設定 */
   }
 
-  .main__area .sub {
+  .main-sub {
     font-size: 3.5vw;
     letter-spacing: 0.25vw;
   }
@@ -1321,7 +1330,7 @@ footer{
     letter-spacing:0.2vw ; /*  */
   }
 
-  .main__area__top .toptitle {
+  .main__area__top .main-toptitle {
     font-size: 6.4vw; /*  */
     font-weight: bold; /* フォントを太字に設定 */
     color: #fff; /* テキストの色を白に設定 */
@@ -1483,15 +1492,15 @@ footer{
   /* about */
   /* ーーーー */
 
-  .about__concept{
+  .about__inner {
     padding-top: 65px;
   }
 
-  .about__concept__top{
+  .about__top{
     padding-bottom: 65px;
   }
 
-  .about__concept__text
+  .about__text
   {
     font-size: clamp(10px, 5.2vw, 24px);
     letter-spacing: 0.1vw;
@@ -1499,31 +1508,31 @@ footer{
     margin: 0 35px 59px 36px; /* マージンを設定 */
   }
 
-  .about__concept__text p
+  .about__text p
   {
     font-size: clamp(10px, 5.2vw, 24px);
     letter-spacing: 0.1vw;
   }
 
-  .about__concept__text span{
+  .about__text span{
     line-height: 13vw;
     letter-spacing: 0.4vw;
     font-size: clamp(10px, 6vw, 32px); /*  */
   }
 
-  .about__concept__image{
+  .about__image{
     display: none; /* 非表示に設定 */
   }
 
-  .about__concept__image_sp{
+  .about__image_sp{
     display: block; /* 表示状態に設定 */
   }
 
-  .about__index__top {
+  .feature__top {
     padding-bottom: 52px;
   }
 
-  .about__index__flex{
+  .feature__flex{
     display: block; /* ブロック要素に設定 */
   }
 
@@ -1544,7 +1553,12 @@ footer{
     line-height: clamp(10px, 7.8vw, 30px);
   }
 
-  .about__caregiver{
+  /* ーーーー */
+  /* caregiver */
+  /*介護士の登録情報の閲覧 */
+  /* ーーーー */
+
+  .caregiver{
     padding: 40px 27px 40px 28px; /* 全体にパディングを設定 */
   }
 
