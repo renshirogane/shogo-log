@@ -1515,7 +1515,7 @@ footer{
   {
     font-size: clamp(10px, 5.2vw, 24px);
     letter-spacing: 0.1vw;
-    line-height: 9.5vw;
+    line-height: clamp(10px, 9.5vw, 40px);
     margin: 0 35px 59px 36px; /* マージンを設定 */
   }
 
