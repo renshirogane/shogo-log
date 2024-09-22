@@ -372,29 +372,29 @@ header {
 .header__menu {
   font-size: 16px;
   max-width: 568px;
+  height: 96px;/* aタグをヘッダーの高さいっぱいにするため */
   font-weight: bold;
   margin-right: 58px;
   display: flex; /* メニュー項目を横並びにする */
-  height: inherit; /* 高さを親要素に揃える */
   align-items: center; /* 垂直方向の中央に揃える */
   }
 
 .header__menu ul {
   display: flex; /* リスト項目を横並びにする */
-  height: inherit; /* 高さを親要素に揃える */
+  height: 100%;
   align-items: center; /* 垂直方向の中央に揃える */
   gap: 28.45px;
 }
 
 .header__menu li {
   display: flex; /* リスト項目を横並びにする */
-  height: inherit; /* 高さを親要素に揃える */
+  height: 100%;
   align-items: center; /* 垂直方向の中央に揃える */
 }
 
 .header__menu li a {
   display: flex; /* リスト項目を横並びにする */
-  height: inherit; /* 高さを親要素に揃える */
+  height: 100%;
   align-items: center; /* 垂直方向の中央に揃える */
 }
 
