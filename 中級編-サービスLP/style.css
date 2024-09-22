@@ -13,7 +13,7 @@ body {
 }
 
 *{
-  font-family: Noto Sans Jp; /* 全体のフォントをNoto Sans JPに設定 */
+  font-family: Noto Sans Jp, sans-serif; /* 全体のフォントをNoto Sans JPに設定 */
   box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
   margin: 0; /* 全要素のマージンをリセット */
   padding: 0; /* 全要素のパディングをリセット */
@@ -49,7 +49,15 @@ a {
   list-style: none; /* リストのスタイルを無効に設定 */
 }
 
-.headline{
+h1{
+  line-height: 150%;
+  font-size: 56px; /* フォントサイズを56pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  color: #fff; /* テキストの色を白に設定 */
+  padding: 12px 0 16px 0;
+}
+
+h2{
   font-size: 32px; /* 見出しのフォントサイズを32pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
   color: #333333; /* テキストの色を濃いグレーに設定 */
@@ -60,13 +68,14 @@ a {
   padding-bottom: 50px; /*  */
 }
 
-.subtitle{
+h3{
   font-size: 24px; /* サブタイトルのフォントサイズを24pxに設定 */
   line-height: 43.2px; /* 行の高さを43.2pxに設定 */
   font-weight: bold; /* フォントを太字に設定 */
   color: #333333; /* テキストの色を濃いグレーに設定 */
   text-align: center; /* テキストを中央に揃える */
 }
+
 .caresend-1
 {
   letter-spacing: 0.03em;
@@ -99,7 +108,7 @@ form {
   color: red;
 }
 
-.main__entry h2 {
+.form__title  {
   display: flex;
   align-items: center; /* 垂直方向の中央揃え */
   text-align: center;
@@ -115,11 +124,11 @@ form {
   padding: 16px 15px 16px 14px;
 }
 
-.main__entry h2 .responsive{
+.form__title .responsive{
   display: none; 
 }
 
-.main__entry h2::before {
+.form__title::before {
   content: "";
   position: absolute;
   bottom: -11px;
@@ -312,25 +321,25 @@ form {
 }
 
 /* メニューのリスト項目のスタイル */
-.menu ul {
+.menu li {
   display: flex;
   align-items: center;
   list-style: none;
   padding: 24px 16px;
   margin: 0;
   text-align: left; /* メニュー項目を左に配置 */
-  padding: 20px;
   font-size: 16px;
   color: #fff;
   border-bottom: 1px solid #fff; /* 各項目の下にボーダーを表示 */
 }
 
-.menu ul :last-child {
+.menu li :last-child {
   font-size: 16px;
+  margin-top: -3px;
   border-bottom: none;
 }
 
-.menu ul img {
+.menu li img {
   width: 24px; /*  */
   height: 24px; /*  */
   margin-right: 7px; /* 画像とテキストの間に7pxのマージンを追加 */
@@ -449,18 +458,11 @@ header {
   width: 100%; /* 幅を100%に設定 */
 }
 
-.main-sub{
+.main-sub-1,
+.main-sub-2{
   font-size: 20px; /* フォントサイズを20pxに設定 */
   color: #fff; /* テキストの色を白に設定 */
   font-weight: lighter; /* フォントの太さをlighterに設定 */
-}
-
-.main-toptitle{
-  line-height: 150%;
-  font-size: 56px; /* フォントサイズを56pxに設定 */
-  font-weight: bold; /* フォントを太字に設定 */
-  color: #fff; /* テキストの色を白に設定 */
-  padding: 12px 0 16px 0;
 }
 
 .area__circle {
@@ -673,7 +675,7 @@ header {
 /* ーー */
 
 
-.feature{
+.feature__inner{
   padding-top: 98px;
   padding-left: 20px;
   padding-right: 20px;
@@ -694,7 +696,7 @@ header {
 
 .index__flex__box{
   max-width: 480px;
-  height: 325px; /* 最大高さを325pxに設定 */
+  min-height: 325px; /* 最大高さを325pxに設定 */
   display: flex; /* フレックスボックスで配置 */
   padding: 13px; /*  */
   flex-direction: column; /* 子要素を縦方向に並べる */
@@ -710,9 +712,6 @@ header {
   padding: 19px 0 18px 0; 
 }
 
-.box__title.iregurar{
-  padding: 20px 0 18px 0; /* box内のimgが一番目だけ高さが1px小さいため */
-}
 
 .box__text__index{
   font-size: 16px; /* フォントサイズを16pxに設定 */
@@ -884,6 +883,7 @@ header {
 
 .commission__pattern{
   max-height: 277px;
+  margin: 0 auto;
   display: flex; /* フレックスボックスで配置 */
   gap: 12px; /* 要素間に12pxの間隔を設定 */
   justify-content: space-between; /* 子要素を左右に均等に配置 */
@@ -1019,6 +1019,11 @@ header {
 .faq__answer._emergent {
   display: block; /* 表示状態に変更 */
 }
+
+.faq__answer ol{
+  margin-left: 16px;
+}
+
 .question__btn span{
   background: #000; /* White color for the bars */
   border-radius: .125rem;
@@ -1053,7 +1058,7 @@ header {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1 / 1;
-  font-family: goldman;
+  font-family: goldman,sans-serif;
   font-size: 32px;
   padding: 0 9px;
   text-align: center;
@@ -1106,7 +1111,6 @@ header {
 .download__site {
   position: relative; /* 相対位置に配置 */
   width: 100%; /* 幅を100%に設定 */
-  max-width: 413px; /* 最大幅を413pxに設定 */
   margin: 0 auto; /* 要素を中央に配置 */
   border-radius: 8px; /* 角を8px丸める */
   margin-top: 36px; /*  */
@@ -1126,7 +1130,7 @@ header {
 .site__image {
   max-width: 500px; /* 最大幅を500pxに設定 */
   height: auto; /* 高さを自動調整に設定 */
-  float:right;
+  text-align: right;
 }
 
 /* 1枚目の画像の設定 */
@@ -1179,7 +1183,7 @@ footer{
 }
 
 .footer__text{
-  font-family: Goldman;
+  font-family: Goldman,sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -1192,7 +1196,7 @@ footer{
 
 @media screen and (max-width: 1080px) {
 
-  /* 1080からmain-toptitleが改行され始めるため。 */
+  /* 1080からh1が改行され始めるため。 */
 
   /* フォントサイズをビューポート幅に基づいて調整 */
   /* font-size: 9vw; ビューポート幅の9%に基づいたフォントサイズ */
@@ -1225,11 +1229,20 @@ footer{
     padding-right: 16px; /* 右に16pxのパディングを設定 */
   }
 
-  .headline{
+  h1 {
+    font-size: 6.4vw; /*  */
+    font-weight: bold; /* フォントを太字に設定 */
+    color: #fff; /* テキストの色を白に設定 */
+    padding: 18px 0 25px 0; /*  */
+    text-align: left;
+    line-height: 11.5vw;
+  }
+
+  h2{
     font-size: clamp(10px, 6.5vw, 32px); /* 最小Xpx、最大Cpx、理想Bvw */
   }
 
-  .subtitle{
+  h3{
     font-size: 5vw; /* ビューポート幅の5%に基づいたフォントサイズに設定 */
     font-size: clamp(10px, 5vw, 20px); /* 最小Xpx、最大Cpx、理想Bvw */
     line-height: 9vw; /* ビューポート幅の9%に基づいた行の高さに設定 */
@@ -1257,12 +1270,11 @@ footer{
 
   .header__symbol {
     height: 100%;
-    padding: 16px; /* 全体に16pxのパディングを設定 */
+    padding-left: 16px;
   }
 
   .header__symbol a{
     max-width: 139px; /* 最大幅を139pxに設定 */
-    max-height: 32px; /* 最大高さを32pxに設定 */
   }
 
   .header__symbol img{
@@ -1318,25 +1330,21 @@ footer{
 
   .main__area__top{
     text-align: center; /* テキストを中央に揃える */
-    padding: 0 39px 0 40px; /* 左右にパディングを設定 */
+    padding: 0 10.4vw 0 10.67vw;
   }
 
-  .main-sub {
+  .main-sub-1,
+  .main-sub-2{
     font-size: 3.5vw;
     letter-spacing: 0.25vw;
   }
 
+  .main-sub-2{
+    line-height: 6.5vw;
+    }
+
   .caresend-1 {
     letter-spacing:0.2vw ; /*  */
-  }
-
-  .main__area__top .main-toptitle {
-    font-size: 6.4vw; /*  */
-    font-weight: bold; /* フォントを太字に設定 */
-    color: #fff; /* テキストの色を白に設定 */
-    padding: 18px 0 25px 0; /*  */
-    text-align: left;
-    line-height: 11.5vw;
   }
 
   .main__area__top :nth-of-type(3) {
@@ -1382,15 +1390,15 @@ footer{
   }
 
   .main__area__note{
-    line-height: 5.2vw;
-  }
+    line-height: clamp(10px, 5.2vw, 30px);
+    }
 
   .main__area__note .note1, .note2{
-    font-size: 3.2vw ;
+    font-size: clamp(10px, 3.2vw, 18px); /*  */
   }
 
   .main__area__note .caresend-1{
-    font-size: 3.2vw ;
+    font-size: clamp(10px, 3.2vw, 18px); /*  */
   }
 
   .main__inner img {
@@ -1415,7 +1423,7 @@ footer{
     padding: 0;
   }
 
-  .main__entry h2 {
+  .form__title  {
     font-size: clamp(10px, 4.27vw, 19px); /* 最小10px、最大19px、理想4vw */
     justify-content: center;
     
@@ -1528,6 +1536,11 @@ footer{
     display: block; /* 表示状態に設定 */
   }
 
+  /* ーーーー */
+  /* feature */
+  /*CareSendの特徴 */
+  /* ーーーー */
+
   .feature__top {
     padding-bottom: 52px;
   }
@@ -1585,8 +1598,6 @@ footer{
   .splide__list{
     max-width: 100%;
   }
-
-
 
   .splide__slide{
     max-width: 311px;
@@ -1704,9 +1715,13 @@ footer{
     padding: 0 10px 0 10px;
     }
 
-  .faq__answer {
+    .faq__answer{
+      padding: 10px;
+    }
+
+  .faq__answer,
+  .faq__answer li{
     font-size: 14px;
-    padding: 10px;
   }
 
   .left-element{
@@ -1729,10 +1744,6 @@ footer{
   .question__text._emergent{
     font-size:14px; /*  */
     margin: 9px 0;
-  }
-
-  .faq__answer ol {
-    padding-left: 16px;
   }
 
   .question__btn span{
