@@ -321,7 +321,7 @@ form {
 }
 
 /* メニューのリスト項目のスタイル */
-.menu li {
+.menu a {
   display: flex;
   align-items: center;
   list-style: none;
@@ -333,10 +333,13 @@ form {
   border-bottom: 1px solid #fff; /* 各項目の下にボーダーを表示 */
 }
 
-.menu li :last-child {
+.menu a :last-child {
   font-size: 16px;
-  margin-top: -3px;
   border-bottom: none;
+}
+
+.menu p{
+  margin-top: -3px;
 }
 
 .menu li img {
