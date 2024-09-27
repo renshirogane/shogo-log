@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* ーーーー */
+/* 共通要素 */
+/* ーーーー */
+
+html{
+  background-color: #fff; /* HTML全体の背景色を白に設定 */
+}
+
+body {
+  font-size: 14px; /* ボディ全体のフォントサイズを14pxに設定 */
+}
+
+*{
+  font-family: Noto Sans Jp, sans-serif; /* 全体のフォントをNoto Sans JPに設定 */
+  box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
+  margin: 0; /* 全要素のマージンをリセット */
+  padding: 0; /* 全要素のパディングをリセット */
+}
