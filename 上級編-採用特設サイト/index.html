@@ -31,8 +31,8 @@
           </div>
           <div class="header__content">
             <div class="header__info">
-              <a href="#download">募集要項</a>
-              <a href="#download">ENTRY</a>
+              <a href="#download" class="header__info-details">募集要項</a>
+              <a href="#download" class="header__info-entry">ENTRY</a>
             </div><!-- /.header__info -->
             <!-- ハンバーガーメニュー -->
             <div class="menu-container">
@@ -59,17 +59,19 @@
       <div class="hero">
         <div class="hero__inner">
           <h1 class="hero-titile">BECOME A <br>CHALLENGER.</h1>
-          <p class="hero-text">君の挑戦が、意思が、未来を変える</p><!-- /.about-us__content_text -->
+          <div class="hero-banner">
+            <p class="hero-text">君の挑戦が、意思が、未来を変える</p>
+          </div>
           <div class="hero__box">
             <a href="">
               <div class="hero__box-topic">
                 <p>NEWS</p>
               </div><!-- /.hero__box-topic -->
-              <div class="hero__box-text">
+              <d  iv class="hero__box-text">
                 <p class="hero__box-title">2024年度働きやすさランキング一位を取得しました！！</p>
-                <div class="hero__box-link">
-                  <p class="link-title">VIEW MORE/p>
-                  <p class="link-button">></p>
+                <div class="hero__box__linkarea">
+                  <p class="linkarea-title">VIEW MORE</p>
+                  <p class="linkarea-button">></p>
                 </div>
               </div><!-- /.hero__box-text -->
             </a>
@@ -112,7 +114,7 @@
     </section>
 
     <!-- 社員について開始 -->
-    <section class="staff">
+    <section class="staff splide">
       <div class="staff__inner range">
         <div class="staff__headline headline_left">
           <h2 class="staff__headline-title headline-title">人を知る</h2>
@@ -122,18 +124,6 @@
         <div class="splide__track">
           <!-- 社員リスト -->
           <div class="splide__list">
-            <!-- 社員1: xxxさん -->
-            <div class="splide__slide">
-              <div class="slide-image">
-                <img src="./img/社員_西村さん.png" alt="">
-              </div><!-- /.slide-image -->
-              <div class="slide__content">
-                <p class="slide-title">「あなたが担当で良かった」</p><!-- /.slide-title -->
-                <p class="slide-title">この一言が、最高のやりがい</p><!-- /.slide-title -->
-                <p class="slide-text">コンサルタント&ensp;2011年入社</p><!-- /.slide-text -->
-                <p class="slide-name">西村 優</p><!-- /.slide-name -->
-              </div><!-- /.slide__content -->
-            </div><!-- /.splide__slide -->
             <!-- 社員1: xxxさん -->
             <div class="splide__slide">
               <div class="slide-image">
@@ -242,11 +232,11 @@
             <!-- 研修制度とキャリアパス -->
             <div class="benefits-career__career__box">
               <div class="career-image">
-                <img src="./img/制度・環境を知る_研修制度とキャリアパス.png" alt="研修制度とキャリアパス">
-                <div class="career__button">
+                <div class="career__button vertical">
                   <p class="career__button-text">Traning And Career</p>
-                  <a class="career__button-next controls" href=""><p>→</p></a>
+                  <a class="career__button-next" href=""><img src="./img/制度・環境を知る_右ボタン.png" alt="" class=" controls"></a>
                 </div><!-- /.career__button -->
+                <img src="./img/制度・環境を知る_研修制度とキャリアパス.png" alt="研修制度とキャリアパス" class="career-image-top">
               </div><!-- /.career_image -->
               <div class="career__writing">
                 <h3 class="career-title">研修制度とキャリアパス</h3>
@@ -254,19 +244,21 @@
               </div><!-- /.career__writing -->
             </div><!-- /.benefits-career__career_box -->
             <!-- 福利厚生 -->
-            <div class="benefits-career__benefits__box">
-              <div class="benefits-image">
-                <img src="./img/制度・環境を知る_福利厚生.png" alt="研修制度とキャリアパス">
-                <div class="benefits__button">
-                  <p class="benefits__button-text">Traning And benefits</p>
-                  <a class="benefits__button-next controls" href=""><p>→</p></a>
-                </div><!-- /.benefits__button -->
-              </div><!-- /.benefits_image -->
-              <div class="benefits__writing">
-                <h3 class="benefits-title">研修制度とキャリアパス</h3>
-                <p class="benefits-text">個々の目標に合わせたキャリアパスを支える、豊富な研修メニューで、あなた自身の成長を強力にサポートします。</p>
-              </div><!-- /.benefits__writing -->
-            </div><!-- /.benefits-career__benefits__box -->
+            <div class="benefits-career__career__box">
+              <div class="career-image">
+                <div class="career__button vertical">
+                  <p class="career__button-text">Traning And Career</p>
+                  <a class="career__button-next" href=""><img src="./img/制度・環境を知る_右ボタン.png" alt="" class=" controls"></a>
+                </div><!-- /.career__button -->
+                <img src="./img/制度・環境を知る_研修制度とキャリアパス.png" alt="研修制度とキャリアパス" class="career-image-top">
+              </div><!-- /.career_image -->
+              <div class="career__writing">
+                <h3 class="career-title">研修制度とキャリアパス</h3>
+                <p class="career-text">個々の目標に合わせたキャリアパスを支える、豊富な研修メニューで、あなた自身の成長を強力にサポートします。</p>
+              </div><!-- /.career__writing -->
+            </div><!-- /.benefits-career__career_box -->
+              </div><!-- /.career__writing -->
+            </div><!-- /.benefits-career__career_box -->
           </div><!-- /.benefits-career__content_area -->
         </div><!-- /.benefits-career__content -->
       </div><!-- /.benefits-career__inner range -->
@@ -279,10 +271,10 @@
           <div class="blog__headline__area">
             <div class="blog__headline__box">
               <h2 class="blog__headline-title headline-title">採用ブログ</h2>
-              <div class="blog__headline__button">
-                <a class="blog__headline__button-next controls" href=""><p>→</p></a>
+              <a class="blog__headline__button" href="">
+                <img src="./img/採用ブログ_右ボタン.png" class="blog__headline__button-next controls">
                 <p class="blog__headline__button-text">VIEW MORE</p>
-              </div><!-- /.blog__headline__button -->
+              </a><!-- /.blog__headline__button -->
             </div><!-- /.blog__headline__box -->
             <p class="blog__headline-backtitle headline-backtitle_left">BLOG</p>
             <p class="blog__headline-text headline-text">採用情報やイベント情報、社員の紹介など、<br>日々の現場の様子をご紹介します。</p>
@@ -295,9 +287,9 @@
               <div class="blog__box-image">
                 <img src="./img/新入社員向けに、入社前研修を行いました。.png" alt="新入社員向けに、入社前研修を行いました。">
               </div><!-- /.blog__box_image -->
-              <div class="blog__box__writimage">
+              <div class="blog__box__writing">
                 <div class="blog__box-topic">
-                  <img src="./img/categorry 1.png" alt="">
+                  <img src="./img/採用ブログ_カテゴリー.png" alt="">
                   <p>社内研修</p>
                 </div><!-- /.blog__box_topic -->
                 <div class="blog__box-title">
@@ -306,16 +298,16 @@
                   </a>
                 </div><!-- /.blog__box-title -->
                 <p class="blog__box-date">2025.03.25</p><!-- /.blog__box_date -->
-              </div><!-- /.blog__box__writimage -->
+              </div><!-- /.blog__box__writing -->
             </div><!-- /.blog_box -->
             <!-- 社内研修1 -->
             <div class="blog__box">
               <div class="blog__box-image">
                 <img src="./img/新入社員向けに、入社前研修を行いました。.png" alt="新入社員向けに、入社前研修を行いました。">
               </div><!-- /.blog__box_image -->
-              <div class="blog__box__writimage">
+              <div class="blog__box__writing">
                 <div class="blog__box-topic">
-                  <img src="./img/categorry 1.png" alt="">
+                  <img src="./img/採用ブログ_カテゴリー.png" alt="">
                   <p>社内研修</p>
                 </div><!-- /.blog__box_topic -->
                 <div class="blog__box-title">
@@ -324,16 +316,16 @@
                   </a>
                 </div><!-- /.blog__box-title -->
                 <p class="blog__box-date">2025.03.25</p><!-- /.blog__box_date -->
-              </div><!-- /.blog__box__writimage -->
-            </div><!-- /.blog_box --> 
+              </div><!-- /.blog__box__writing -->
+            </div><!-- /.blog_box -->
             <!-- 社内研修1 -->
             <div class="blog__box">
               <div class="blog__box-image">
                 <img src="./img/新入社員向けに、入社前研修を行いました。.png" alt="新入社員向けに、入社前研修を行いました。">
               </div><!-- /.blog__box_image -->
-              <div class="blog__box__writimage">
+              <div class="blog__box__writing">
                 <div class="blog__box-topic">
-                  <img src="./img/categorry 1.png" alt="">
+                  <img src="./img/採用ブログ_カテゴリー.png" alt="">
                   <p>社内研修</p>
                 </div><!-- /.blog__box_topic -->
                 <div class="blog__box-title">
@@ -342,16 +334,16 @@
                   </a>
                 </div><!-- /.blog__box-title -->
                 <p class="blog__box-date">2025.03.25</p><!-- /.blog__box_date -->
-              </div><!-- /.blog__box__writimage -->
-            </div><!-- /.blog_box --> 
+              </div><!-- /.blog__box__writing -->
+            </div><!-- /.blog_box -->
             <!-- 社内研修1 -->
             <div class="blog__box">
               <div class="blog__box-image">
                 <img src="./img/新入社員向けに、入社前研修を行いました。.png" alt="新入社員向けに、入社前研修を行いました。">
               </div><!-- /.blog__box_image -->
-              <div class="blog__box__writimage">
+              <div class="blog__box__writing">
                 <div class="blog__box-topic">
-                  <img src="./img/categorry 1.png" alt="">
+                  <img src="./img/採用ブログ_カテゴリー.png" alt="">
                   <p>社内研修</p>
                 </div><!-- /.blog__box_topic -->
                 <div class="blog__box-title">
@@ -360,8 +352,8 @@
                   </a>
                 </div><!-- /.blog__box-title -->
                 <p class="blog__box-date">2025.03.25</p><!-- /.blog__box_date -->
-              </div><!-- /.blog__box__writimage -->
-            </div><!-- /.blog_box --> 
+              </div><!-- /.blog__box__writing -->
+            </div><!-- /.blog_box -->
           </div><!-- /.blog__content__area -->
         </div><!-- /.blog__content -->
       </div><!-- /.blog__inner range -->
