@@ -239,9 +239,19 @@ a {
 
 .background-section {
   background-image: url("./img/ファーストビュー1枚目.png");
-  background-size: cover; /* 画像をセクション全体にフィットさせる */
-  background-position: center; /* 画像を中央に配置 */
-  background-repeat: no-repeat; /* 画像を繰り返さない */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeBackground 10s infinite alternate ease-in-out;
+}
+
+@keyframes fadeBackground {
+  0% {
+    background-image: url("./img/ファーストビュー1枚目.png");
+  }
+  100% {
+    background-image: url("./img/ファーストビュー2枚目.png");
+  }
 }
 
 /* ーーーー */
@@ -505,20 +515,24 @@ header{
 .slide__content{
   margin-top: 28px;
   font-weight: bold;
+  text-align: left;
 }
 
 .slide-title{
   display: block;
   font-size: 20px;
-  text-align: left;
-  background-color: #AFA86F;
-  margin-top: -26px;
+  margin-top: 20px;
   position: absolute;
-  left: 50%;
-  transform: translate(-58%, -160%);
+  left: 0;
+  transform: translate(0, -160%);
   white-space: nowrap;
 }
-.slide-title:nth-of-type(2) {
+
+.slide-title p{
+  background-color: #AFA86F;
+}
+
+.slide-title p:nth-of-type(2) {
   margin-top: 6px;
 }
 
@@ -542,6 +556,34 @@ header{
   margin-top: 80px;
 }
 
+.splide__content_box{
+  position: relative;
+}
+
+.splide__button {
+  position: absolute;
+  top: 94% !important;
+  left: 95%;
+}
+
+.splide__arrow--prev{
+  left: -6em !important;
+}
+
+.splide__arrow--next{
+  right: -2em !important;
+}
+
+.splide__arrow img{
+  max-width: 58px;
+  aspect-ratio: 1/1;
+}
+
+.splide__pagination{
+  display: none !important;
+}
+
+
 /* ーーーー */
 /* benefits-career */
 /* 福利厚生について */
@@ -559,6 +601,7 @@ header{
 .benefits-career__content__area{
   display: flex;
   gap: 94px;
+  align-items: center;
 }
 
 .benefits-career__career__box,
@@ -576,6 +619,7 @@ header{
 .career-text,
 .benefits-text{
   margin-top: 41px;
+  text-align: left;
 }
 
 .career-image-top{
@@ -584,7 +628,15 @@ header{
   position: relative;
 }
 
-.career-image::before {
+.benefits-image-top{
+  max-width: 344px;
+  aspect-ratio: 344/230;
+  position: relative;
+  margin: 23.5px 0;
+}
+
+.career-image::before,
+.benefits-image::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -597,10 +649,6 @@ header{
   z-index: -1;
 }
 
-.benefits-career__benefits__box img{
-  max-width: 344px;
-  aspect-ratio: 344/230;
-}
 .vertical{
   display: flex;
   column-gap: 35px;
@@ -668,6 +716,9 @@ header{
 }
 
 .blog__box__writing{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 1fr; /* 行の比率を1:4:1に設定 */
   padding:20px 23px;
 }
 
@@ -679,8 +730,8 @@ header{
 
 .blog__box-topic{
   display: flex;
-  align-items: center;
   gap: 4px;
+  align-items: center;
 }
 
 .blog__box-topic img{
@@ -693,17 +744,19 @@ header{
 }
 
 .blog__box-title{
-  margin-top: 15px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.5;
   text-align: left;
+  align-items: end;
+  margin-top: 12px;
   text-decoration: underline; /* アンダーライン復活 */
 }
 
 .blog__box-date{
+  display: flex;
   font-size: 12px;
-  margin-top: 37px;
+  align-items: end;
 }
 
 /* ーーーー */
