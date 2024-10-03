@@ -424,6 +424,9 @@ header._emergent {
 
 
 .hero__box-topic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 60px;
   background-color: #222222;
   font-size: 24px;
@@ -536,9 +539,9 @@ header._emergent {
   font-size: 36px;
   font-weight: bold;
   line-height: 1.8;
-  height: 553px; /* 高さを固定 */
   overflow: hidden; /* はみ出た部分を非表示に */
   white-space: nowrap;
+  aspect-ratio: 1024/553;
 }
 
 .about-text2{
@@ -980,4 +983,109 @@ header._emergent {
 .footer__icon-app img{
   max-width: 24px;
   aspect-ratio: 24/24;
+}
+
+@media screen and (max-width: 1040px) {
+
+  /* 1040からrecruitmentセクションの余白が無くなってくるから */
+
+.range {
+  padding-top: 95px;
+}
+
+h1{
+  font-size: clamp(30px, 12.8vw, 96px);   /* =デザインカンプ375px：48px */
+}
+
+.logo {
+  max-width: 40vw;
+}
+
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+
+header {
+  padding: 8px 12px;
+}
+
+.header__info{
+  display: none;
+}
+/* ーーーー */
+/* main */
+/* ファーストビュー */
+/* ーーーー */
+
+.hero__inner {
+  margin: 358px 12px 0;
+  padding-bottom: 10px;
+}
+
+.hero-banner{
+  margin-left: -12px;
+  max-width: 60.8VW;
+  font-size: clamp(8px, 3.2vw, 24px);  /* =デザインカンプ375px：12px */
+}
+
+.hero__box a{
+  aspect-ratio: 351/48;
+}
+
+.hero__box-topic {
+  padding: 10px;
+}
+
+.hero__box-text {
+  padding: 10px;
+  font-size: clamp(8px, 3.2vw, 24px);  /* =デザインカンプ375px：12px */
+}
+
+.hero__box-title {
+  padding: 0;
+}
+
+.hero__box__linkarea {
+  display: none;
+}
+
+/* ーーーー */
+/* about-image */
+/* TETOTEについて */
+/* ーーーー */
+
+.about-image__image {
+  gap: 16px;
+}
+
+.about-image__image img {
+  max-width: 270px;
+}
+
+.about-image__text {
+  margin-top: -32px;
+}
+
+
+.about-image__text p{
+  font-size: clamp(16px, 6.4vw, 40px);  /* =デザインカンプ375px：24px */
+}
+
+.about-content__inner {
+  margin: 100px 17px;
+}
+
+.about-content__text{
+  background-position: center top; /* 画像を中央上部に配置 */
+  background-size: 100% auto; /* 横幅を100%に、高さを自動調整 */
+  font-size: clamp(10px, 4.8vw, 36px);  /* =デザインカンプ375px：18px */
+  line-height: 2.5;
+  aspect-ratio: 342/393;
+}
+
+.about-text2 {
+  margin-top: 39px;
+}
+
 }
