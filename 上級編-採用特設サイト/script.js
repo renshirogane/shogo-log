@@ -9,9 +9,8 @@ const splide = new Splide(".splide", {
   speed: 1000, // スライドの移動速度
   perPage: 3, // デフォルトの表示枚数
   breakpoints: {
-    1080: {
-      perPage: 1, // 1015px未満では1枚だけ表示
-      focus: 'center', // スライドを中央に配置
+    1040: {
+      perPage: 1, // 1040px未満では1枚だけ表示
     },
   },
 }).mount();
