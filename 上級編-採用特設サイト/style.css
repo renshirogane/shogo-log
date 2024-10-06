@@ -201,7 +201,9 @@ a {
 
 /* メニューのスタイル */
 .hamburger__inner {
-  padding-left: 410px;
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 2列 */
+  padding: 90px 0 208px 410px;
   position: absolute;
   top: 0;
   left: 0; /* 左端に揃える */
@@ -213,16 +215,23 @@ a {
   z-index: 1; /* ハンバーガーアイコンの下に表示されるようにする */
 }
 
+@media screen and (max-width: 1319px) {
+
+  /* hamburger__inner右の余白が無くなってくるから */
+  .hamburger__inner {
+    padding: 90px 0 208px 0;
+    grid-template-columns: 1fr 2fr;
+    place-items: center; /* 要素をグリッドの中央に配置 */
+  }
+
+}
+
 
 /* メニュー表示時のスタイル */
 .hamburger__inner._emergent {
-  display: grid;
-  grid-template-columns: 1fr 3fr; /* 2列 */
   align-items: center;
   transform: translateY(0);
   margin-top: 122.5px;/* ヘッダーの高さ*/
-  padding-top: 90px;
-  padding-bottom: 208px;
 }
 
 .hamburger__inner._emergent > *:nth-child(2) {
@@ -236,6 +245,10 @@ a {
 
 .hamburger__inner._emergent > *:nth-child(2) {
   padding-left: 63px; /* 右列の左側に63pxのスペース */
+}
+
+.hamburger__menu__area{
+  max-width: 589px;
 }
 
 
@@ -291,6 +304,7 @@ a {
 .hamburger__link__area{
   display: flex;
   column-gap: 30px;
+  width: 100%;
 }
 
 .hamburger__link__area a{
@@ -1051,6 +1065,68 @@ h3{
   max-width: 42px;
 }
 
+/* ーーーー */
+/* ハンバーガーメニュー */
+/* ーーーー */
+
+.hamburger__inner._emergent {
+  margin-top: 68px;
+}
+
+.hamburger__inner {
+  padding-left: 0;
+}
+
+.hamburger__inner._emergent > *:nth-child(2) {
+  padding: 0 12px;
+}
+
+.hamburger-symbol{
+  display: none;
+}
+
+.menu{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  max-width: 1016px;
+  width: 93vw;
+}
+
+.item_e{
+  font-size: clamp(10px, 4.8vw, 32px);  /* =デザインカンプ375px：18px */
+}
+
+.item_j{
+  font-size: clamp(8px, 3.2vw, 16px);  /* =デザインカンプ375px：12px */
+}
+
+.hamburger__link__area{
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px ;
+  margin-top: 53px;
+}
+
+.hamburger__link__area a{
+  margin: 0;
+}
+
+.hamburger__inner._emergent > *:nth-child(2) {
+  border-left: none;
+}
+
+.hamburger-item:nth-child(-n+2) {
+  border-top: none;
+}
+
+.hamburger-item:nth-child(1) {
+  border-top: 1px solid black;
+}
+
+.hamburger-item:nth-child(5),
+ .hamburger-item:nth-child(6) {
+  border-bottom: 1px solid black;;
+}
 
 /* ーーーー */
 /* header */
