@@ -86,11 +86,18 @@ a {
   margin: 0 auto;
   align-items: center;
   border: 1px solid black;
+  display: flex;
   max-width: 355px;
   aspect-ratio: 355/80;
-  display: flex;
   justify-content: center;
   position: relative;
+}
+
+.linkbox__area{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .link-title {
@@ -247,10 +254,9 @@ a {
   padding-left: 63px; /* 右列の左側に63pxのスペース */
 }
 
-.hamburger__menu__area{
+.hamburger__menu-area{
   max-width: 589px;
 }
-
 
 .menu {
   display: grid;
@@ -301,13 +307,13 @@ a {
   font-size: 32px;
 }
 
-.hamburger__link__area{
+.hamburger__infobox{
   display: flex;
   column-gap: 30px;
   width: 100%;
 }
 
-.hamburger__link__area a{
+.hamburger__infobox-title {
   display: flex;
   margin-top: 50px;
   width: 248px;
@@ -381,21 +387,21 @@ header._emergent {
   gap: 22px;
 }
 
-.header__info a{
+.infobox__title{
   display: flex;
+  font-size: 14px;
   width: 126px;
   aspect-ratio: 126/42;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
   color: #FFFFFF;
 }
 
-.header__info-details{
+.info-details{
   background: #222222;
 }
 
-.header__info-entry{
+.info-entry{
   background: #AFA86F;
 }
 
@@ -408,6 +414,13 @@ header._emergent {
   margin-top: 168px;
   margin-left: 66px;
   padding-bottom: 38px;
+}
+
+@media screen and (max-width: 1330px) {
+    /* hero__inner右の余白が無くなってくるから */
+  .hero__inner{
+    margin-right: 66px;
+  }
 }
 
 .hero-titile{
@@ -435,15 +448,13 @@ header._emergent {
   max-width: 1263px;
 }
 
-.hero__box a{
+.hero__box__area{
   display: flex;
   width: 100%;
   background-color: #FFFFFF;
   aspect-ratio: 1263/62;
   border-radius: 62px;
-
 }
-
 
 .hero__box-topic{
   display: flex;
@@ -485,7 +496,7 @@ header._emergent {
 /* ーーーー */
 
 .about-image__inner{
-  margin-top: 100px;
+  padding-top: 100px;
   overflow: hidden; /* はみ出た部分を非表示 */
 }
 
@@ -782,6 +793,10 @@ header._emergent {
   gap: 13px;
 }
 
+.blog__headline__button-sp{
+  display: none;
+}
+
 .blog__headline__button-text{
   text-decoration: underline; /* アンダーライン復活 */
   font-weight: bold;
@@ -884,7 +899,7 @@ header._emergent {
   grid-column: span 2; /* 2つのカラムにまたがる */
 }
 
-.recruitment__link-box a {
+.gridbox__area {
   margin: 0 auto;
   align-items: center;
   border: none;
@@ -892,22 +907,11 @@ header._emergent {
   display: flex;
   justify-content: center;
   position: relative;
-}
-
-.recruitment__link-title {
-  font-family: Viga;
-  font-size: 20px;
-  font-weight: normal;
-  margin: 0 auto;
   padding: 50px;
-  font-weight: bold;
 }
 
-.recruitment__link-button {
-  font-size: 20px;
+.gridbox__area p{
   font-weight: bold;
-  position: absolute;
-  right: 20px;
 }
 
 /* ーーーー */
@@ -945,7 +949,7 @@ header._emergent {
   white-space: nowrap;
 }
 
-.footer__content__entry a{
+.entrybox__area{
   margin-top: 31px;
   display: flex;
   justify-content: center;
@@ -958,7 +962,7 @@ header._emergent {
   aspect-ratio: 556/70;
 }
 
-.footer__content__entry a p{
+.entrybox__area p{
   font-size: 16px;
 }
 
@@ -1028,6 +1032,10 @@ h3{
   font-size: clamp(16px, 6.4vw, 32px);  /* =デザインカンプ375px：24px */
 }
 
+.link-title,.link-button{
+  font-size: clamp(14px, 4.27vw, 20px);   /* =デザインカンプ375px：16px */
+}
+
 .logo {
   max-width: 40vw;
 }
@@ -1069,6 +1077,10 @@ h3{
 /* ハンバーガーメニュー */
 /* ーーーー */
 
+.hamburger__inner{
+    padding: 39px 0 192px 0;
+}
+
 .hamburger__inner._emergent {
   margin-top: 68px;
 }
@@ -1100,14 +1112,14 @@ h3{
   font-size: clamp(8px, 3.2vw, 16px);  /* =デザインカンプ375px：12px */
 }
 
-.hamburger__link__area{
+.hamburger__infobox{
   display: flex;
   flex-direction: column;
   row-gap: 13px ;
   margin-top: 53px;
 }
 
-.hamburger__link__area a{
+.hamburger__infobox-title{
   margin: 0;
 }
 
@@ -1156,8 +1168,8 @@ header {
   font-size: clamp(8px, 3.2vw, 24px);  /* =デザインカンプ375px：12px */
 }
 
-.hero__box a{
-  aspect-ratio: 351/48;
+.hero__box__area{
+  aspect-ratio: unset;
 }
 
 .hero__box-topic {
@@ -1290,6 +1302,23 @@ header {
   font-size: clamp(10px, 3.73vw, 18px);  /* =デザインカンプ375px：14px */
 }
 
+
+.blog__headline__box{
+  margin-top: 52px;
+}
+
+.blog__headline__button-normal{
+  display: none;
+}
+
+.blog__headline__button-sp{
+  display: flex;
+}
+
+.blog__headline__button-next{
+  max-width: 58px;
+}
+
 /* ーーーー */
 /* recruitment */
 /* 採用情報について */
@@ -1305,6 +1334,10 @@ header {
 }
 .recruitment__content__area :nth-child(3) {
   grid-column: auto;/* グリットの連結をキャンセル */
+}
+
+.gridbox__area p{
+  font-size: clamp(10px, 5.33vw, 24px);  /* =デザインカンプ375px：20px */
 }
 
 
@@ -1340,7 +1373,7 @@ header {
   margin: 0 auto;
 }
 
-.footer__content__entry a {
+.entrybox__area {
   padding: 0;
   max-width: 200px;
   aspect-ratio: 200 / 54;

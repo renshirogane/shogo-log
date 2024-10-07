@@ -30,9 +30,13 @@
             <a href="#"><img src="./img/シンボル_白.png" alt="ロゴ" class="logo hamburger_action_clicked"></a>
           </div>
           <div class="header__content">
-            <div class="header__info">
-              <a href="#download" class="header__info-details">募集要項</a>
-              <a href="#download" class="header__info-entry">ENTRY</a>
+            <div class="header__info infobox">
+              <a href="#download" class=" infobox__area">
+                <p class="infobox__title info-details">募集要項</p>
+              </a>
+              <a href="#download" class="infobox__area">
+                <p class="infobox__title info-entry">ENTRY</p>
+              </a>
             </div><!-- /.header__info -->
             <!-- ハンバーガーメニュー -->
             <div class="menu-container">
@@ -47,48 +51,52 @@
                   <!-- ロゴを表示 -->
                   <a href="#"><img src="./img/シンボル_黒.png" alt="ロゴ" class="logo"></a>
                 </div>
-                <div class="hamburger__menu__area">
+                <div class="hamburger__menu-area">
                   <ul class="menu">
                     <li class="hamburger-item">
-                      <a href="#about">
+                      <a href="#about-us">
                         <p class="item_e">ABOUT US</p>
                         <p class="item_j">TETOTEについて</p>
                       </a>
                     </li>
                     <li class="hamburger-item">
-                      <a href="#about">
+                      <a href="#staff">
                         <p class="item_e">STAFF</p>
                         <p class="item_j">社員について</p>
                       </a>
                     </li>
                     <li class="hamburger-item">
-                      <a href="#about">
+                      <a href="#blog">
                         <p class="item_e">BLOG</p>
                         <p class="item_j">採用ブログ</p>
                       </a>
                     </li>
                     <li class="hamburger-item">
-                      <a href="#about">
+                      <a href="#benefits">
                         <p class="item_e">BENEFITS</p>
                         <p class="item_j">福利厚生について</p>
                       </a>
                     </li>
                     <li class="hamburger-item">
-                      <a href="#about">
+                      <a href=""><!-- サイト外のリンク先 -->
                         <p class="item_e">CARRER</p>
                         <p class="item_j">研修制度とキャリアパス</p>
                       </a>
                     </li>
                     <li class="hamburger-item">
-                      <a href="#about">
+                      <a href=""><!-- サイト外のリンク先 -->
                         <p class="item_e">FAQ</p>
                         <p class="item_j">よくある質問</p>
                       </a>
                     </li>
                   </ul>
-                  <div class="hamburger__link__area">
-                    <a href="#download" class="hamburger__link-details">募集要項</a>
-                    <a href="#download" class="hamburger__link-entry">ENTRY</a>
+                  <div class="hamburger__infobox">
+                    <a href="#download" class="hamburger__infobox__area">
+                      <p class="hamburger__infobox-title hamburger__link-details">募集要項</p>
+                    </a>
+                    <a href="#download" class="hamburger__infobox__area">
+                      <p class="hamburger__infobox-title hamburger__link-entry">ENTRY</p>
+                    </a>
                   </div><!-- /.hamburger__link__area -->
                 </div><!-- /.hamburger__menu__area -->  
               </div><!-- /.hamburger__inner -->
@@ -104,11 +112,11 @@
             <p class="hero-text">君の挑戦が、意思が、未来を変える</p>
           </div>
           <div class="hero__box">
-            <a href="">
+            <a href="" class="hero__box__area">
               <div class="hero__box-topic">
                 <p>NEWS</p>
               </div><!-- /.hero__box-topic -->
-              <d  iv class="hero__box-text">
+              <div class="hero__box-text">
                 <p class="hero__box-title">2024年度働きやすさランキング一位を取得しました！！</p>
                 <div class="hero__box__linkarea">
                   <p class="linkarea-title">VIEW MORE</p>
@@ -122,7 +130,7 @@
     </section><!-- ファーストビュー終了 -->
 
     <!-- TETOTEについて開始 -->
-    <section class="about-image">
+    <section class="about-image" id="about-us">
       <div class="about-image__inner">
         <div class="about-image__image">
           <img src="./img/TETOTEについて_イメージ1.png" alt="TETOTEについてのスライド1枚目">
@@ -145,17 +153,17 @@
           <p class="about-text1">「人手不足」<br>今の日本が抱えるこの社会課題に挑み、<br>企業と個人の可能性を最大限に引き出す。<br>それが私達の役目。</p><!-- /.about-text1 -->
           <p class="about-text2">単につなぐだけじゃない。<br>「手と手」を取り合っていけるような、<br>持続可能な社会を、一緒に作りませんか？</p><!-- /.about-content_text2 -->
         </div><!-- /.about-content__text -->
-        <div class="about-content__box">
-          <a href="" class="linkbox">
+        <div class="about-content__linkbox linkbox">
+          <a href="" class="linkbox__area">
             <p class="link-title">VIEW MORE</p>
             <p class="link-button">＞</p>
           </a>
-        </div><!-- /.about-content_box -->
+        </div><!-- /.about-content_linkbox linkbox -->
       </div><!-- /.about-content__inner -->
     </section>
 
     <!-- 社員について開始 -->
-    <section class="staff splide">
+    <section class="staff splide" id="staff">
       <div class="staff__inner range">
         <div class="staff__headline headline_left">
           <h2 class="staff__headline-title headline-title">人を知る</h2>
@@ -249,15 +257,14 @@
                 <p class="slide-name">橘 光</p><!-- /.slide-name -->
               </div><!-- /.slide__content -->
             </div><!-- /.splide__slide -->
-v><!-- /.splide__slide -->
           </div><!-- /.splide__list -->
           <div class="splide__content">
-            <div class="splide__content_box">
-              <a href="" class="linkbox">
+            <div class="splide__content_linkbox linkbox">
+              <a href="" class="linkbox__area">
                 <p class="link-title">VIEW MORE</p>
                 <p class="link-button">＞</p>
               </a>
-            </div><!-- /.splidecontent_box -->
+            </div><!-- /.splidecontent_linkbox linkbox -->
             <div class="splide__button">
               <!-- 左右の操作ボタン -->
               <div class="splide__arrows controls">
@@ -274,7 +281,7 @@ v><!-- /.splide__slide -->
     </section><!-- 社員について終了 -->
 
     <!-- 福利厚生について開始 -->
-    <section class="benefits-career">
+    <section class="benefits-career" id="benefits">
       <div class="benefits-career__inner range">
         <div class="benefits-career__headline headline_center">
           <h2 class="benefits-career__headline-title headline-title">制度・環境を知る</h2>
@@ -319,13 +326,13 @@ v><!-- /.splide__slide -->
     </section><!-- 福利厚生について終了 -->
 
     <!--  採用ブログについて開始 -->
-    <section class="blog">
+    <section class="blog" id="blog">
       <div class="blog__inner range">
         <div class="blog__headline headline_left">
           <div class="blog__headline__area">
             <div class="blog__headline__box">
               <h2 class="blog__headline-title headline-title">採用ブログ</h2>
-              <a class="blog__headline__button" href="">
+              <a class="blog__headline__button blog__headline__button-normal" href="">
                 <img src="./img/採用ブログ_右ボタン.png" class="blog__headline__button-next controls">
                 <p class="blog__headline__button-text">VIEW MORE</p>
               </a><!-- /.blog__headline__button -->
@@ -413,6 +420,12 @@ v><!-- /.splide__slide -->
               </div><!-- /.blog__box__writing -->
             </div><!-- /.blog_box -->
           </div><!-- /.blog__content__area -->
+          <div class="blog__headline__box">
+            <a class="blog__headline__button blog__headline__button-sp" href="">
+              <img src="./img/採用ブログ_右ボタン.png" class="blog__headline__button-next controls">
+              <p class="blog__headline__button-text">VIEW MORE</p>
+            </a><!-- /.blog__headline__button -->
+          </div><!-- /.blog__headline__box -->
         </div><!-- /.blog__content -->
       </div><!-- /.blog__inner range -->
     </section><!--  採用ブログについて終了 -->
@@ -427,22 +440,22 @@ v><!-- /.splide__slide -->
       </div><!-- /.recruitment__headline headline_center -->
         <div class="recruitment__content">
           <div class="recruitment__content__area">
-            <div class="recruitment__content__details recruitment__link-box">
-              <a href="">
-                <p class="recruitment__link-title">募集要項</p>
-                <p class="recruitment__link-button">＞</p>
+            <div class="recruitment__content__details gridbox">
+              <a href="" class="gridbox__area">
+                <p class="link-title">募集要項</p>
+                <p class="link-button">＞</p>
               </a>  
             </div><!-- /.recruitment__content_details -->
-            <div class="recruitment__content__faq recruitment__link-box">
-              <a href="">
-                <p class="recruitment__link-title">よくある質問</p>
-                <p class="recruitment__link-button">＞</p>
+            <div class="recruitment__content__faq gridbox">
+              <a href="" class="gridbox__area">
+                <p class="link-title">よくある質問</p>
+                <p class="link-button">＞</p>
               </a>
             </div><!-- /.recruitment__content_faq -->
-            <div class="recruitment__content__overview recruitment__link-box"><!-- about-usページの下の方にある項目 -->
-              <a href="">
-                <p class="recruitment__link-title">会社概要</p>
-                <p class="recruitment__link-button">＞</p>
+            <div class="recruitment__content__overview gridbox"><!-- about-usページの下の方にある項目 -->
+              <a href="" class="gridbox__area">
+                <p class="link-title">会社概要</p>
+                <p class="link-button">＞</p>
               </a>
             </div><!-- /.recruitment__content_overview -->
           </div><!-- /.recruitment__content_area -->
@@ -458,8 +471,8 @@ v><!-- /.splide__slide -->
       <div class="footer__content">
         <div class="footer__content__inner">
           <p class="footer__content-text">わたしたちと一緒に働く仲間を募集中です。<br>少数精鋭のチームで、<br>あなたも会社も一緒に成長していきましょう。</p>
-          <div class="footer__content__entry">
-            <a href="">
+          <div class="footer__content__entry entrybox">
+            <a href="" class="entrybox__area">
               <p class="link-title">ENTRY</p>
               <p class="link-button">＞</p>
             </a>
