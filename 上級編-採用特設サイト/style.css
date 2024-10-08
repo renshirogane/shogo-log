@@ -27,6 +27,7 @@ body {
 
 .headline_left{
   text-align: left;
+  margin-left: 34px;
 }
 
 .headline_center{
@@ -710,6 +711,7 @@ header._emergent {
 
 .benefits-career__content__area{
   display: flex;
+  margin-left: 35px;
   gap: 94px;
   align-items: center;
 }
@@ -785,6 +787,10 @@ header._emergent {
 
 .blog{
   background-color:#FAF7F1;
+}
+
+.blog__headline-backtitle{
+  transform: translate(-20%, -70%);/* BLOGの位置調節のため */
 }
 
 .blog__headline__button{
@@ -1037,11 +1043,15 @@ h3{
 }
 
 .logo {
-  max-width: 40vw;
+  max-width:clamp(151px, 40vw, 230px);  /* =デザインカンプ375px：151px */
 }
 
 .headline_center{
   text-align: left;
+}
+
+.headline_left{
+  margin-left: 0;
 }
 
 .headline-backtitle_left,
@@ -1220,7 +1230,11 @@ header {
   background-size: 100% auto; /* 横幅を100%に、高さを自動調整 */
   font-size: clamp(10px, 4.8vw, 36px);  /* =デザインカンプ375px：18px */
   line-height: 2.5;
-  aspect-ratio: 342/393;
+  aspect-ratio: unset;
+}
+
+.about-content__linkbox{
+  margin-top: 39px;
 }
 
 .about-text2 {
@@ -1263,7 +1277,7 @@ header {
 
 .vertical {
   top: 45px;
-  right: -35px;
+  right: -5%;
   column-gap: 12px;
 }
 
@@ -1285,16 +1299,18 @@ header {
 }
 
 .blog__box {
-  aspect-ratio: 341 / 121;
+  max-width: none;
+  aspect-ratio: unset;
 }
 
 .blog__box-image img {
-  max-width: 121px;
+  width: 121px;
   aspect-ratio: 121 / 121;
   border-radius: 10px 0 0 10px;
 }
 .blog__box__writing {
   padding: 8px 7px;
+  height: 121px; /* グリット内の余分な余白をなくすため */
 }
 
 .blog__box-title {
