@@ -449,7 +449,7 @@ header._emergent {
   max-width: 1263px;
 }
 
-.hero__box__area{
+.hero__box-area{
   display: flex;
   width: 100%;
   background-color: #FFFFFF;
@@ -481,12 +481,12 @@ header._emergent {
   padding-left: 43px;
 }
 
-.hero__box__linkarea{
+.hero__box-linkarea{
   display: flex;
   gap: 6px;
 }
 
-.hero__box__linkarea p{
+.hero__box-linkarea p{
   font-weight: 14;
   font-family:Viga;
 }
@@ -706,18 +706,18 @@ header._emergent {
 }
 
 .benefits-career__content{
-  margin-top: 214px;
+  margin-top: 190px;
 }
 
-.benefits-career__content__area{
+.benefits-career__content-area{
   display: flex;
   margin-left: 35px;
   gap: 94px;
   align-items: center;
 }
 
-.benefits-career__career__box,
-.benefits-career__benefits__box{
+.benefits-career__career-box,
+.benefits-career__benefits-box{
   max-width: 430px;
   text-align: center;
   position: relative;
@@ -734,16 +734,19 @@ header._emergent {
   text-align: left;
 }
 
+.career-image,
+.benefits-image{
+  position: relative;
+}
+
 .career-image-top{
   max-width: 327px;
   aspect-ratio: 327/277;
-  position: relative;
 }
 
 .benefits-image-top{
   max-width: 344px;
   aspect-ratio: 344/230;
-  position: relative;
   margin: 23.5px 0;
 }
 
@@ -757,7 +760,7 @@ header._emergent {
   height: 430px;
   background: #FAF7F1;
   border-radius: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
@@ -767,7 +770,7 @@ header._emergent {
   position: absolute;
   letter-spacing: 0.2vw;
   transform: rotate(-270deg); /* 回転させる */
-  top: 45px;
+  top: 70px;
   right: -145px;
 }
 
@@ -778,6 +781,11 @@ header._emergent {
 
 .vertical img{
   transform: rotate(-90deg); /* 回転させる */
+}
+
+.career__writing,
+.benefits__writing{
+  margin-top: 26px;
 }
 
 /* ーーーー */
@@ -793,28 +801,28 @@ header._emergent {
   transform: translate(-20%, -70%);/* BLOGの位置調節のため */
 }
 
-.blog__headline__button{
+.blog__headline-button{
   display: flex;
   align-items: center;
   gap: 13px;
 }
 
-.blog__headline__button-sp{
+.blog__headline-button-sp{
   display: none;
 }
 
-.blog__headline__button-text{
+.blog__headline-button-text{
   text-decoration: underline; /* アンダーライン復活 */
   font-weight: bold;
 }
 
-.blog__headline__box{
+.blog__headline-box{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.blog__content__area{
+.blog__content-area{
   margin-top: 60px;
   margin-left: 34px;
   display: grid;
@@ -835,7 +843,7 @@ header._emergent {
   display: inline-block;
 }
 
-.blog__box__writing{
+.blog__box-writing{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 4fr 1fr; /* 行の比率を1:4:1に設定 */
@@ -893,7 +901,7 @@ header._emergent {
   padding-bottom: 139px;/* 背景色も含むため */
 }
 
-.recruitment__content__area{
+.recruitment__content-area{
   display: grid;
   margin-top: 64px;
   grid-template-columns: 1fr 1fr;
@@ -901,7 +909,7 @@ header._emergent {
   row-gap: 21px;
 }
 
-.recruitment__content__area :nth-child(3) {
+.recruitment__content-area :nth-child(3) {
   grid-column: span 2; /* 2つのカラムにまたがる */
 }
 
@@ -943,7 +951,7 @@ header._emergent {
   transform: translate(-50%, -50%); /* 完全に中央に配置 */
 }
 
-.footer__content__inner{
+.footer__content-inner{
   display: block;
   text-align: center;
   padding: 50px 200px;
@@ -976,7 +984,7 @@ header._emergent {
   padding: 0 64px 64px;
 }
 
-.footer__info__inner{
+.footer__info-inner{
   padding:198px 178px 61px;
   background-color:#FAF7F1;
   display: grid;
@@ -1178,7 +1186,7 @@ header {
   font-size: clamp(8px, 3.2vw, 24px);  /* =デザインカンプ375px：12px */
 }
 
-.hero__box__area{
+.hero__box-area{
   aspect-ratio: unset;
 }
 
@@ -1195,7 +1203,7 @@ header {
   padding: 0;
 }
 
-.hero__box__linkarea {
+.hero__box-linkarea {
   display: none;
 }
 
@@ -1255,7 +1263,7 @@ header {
 /* 福利厚生について */
 /* ーーーー */
 
-.benefits-career__content__area{
+.benefits-career__content-area{
   flex-direction: column; /* 縦並びにするために追加 */
   row-gap: 136px;
 }
@@ -1263,7 +1271,7 @@ header {
 .career-image::before, .benefits-image::before {
   width: 251px;
   height: 251px;
-  transform: translate(-50%, -80%);
+  transform: translate(-50%, -50%);
 }
 
 .career-image-top {
@@ -1273,16 +1281,35 @@ header {
 .benefits-image-top {
   max-width: 202px;
   aspect-ratio: 202 / 135;
+  margin: 14.5px 0;
 }
 
 .vertical {
-  top: 45px;
+  top: 20%;
   right: -15%;
+}
+
+.career__button{
   column-gap: 12px;
 }
 
+.benefits__button{
+  column-gap: 20px;
+}
+
 .vertical p{
-  font-size: clamp(10px, 3.73vw, 24px);  /* =デザインカンプ375px：14px */
+  font-size: clamp(10px, 3.73vw, 15px);  /* =デザインカンプ375px：14px */
+  letter-spacing: 0.15em;
+}
+
+.career__writing,
+.benefits__writing{
+  margin-top: 20px;
+}
+
+.career-text,
+.benefits-text{
+  margin-top: 20px;
 }
 
 
@@ -1291,7 +1318,7 @@ header {
 /* 採用ブログについて */
 /* ーーーー */
 
-.blog__content__area{
+.blog__content-area{
   margin-top: 43px;
   margin-left: 0;
   grid-template-columns: 1fr; /* 縦一列に設定 */
@@ -1308,7 +1335,7 @@ header {
   aspect-ratio: 121 / 121;
   border-radius: 10px 0 0 10px;
 }
-.blog__box__writing {
+.blog__box-writing {
   padding: 8px 7px;
   height: 121px; /* グリット内の余分な余白をなくすため */
 }
@@ -1319,19 +1346,19 @@ header {
 }
 
 
-.blog__headline__box{
+.blog__headline-box{
   margin-top: 52px;
 }
 
-.blog__headline__button-normal{
+.blog__headline-button-normal{
   display: none;
 }
 
-.blog__headline__button-sp{
+.blog__headline-button-sp{
   display: flex;
 }
 
-.blog__headline__button-next{
+.blog__headline-button-next{
   max-width: 58px;
 }
 
@@ -1344,11 +1371,11 @@ header {
   padding-bottom: 88px;
 }
 
-.recruitment__content__area{
+.recruitment__content-area{
   grid-template-columns: 1fr; /* 縦一列に設定 */
   grid-template-rows: repeat(3, auto); /* 3行に設定 */
 }
-.recruitment__content__area :nth-child(3) {
+.recruitment__content-area :nth-child(3) {
   grid-column: auto;/* グリットの連結をキャンセル */
 }
 
@@ -1374,7 +1401,7 @@ header {
   left: 50%;
 }
 
-.footer__content__inner {
+.footer__content-inner {
   padding: 24px;
 }
 
@@ -1383,7 +1410,7 @@ header {
   line-height: 2.5;
 }
 
-.footer__content__entry{
+.footer__content-entry{
   max-width: 200px;
   aspect-ratio: 200 / 54;
   margin: 0 auto;
@@ -1401,31 +1428,31 @@ header {
   padding-bottom: 24px;
 }
 
-.footer__info__inner {
+.footer__info-inner {
   padding: 0;
   grid-template-columns: 1fr; /* 縦一列に設定 */
   grid-template-rows: repeat(4, auto); /* 4行に設定 */
   row-gap: 29px;
 }
 
-.footer__info__inner > :nth-child(1) {
+.footer__info-inner > :nth-child(1) {
   grid-area: 3 / 1 / 4 / 2; /* 1番目のアイテムを3行目に配置 */
   margin: 0 auto;
 }
 
-.footer__info__inner > :nth-child(2) {
+.footer__info-inner > :nth-child(2) {
   grid-area: 1 / 1 / 2 / 2; /* 2番目のアイテムを1行目に配置 */
   display: block;
   text-align: center;
   padding-left: 0;
 }
 
-.footer__info__inner > :nth-child(3) {
+.footer__info-inner > :nth-child(3) {
   grid-area: 4 / 1 / 5 / 2; /* 3番目のアイテムを4行目に配置 */
   margin: 0 auto;
 }
 
-.footer__info__inner > :nth-child(4) {
+.footer__info-inner > :nth-child(4) {
   grid-area: 2 / 1 / 3 / 2; /* 4番目のアイテムを2行目に配置 */
   justify-content: center;
 }
