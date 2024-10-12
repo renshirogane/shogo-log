@@ -598,6 +598,8 @@ header._emergent {
 
 .staff__inner{
   padding-top: 165px;
+  margin: 0 0 0 208px;/* slideの右側は画面の端まで伸ばすため */
+  max-width: 1232px;/* slideの右側は画面の端まで伸ばすため */
 }
 
 .splide__track{
@@ -1114,7 +1116,6 @@ h3{
    /* 以下、採用ブログ「recruitment」がはみ出るため*/
    width: 93%;
    overflow: hidden;
-   white-space: 
 }
 
 .headline-text {
@@ -1250,7 +1251,7 @@ h3{
 
 header {
   padding: 8px 12px;
-  padding-bottom: 80px;
+  padding-bottom: 80px;/* hamburger__innerとの間に隙間ができるため */
 }
 
 
@@ -1263,7 +1264,7 @@ header {
 /* ーーーー */
 
 .hero__inner {
-  margin: 354px 12px 0;
+  margin: 282px 12px 0;
   padding-bottom: 10px;
 }
 
