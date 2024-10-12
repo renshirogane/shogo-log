@@ -1577,7 +1577,7 @@ header {
 }
 
 .gridbox__area p{
-  font-size: clamp(10px, 5.33vw, 24px);  /* =デザインカンプ375px：20px */
+  font-size: clamp(10px, 5.33vw, 24px);/* =デザインカンプ375px：20px */
 }
 
 
