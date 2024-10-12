@@ -1192,7 +1192,7 @@ h3{
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, auto);
   max-width: 1016px;
-  width: 93vw;
+  width: 92vw;
 }
 
 .hamburger-item{
@@ -1224,6 +1224,8 @@ h3{
 
 .hamburger__infobox-title{
   margin: 0;
+  width: 100%; /* 幅の制限を解除 */
+  max-width: 248px; /* 最大幅を248pxに設定 */
 }
 
 .hamburger__inner._emergent > *:nth-child(2) {
