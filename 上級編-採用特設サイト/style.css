@@ -320,7 +320,7 @@ a {
 .hamburger__infobox-title {
   display: flex;
   margin-top: 50px;
-  max-width: 248px;
+  width: 248px;
   aspect-ratio: 248/42;
   align-items: center;
   justify-content: center;
