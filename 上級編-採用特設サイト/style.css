@@ -885,6 +885,7 @@ header._emergent {
 
 .blog__box-topic{
   display: flex;
+  font-size: 14px;
   gap: 4px;
   align-items: center;
 }
@@ -892,10 +893,6 @@ header._emergent {
 .blog__box-topic img{
   max-width: 14px;
   aspect-ratio: 28/28;
-}
-
-.blog__box-topic p{
-  font-size: 14px;
 }
 
 .blog__box-title{
@@ -1522,6 +1519,10 @@ header {
 .blog__box-writing {
   padding: 4px 16px;
   height: 121px; /* グリット内の余分な余白をなくすため */
+}
+
+.blog__box-topic{
+  font-size: 12px;
 }
 
 .blog__box-title {
