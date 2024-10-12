@@ -672,6 +672,7 @@ header._emergent {
 .splide__content{
   margin-top: 75px;
   margin-left: 8px;/* ＋8px slide_trackで-8px移動した分の修正 */
+  margin-right: 208px;/* slideの右側は画面の端まで伸ばしたため */
 }
 
 .splide__content_box{
@@ -681,7 +682,7 @@ header._emergent {
 .splide__button {
   position: absolute;
   top: 94% !important;
-  left: 94.3%;/* -0,7％ slide_trackで-8px移動した分の修正 */
+  left: 78.4%;/* -0,6％ slide_trackで-8px移動した分の修正 */
 }
 
 .splide__arrow--prev{
