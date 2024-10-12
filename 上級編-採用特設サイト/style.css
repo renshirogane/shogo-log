@@ -71,12 +71,18 @@ h2{
   position: relative;
   }
 
+h2 span{
+    border-bottom: 1px solid black; /* 下線の色と太さ */
+  }
+
 h3{
   font-size: 32px;
   font-weight: 700;
   line-height: 32px;
   color: #222222;
   background-color: #AFA86F;
+  width: max-content;
+  margin-inline: auto;
   }
 
 a {
@@ -212,7 +218,7 @@ a {
 .hamburger__inner {
   display: grid;
   grid-template-columns: 1fr 3fr; /* 2列 */
-  padding: 90px 0 208px 410px;
+  padding: 85px 0 208px 406px;
   position: absolute;
   top: 0;
   left: 0; /* 左端に揃える */
@@ -244,7 +250,7 @@ a {
 }
 
 .hamburger__inner._emergent > *:nth-child(2) {
-  border-left: 1px solid #000; /* 2列目の左側に境界線を追加 */
+  border-left: 1px solid #AFA86F; /* 2列目の左側に境界線を追加 */
 }
 
 /* 左右の列にパディングを追加 */
@@ -269,9 +275,9 @@ a {
 }
 
 .hamburger-item {
-  padding: 23px 0;
+  padding: 19px 0;
   text-align: center;
-  border-bottom: 1px solid black; /* 横線を下に追加 */
+  border-bottom: 1px solid #AFA86F; /* 横線を下に追加 */
 }
 
 .hamburger-item:nth-child(2n) {
@@ -279,14 +285,10 @@ a {
 }
 
 .hamburger-item:nth-child(-n+2) {
-  border-top: 1px solid black; /* 最上部のアイテムに横線を追加 */
+  border-top: 1px solid #AFA86F; /* 最上部のアイテムに横線を追加 */
 }
 
-/* 最後の行のアイテムには下のボーダーを除く */
-.hamburger-item:nth-child(5),
-.hamburger-item:nth-child(6) {
-  border-bottom: none;
-}
+
 
 
 /* メニューのリスト項目のスタイル */
@@ -318,7 +320,7 @@ a {
 .hamburger__infobox-title {
   display: flex;
   margin-top: 50px;
-  width: 248px;
+  max-width: 248px;
   aspect-ratio: 248/42;
   align-items: center;
   justify-content: center;
@@ -640,6 +642,8 @@ header._emergent {
 
 .slide-title p{
   background-color: #AFA86F;
+  /* 要素の幅を、コンテンツの幅に合わせる */
+  width: max-content;
 }
 
 .slide-title p:nth-of-type(2) {
@@ -1108,11 +1112,9 @@ h3{
   transform: translate(6%, -70%);
 
    /* 以下、採用ブログ「recruitment」がはみ出るため*/
-
-  clip-path: inset(0 0 0 0); /* 必要に応じて調整 */
-  width: 100vw; /* ビューポート幅に制限 */
-  white-space: nowrap; /* テキストを一行に */
-  overflow: hidden;
+   width: 93%;
+   overflow: hidden;
+   white-space: 
 }
 
 .headline-text {
@@ -1167,7 +1169,7 @@ h3{
 }
 
 .hamburger__inner{
-    padding: 39px 0 192px 0;
+    padding:30px 0 192px 0;
 }
 
 .hamburger__inner._emergent {
@@ -1192,6 +1194,18 @@ h3{
   max-width: 1016px;
   width: 93vw;
 }
+
+.hamburger-item{
+  padding: 10px 0 12px;
+}
+
+/* カンプに従い順序入れ替え */
+.hamburger-item:nth-child(1) { order: 1; } /* ABOUT US */
+.hamburger-item:nth-child(3) { order: 2; } /* STAFF */
+.hamburger-item:nth-child(5) { order: 3; } /* BLOG */
+.hamburger-item:nth-child(2) { order: 4; } /* BENEFITS */
+.hamburger-item:nth-child(4) { order: 5; } /* CARRER */
+.hamburger-item:nth-child(6) { order: 6; } /* FAQ */
 
 .item_e{
   font-size: clamp(10px, 4.8vw, 32px);  /* =デザインカンプ375px：18px */
@@ -1236,7 +1250,9 @@ h3{
 
 header {
   padding: 8px 12px;
+  padding-bottom: 80px;
 }
+
 
 .header__info{
   display: none;
@@ -1533,6 +1549,7 @@ header {
 .recruitment__inner{
   padding-top: 80px;
   padding-bottom: 89px;
+  overflow: hidden;
 }
 
 .recruitment__content{
