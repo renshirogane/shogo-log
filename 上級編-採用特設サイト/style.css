@@ -646,6 +646,7 @@ header._emergent {
   background-color: #AFA86F;
   /* 要素の幅を、コンテンツの幅に合わせる */
   width: max-content;
+  padding: 0px 6px;
 }
 
 .slide-title p:nth-of-type(2) {
@@ -1408,6 +1409,7 @@ header {
 .splide__content{
   margin-top: 59px;
   margin-left: 13px;
+  margin-right: 0;
 }
 
 .splide__button{
