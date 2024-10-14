@@ -409,216 +409,113 @@ header._emergent {
 
 
 /* ーーーー */
-/* value */
-/* 達が大切にしていること */
+/* blog */
+/* 採用ブログについて */
 /* ーーーー */
 
-
-.value__inner{
-  margin-top: 59px;
+.blog{
+  background-color:#FAF7F1;
 }
 
-.value__content{
-  margin-top: 80px;
-  display: grid;
-  grid-template-rows: repeat(5, auto); /* 5行にする */
-  gap: 35px;
+.blog__headline{
+  margin-right: 54px;
 }
 
-.value__box{
+.blog__headline-backtitle{
+  transform: translate(-13%, -64%);/* BLOGの位置調節のため */
+}
+
+.blog__headline-text{
+  margin-top: 76px;
+}
+
+.blog__headline-button{
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+
+.blog__headline-button-normal{
+  position: absolute;
+  left: 71%;
+}
+
+.blog__headline-button-sp{
+  display: none;
+}
+
+.blog__headline-button-text{
+  text-decoration: underline; /* アンダーライン復活 */
+  font-weight: bold;
+}
+
+.blog__headline-box{
+  display: flex;
+  align-items: center;
+}
+
+.blog__content{
+  margin:60px 34px 0;
+}
+
+.blog__content-area{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 52px;
+  row-gap: 23px;
+}
+
+.blog__box{
+  display: flex;
+  background-color: #FFFFFF;
   border-radius: 10px;
-  background: #FAF7F1;
-  padding: 30px 80px;
-  gap: 21px;
+  max-width: 452px;
+  aspect-ratio: 452/182;
 }
 
-.value__box-head{
-  display: flex;
-  align-items: center;
-  gap: 21px;
+.blog__box-image{
+  display: inline-block;
 }
 
-.value__box-number{
+.blog__box-writing{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 1fr; /* 行の比率を1:4:1に設定 */
+  padding:18px 22px 16px;
+}
+
+.blog__box-image img{
+  max-width: 158px;
+  aspect-ratio: 158/182;
+  border-radius: 10px 0 0 10px;
+}
+
+.blog__box-topic{
   display: flex;
-  justify-content: center;
+  font-size: 14px;
+  gap: 4px;
   align-items: center;
+}
+
+.blog__box-topic img{
+  max-width: 14px;
+  aspect-ratio: 28/28;
+}
+
+.blog__box-title{
   font-size: 18px;
-  width: 48px;             /* 円の幅 */
-  height: 48px;            /* 円の高さ */
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  border: 1px solid #000;  /* 円周にボーダーを追加 */
-}
-
-.value__box-title{
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.value__box-text{
-  line-height: 1.5;
-}
-
-
-/* ーーーー */
-/* message */
-/* 代表メッセージ */
-/* ーーーー */
-
-.message__inner{
-  margin-top: 117px;
-}
-
-.message__content{
-  display: flex;
-  margin-top: 101px;
-  gap: 17px;
-}
-
-.message__image{
-  max-width: 484px;
-}
-
-.message__image img{
-  width: 100%;
-  aspect-ratio: 484/629;
-}
-
-.message__writing{
-  max-width: 479px;
-  margin-top: 18px;
-}
-
-.message-titile{
-  font-size: 32px;
   font-weight: bold;
   line-height: 1.5;
-  margin-left: -80px;
-}
-
-.message-text{
-  margin-top: 44px;
-  line-height: 2.0;
-}
-
-.message-sign{
+  text-align: left;
+  align-items: end;
   margin-top: 20px;
-  max-width: 185px;
+  text-decoration: underline; /* アンダーライン復活 */
 }
 
-.message-sign img{
-  width: 100%;
-  aspect-ratio: 185/35;
-}
-
-
-/* ーーーー */
-/* business */
-/* 事業紹介 */
-/* ーーーー */
-
-.business__inner{
-  margin-top: 99px;
-}
-
-.headline-text{
-  max-width: 690px; /* スムーズな改行のため */
-}
-
-.business__content{
-  margin-top: 82px;
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-}
-
-/* gapよりも確実に境界線を引くためpadding */
-
-.business__box {
-  padding-top: 49px;     /* 上部のパディング */
-  padding-bottom: 49px;  /* 下部のパディング */
-  border-bottom: 1px solid #AFA86F; /* 下部に境界線を追加 */
-}
-
-/* 一番上の要素のパディングを削除 */
-.business__box:first-child {
-  padding-top: 0;
-}
-
-/* 一番下の要素のパディングを削除 */
-.business__box:last-child {
-  padding-bottom: 0;
-  border-bottom: none;　/* 最後のボックスには境界線を表示しない */
-}
-
-
-.business__box{
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 42px;
-  align-items: center;
-}
-
-.business__box-image{
-  max-width: 462px;
-}
-
-.business__box-image img{
-  width: 100%;
-  aspect-ratio: 462/264;
-  border-radius: 20px;
-}
-
-.business__box-writing{
+.blog__box-date{
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 462px;
-}
-
-.business__box-title{
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.business__box-text{
-  line-height: 1.5;
-}
-
-
-/* ーーーー */
-/* profile */
-/* 会社概要 */
-/* ーーーー */
-
-.profile__inner{
-  margin-top: 142px;
-  margin-bottom: 140px;
-}
-
-.profile__content{
-  margin-top: 70px;
-  display: grid;
-  grid-template-rows: repeat(8, auto);
-}
-
-.profile__content > * {
-  border-bottom: 1px dashed #000; /* 点線のボーダーを追加 */
-}
-
-.profile__box{
-  display: grid;
-  grid-template-columns: 1fr 3.24fr; /* 2行の比率を設定 */
-  padding: 32.5px 0;
-}
-
-.profile__box-title{
-  font-weight: bold;
-}
-
-.profile__box-text ul{
-  margin-left: 20px;
+  font-size: 12px;
+  align-items: end;
 }
 
 
@@ -954,123 +851,69 @@ header {
 
 
 /* ーーーー */
-/* value */
-/* 達が大切にしていること */
+/* blog */
+/* 採用ブログについて */
 /* ーーーー */
 
-.value__inner{
-  margin-top: auto;
+.blog__inner{
+  padding-top: 69px;
 }
 
-.value__content{
-  margin-top: 35px;  /* .headline-textと同じレイアウト */
-  gap: 50px;
+.blog__headline{
+  margin: 0;
 }
 
-.value__box{
-  padding: 30px;
+.blog__content{
+  margin:43px 0 0;
 }
 
-.value__box-head{
-  gap: 14px;
+.blog__content-area{
+  margin-left: 0;
+  grid-template-columns: 1fr; /* 縦一列に設定 */
+  grid-template-rows: repeat(4, auto); /* 4行に設定 */
+  row-gap: 9px;
 }
 
-.value__box-title{
-  font-size: clamp(14px, 4.27vw, 20px);   /* =デザインカンプ375px：16px想定 */
+.blog__box {
+  max-width: none;
+  aspect-ratio: unset;
 }
 
-
-/* ーーーー */
-/* message */
-/* 代表メッセージ開始 */
-/* ーーーー */
-
-.message__inner{
-  margin-top: auto;
+.blog__box-image img {
+  width: 121px;
+  aspect-ratio: 121 / 121;
+  border-radius: 10px 0 0 10px;
+}
+.blog__box-writing {
+  padding: 4px 16px;
+  height: 121px; /* グリット内の余分な余白をなくすため */
 }
 
-.message__content{
-  flex-direction: column;
-  margin-top: 35px;  /* .headline-textと同じレイアウト */
+.blog__box-topic{
+  font-size: 12px;
 }
 
-.message__image{
-  max-width: 50%;
-  margin: 0 auto;
+.blog__box-title {
+  margin-top: 8px;
+  font-size: clamp(10px, 3.73vw, 18px);  /* =デザインカンプ375px：14px */
 }
 
-.message__writing{
-  max-width: 100%;
+.blog__headline-button-normal{
+  display: none;
 }
 
-.message-titile{
-  margin-left: auto;
-  font-size: clamp(16px, 5.87vw, 32px);  /* =デザインカンプ375px：22px想定 */
-  text-align: center;
+.blog__headline-button-sp{
+  display: flex;
+  margin-top: 51px;
 }
 
-.message-text{
-  max-width: 100%;
-  margin: 44px auto 0;
-  font-size: clamp(13px, 4.1vw, 16px);/* 320px,375pxで余計な改行がないレイアウト */
-  text-align: center;
+.blog__headline-button-next{
+  max-width: 58px;
 }
 
-.message-sign{
-  margin: 21px auto 0;
+.blog__headline-button-next:hover{
+  max-width: 70px;
 }
-
-
-/* ーーーー */
-/* business */
-/* 事業紹介 */
-/* ーーーー */
-
-
-.business__inner{
-  margin-top: auto;
-}
-
-.business__content{
-  margin-top: 43px;  /* .TOPページのblogと同じレイアウト */
-}
-
-.business__box{
-  grid-template-columns: 1fr; /* 縦一列に変更 */
-  gap: 20px;
-}
-
-.business__box-image{
-  max-width: 100%;
-}
-
-.business__box-writing{
-  max-width: 100%;
-  gap: 10px;
-}
-
-.business__box-title{
-  font-size: clamp(10px, 5.33vw, 20px);
-}
-
-
-/* ーーーー */
-/* profile */
-/* 会社概要 */
-/* ーーーー */
-
-.profile__inner{
-  margin-top: auto;
-}
-
-.profile__content{
-  margin-top: 30px;
-}
-
-.profile__box{
-  column-gap: 20px;
-}
-
 /* ------------------------ここまでabout-us------------------------ */
 
 /* ーーーー */
