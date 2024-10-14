@@ -489,6 +489,10 @@ header._emergent {
   left: 50%;
 }
 
+.splide__arrow:disabled {
+  opacity: 1 !important;
+}
+
 .splide__arrow--prev{
   left: -6em !important;
 }
