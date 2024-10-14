@@ -108,6 +108,11 @@ a {
   height: 100%;
 }
 
+.linkbox__area:hover {
+  background-color: #222222; /* 背景を黒に */
+  color: #fff; /* テキストを白に */
+}
+
 .link-title {
   font-family: Viga;
   font-size: 20px;
@@ -130,6 +135,10 @@ a {
 .controls{
   max-width: 58px;
   aspect-ratio: 58/58;
+}
+
+.controls:hover {
+  max-width: 70px; /* ホバー時にサイズを70pxに */
 }
 
 .normal{
@@ -336,6 +345,10 @@ a {
   background: #AFA86F;
 }
 
+.hamburger__link-entry:hover {
+  background: #988C2C;
+}
+
 /* ーーーー */
 /* main */
 /* ファーストビュー */
@@ -407,6 +420,10 @@ header._emergent {
 
 .info-entry{
   background: #AFA86F;
+}
+
+.info-entry:hover {
+  background: #988C2C;
 }
 
 /* ーーーー */
@@ -699,6 +716,10 @@ header._emergent {
   aspect-ratio: 1/1;
 }
 
+.splide__arrow img:hover {
+  max-width: 70px; /* ホバー時にサイズを70pxに */
+}
+
 .splide__pagination{
   display: none !important;
 }
@@ -834,6 +855,11 @@ header._emergent {
   gap: 13px;
 }
 
+.blog__headline-button-normal{
+  position: absolute;
+  left: 71%;
+}
+
 .blog__headline-button-sp{
   display: none;
 }
@@ -846,7 +872,6 @@ header._emergent {
 .blog__headline-box{
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .blog__content{
@@ -1011,6 +1036,11 @@ header._emergent {
   aspect-ratio: 556/70;
 }
 
+.entrybox__area:hover{
+  background-color: #222222; /* 背景を黒に */
+  color: #fff; /* テキストを白に */
+}
+
 .entrybox__area p{
   font-size: 16px;
 }
@@ -1131,6 +1161,10 @@ h3{
 
 .controls {
   max-width: 42px;
+}
+
+.controls:hover {
+  max-width: 55px; /* ホバー時にサイズを55pxに */
 }
 
 .linkbox{
@@ -1546,6 +1580,10 @@ header {
 
 .blog__headline-button-next{
   max-width: 58px;
+}
+
+.blog__headline-button-next:hover{
+  max-width: 70px;
 }
 
 /* ーーーー */
