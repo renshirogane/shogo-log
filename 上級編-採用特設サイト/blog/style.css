@@ -485,8 +485,8 @@ header._emergent {
 
 .splide__button {
   position: absolute;
-  top: 94% !important;
-  left: 78.4%;/* -0,6％ slide_trackで-8px移動した分の修正 */
+  top: 90% !important;
+  left: 50%;
 }
 
 .splide__arrow--prev{

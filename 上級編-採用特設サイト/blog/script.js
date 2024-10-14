@@ -2,7 +2,6 @@
 
 "use strict"
 const splide = new Splide(".splide", {
-  type: "loop", // スライダーをループさせる
   pauseOnHover: false, // カーソルが乗っても停止しない
   pauseOnFocus: false, // フォーカスを当てても停止しない
   interval: 2000, // 自動再生の間隔
