@@ -464,7 +464,6 @@ header._emergent {
   grid-template-columns: 1fr 1fr;
   column-gap: 52px;
   row-gap: 23px;
-  justify-content: center;  /* グリッド全体を中央に揃える */
 }
 
 .blog__box{
