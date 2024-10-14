@@ -10,6 +10,7 @@ html{
 
 body {
   font-size: 16px; /* ボディ全体のフォントサイズを16pxに設定 */
+  color: #222222;
 }
 
 *{
@@ -17,7 +18,6 @@ body {
   box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
   margin: 0; /* 全要素のマージンをリセット */
   padding: 0; /* 全要素のパディングをリセット */
-  color: #222222;
 }
 
 .range{
@@ -35,7 +35,7 @@ body {
 }
 
 .headline-text{
-  margin-top: 44px;
+  margin-top: 37px;
 }
 
 h1{
@@ -58,6 +58,20 @@ h3{
 a {
   color:#222222; /* リンクのテキスト色を青に設定 */
   text-decoration: none; /* リンクの下線を削除 */
+}
+
+.link-title {
+  font-family: Viga;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+.link-button {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
 }
 
 .logo{
@@ -109,15 +123,15 @@ a {
   color: #222222; /* #222222 for the text */
   font-size: 12px; /* Adjust font size for better visibility */
   text-align: center;
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 .hamburger span:nth-of-type(1) {
-  top: 10%;
+  top: 0%;
 }
 
 .hamburger span:nth-of-type(2) {
-  top: 35%;
+  top: 30%;
 }
 
 .hamburger span:nth-of-type(3) {
@@ -150,7 +164,7 @@ a {
 .hamburger__inner {
   display: grid;
   grid-template-columns: 1fr 3fr; /* 2列 */
-  padding: 85px 0 208px 406px;
+  padding: 88px 0 208px 406px;
   position: absolute;
   top: 0;
   left: 0; /* 左端に揃える */
@@ -166,7 +180,7 @@ a {
 
   /* hamburger__inner右の余白が無くなってくるから */
   .hamburger__inner {
-    padding: 90px 0 208px 0;
+    padding: 88px 0 208px 0;
     grid-template-columns: 1fr 2fr;
     place-items: center; /* 要素をグリッドの中央に配置 */
   }
@@ -178,7 +192,7 @@ a {
 .hamburger__inner._emergent {
   align-items: center;
   transform: translateY(0);
-  margin-top: 122px;/* ヘッダーの高さ*/
+  margin-top: 118px;/* ヘッダーの高さ*/
 }
 
 .hamburger__inner._emergent > *:nth-child(2) {
@@ -268,6 +282,10 @@ a {
   background: #AFA86F;
 }
 
+.hamburger__link-entry:hover {
+  background: #988C2C;
+}
+
 
 /* ーーーー */
 /* header */
@@ -288,6 +306,11 @@ header._emergent {
   display: flex; /* フレックスボックスで配置 */
   align-items: center; /* 垂直方向の中央に揃える */
   justify-content: space-between;
+}
+
+.header-symbol a{
+  display: flex;
+  height: 100%;
 }
 
 .header__content{
@@ -319,6 +342,11 @@ header._emergent {
 .info-entry{
   background: #AFA86F;
 }
+
+.info-entry:hover {
+  background: #988C2C;
+}
+
 /* ------------------------ここからabout-us------------------------ */
 
 
@@ -332,9 +360,9 @@ header._emergent {
 .hero__box{
     display: flex;
     flex-direction: column;
-    padding-top: 78px;
-    padding-bottom: 105px;
-    gap: 18px
+    padding-top: 71px;
+    padding-bottom: 95px;
+    gap: 16px
 }
 
 .background-section {
@@ -347,19 +375,23 @@ header._emergent {
 .hero-titile_e,
 .hero-titile_j,
 .hero-text{
-  font-weight: bold;
+  font-weight: normal;
   background-color: #fff;
   width: max-content;
-  padding: 0 10px;
+  padding: 0 11px;
+  line-height: 1.2; /* 行の高さを調整してテキストの縦の間隔を減らす */
 }
 
 .hero-titile_j{
+  font-weight: bold;
   font-size: 24px;
 }
 
 .hero-text{
+  font-weight: bold;
   font-size: 16px;
   color: #988C2C;
+  line-height: 2.2;
 }
 
 .breadcrumb__area{
@@ -378,16 +410,16 @@ header._emergent {
 
 /* ーーーー */
 /* value */
-/* 達が大切にしていること開始 */
+/* 達が大切にしていること */
 /* ーーーー */
 
 
 .value__inner{
-  margin-top: 66px;
+  margin-top: 59px;
 }
 
 .value__content{
-  margin-top: 86px;
+  margin-top: 80px;
   display: grid;
   grid-template-rows: repeat(5, auto); /* 5行にする */
   gap: 35px;
@@ -432,16 +464,16 @@ header._emergent {
 
 /* ーーーー */
 /* message */
-/* 代表メッセージ開始 */
+/* 代表メッセージ */
 /* ーーーー */
 
 .message__inner{
-  margin-top: 125px;
+  margin-top: 117px;
 }
 
 .message__content{
   display: flex;
-  margin-top: 109px;
+  margin-top: 101px;
   gap: 17px;
 }
 
@@ -472,7 +504,7 @@ header._emergent {
 }
 
 .message-sign{
-  margin-top: 21px;
+  margin-top: 20px;
   max-width: 185px;
 }
 
@@ -488,7 +520,7 @@ header._emergent {
 /* ーーーー */
 
 .business__inner{
-  margin-top: 111px;
+  margin-top: 99px;
 }
 
 .headline-text{
@@ -499,8 +531,27 @@ header._emergent {
   margin-top: 82px;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  gap: 98px;
 }
+
+/* gapよりも確実に境界線を引くためpadding */
+
+.business__box {
+  padding-top: 49px;     /* 上部のパディング */
+  padding-bottom: 49px;  /* 下部のパディング */
+  border-bottom: 1px solid #AFA86F; /* 下部に境界線を追加 */
+}
+
+/* 一番上の要素のパディングを削除 */
+.business__box:first-child {
+  padding-top: 0;
+}
+
+/* 一番下の要素のパディングを削除 */
+.business__box:last-child {
+  padding-bottom: 0;
+  border-bottom: none;　/* 最後のボックスには境界線を表示しない */
+}
+
 
 .business__box{
   display: grid;
@@ -542,12 +593,12 @@ header._emergent {
 /* ーーーー */
 
 .profile__inner{
-  margin-top: 150px;
+  margin-top: 142px;
+  margin-bottom: 140px;
 }
 
 .profile__content{
-  margin-top: 80.5px;
-  margin-bottom: 139px;
+  margin-top: 70px;
   display: grid;
   grid-template-rows: repeat(8, auto);
 }
@@ -624,6 +675,11 @@ header._emergent {
   position: relative;
   max-width: 556px;
   aspect-ratio: 556/70;
+}
+
+.entrybox__area:hover{
+  background-color: #222222; /* 背景を黒に */
+  color: #fff; /* テキストを白に */
 }
 
 .entrybox__area p{
@@ -709,10 +765,6 @@ h3{
   max-width:clamp(151px, 40vw, 230px);  /* =デザインカンプ375px：151px */
 }
 
-.headline_center{
-  text-align: left;
-}
-
 .headline_left{
   margin-left: 0;
 }
@@ -787,11 +839,11 @@ h3{
 }
 
 .hamburger__inner{
-    padding:30px 0 192px 0;
+    padding:36px 0 192px 0;
 }
 
 .hamburger__inner._emergent {
-  margin-top: clamp(60px, 16vw, 68px);  /* =デザインカンプ375px：60px */
+  margin-top:clamp(54px, 13vw, 68px)
 }
 
 .hamburger__inner {
@@ -888,6 +940,14 @@ header {
   margin-top: -72px;
 }
 
+.hero-titile_j{
+  font-size: clamp(12px, 4.8vw, 24px);/* =デザインカンプ375px：18px想定 */
+}
+
+.hero-text{
+  font-size: clamp(8px, 3.2vw, 16px);/* =デザインカンプ375px：12px想定 */
+}
+
 .breadcrumb{
   padding-top: 17px;
 }
@@ -895,7 +955,7 @@ header {
 
 /* ーーーー */
 /* value */
-/* 達が大切にしていること開始 */
+/* 達が大切にしていること */
 /* ーーーー */
 
 .value__inner{
@@ -920,9 +980,10 @@ header {
 }
 
 
-
-
-
+/* ーーーー */
+/* message */
+/* 代表メッセージ開始 */
+/* ーーーー */
 
 .message__inner{
   margin-top: auto;
@@ -934,7 +995,8 @@ header {
 }
 
 .message__image{
-  max-width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .message__writing{
@@ -944,10 +1006,25 @@ header {
 .message-titile{
   margin-left: auto;
   font-size: clamp(16px, 5.87vw, 32px);  /* =デザインカンプ375px：22px想定 */
+  text-align: center;
+}
+
+.message-text{
+  max-width: 100%;
+  margin: 44px auto 0;
+  font-size: clamp(13px, 4.1vw, 16px);/* 320px,375pxで余計な改行がないレイアウト */
+  text-align: center;
+}
+
+.message-sign{
+  margin: 21px auto 0;
 }
 
 
-
+/* ーーーー */
+/* business */
+/* 事業紹介 */
+/* ーーーー */
 
 
 .business__inner{
@@ -956,7 +1033,6 @@ header {
 
 .business__content{
   margin-top: 43px;  /* .TOPページのblogと同じレイアウト */
-  gap: 50px;
 }
 
 .business__box{
@@ -977,6 +1053,11 @@ header {
   font-size: clamp(10px, 5.33vw, 20px);
 }
 
+
+/* ーーーー */
+/* profile */
+/* 会社概要 */
+/* ーーーー */
 
 .profile__inner{
   margin-top: auto;
