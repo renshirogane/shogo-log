@@ -413,53 +413,17 @@ header._emergent {
 /* 採用ブログについて */
 /* ーーーー */
 
-.blog__inner{
+.splide__track{
   margin-top: 130px;
-  margin-bottom: 139px; 
+  padding-bottom: 295px; /* ボタンをlist外の下余白に入れるためpadding */
+  position: relative;
 }
 
-.blog__headline{
-  margin-right: 54px;
-}
-
-.blog__headline-backtitle{
-  transform: translate(-13%, -64%);/* BLOGの位置調節のため */
-}
-
-.blog__headline-text{
-  margin-top: 76px;
-}
-
-.blog__headline-button{
-  display: flex;
-  align-items: center;
-  gap: 13px;
-}
-
-.blog__headline-button-normal{
-  position: absolute;
-  left: 71%;
-}
-
-.blog__headline-button-sp{
-  display: none;
-}
-
-.blog__headline-button-text{
-  text-decoration: underline; /* アンダーライン復活 */
-  font-weight: bold;
-}
-
-.blog__headline-box{
-  display: flex;
-  align-items: center;
-}
-
-.blog__content{
+.splide__list{
   margin-bottom:98px;
 }
 
-.blog__content-area{
+.splide__slide{
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 52px;
@@ -517,6 +481,33 @@ header._emergent {
   display: flex;
   font-size: 12px;
   align-items: end;
+}
+
+.splide__button {
+  position: absolute;
+  top: 85% !important;
+  left: 50%;
+}
+
+.splide__arrow--prev{
+  left: -6em !important;
+}
+
+.splide__arrow--next{
+  right: -2em !important;
+}
+
+.splide__arrow img{
+  max-width: 58px;
+  aspect-ratio: 1/1;
+}
+
+.splide__arrow img:hover {
+  max-width: 70px; /* ホバー時にサイズを70pxに */
+}
+
+.splide__pagination{
+  display: none !important;
 }
 
 
@@ -864,11 +855,11 @@ header {
   margin: 0;
 }
 
-.blog__content{
+.splide__list{
   margin:43px 0 0;
 }
 
-.blog__content-area{
+.splide__slide{
   margin-left: 0;
   grid-template-columns: 1fr; /* 縦一列に設定 */
   grid-template-rows: repeat(4, auto); /* 4行に設定 */
