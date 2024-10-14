@@ -415,7 +415,7 @@ header._emergent {
 
 .splide__track{
   margin-top: 130px;
-  padding-bottom: 295px; /* ボタンをlist外の下余白に入れるためpadding */
+  padding-bottom: 287px; /* ボタンをlist外の下余白に入れるためpadding */
   position: relative;
 }
 
@@ -486,7 +486,7 @@ header._emergent {
 
 .splide__button {
   position: absolute;
-  top: 85% !important;
+  top: 84.5% !important;
   left: 52.5%;
 }
 
@@ -495,11 +495,11 @@ header._emergent {
 }
 
 .splide__arrow--prev{
-  left: -6em !important;
+  left: -6.2em !important;
 }
 
 .splide__arrow--next{
-  right: -2em !important;
+  right: -2.5em !important;
 }
 
 .splide__arrow img{
@@ -909,6 +909,10 @@ header {
 
 .blog__headline-button-next:hover{
   max-width: 70px;
+}
+
+.splide__button{
+  top: 90% !important;
 }
 
 
