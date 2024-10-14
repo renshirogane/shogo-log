@@ -415,6 +415,7 @@ header._emergent {
   font-size: 18px;
   width: 48px;             /* 円の幅 */
   height: 48px;            /* 円の高さ */
+  aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #000;  /* 円周にボーダーを追加 */
 }
@@ -425,7 +426,6 @@ header._emergent {
 }
 
 .value__box-text{
-  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -489,6 +489,10 @@ header._emergent {
 
 .business__inner{
   margin-top: 111px;
+}
+
+.headline-text{
+  max-width: 690px; /* スムーズな改行のため */
 }
 
 .business__content{
@@ -559,12 +563,7 @@ header._emergent {
 }
 
 .profile__box-title{
-  font-size: 16px;
   font-weight: bold;
-}
-
-.profile__box-text{
-  font-size: 16px;
 }
 
 .profile__box-text ul{
@@ -680,19 +679,22 @@ header._emergent {
 
 @media screen and (max-width: 1040px) {
 
-  /* 1040からrecruitmentセクションの余白が無くなってくるから */
+  /* 1024からTOPサイトページのrecruitmentセクションの余白が無くなってくるから */
+
+body{
+  font-size: clamp(14px, 4.27vw, 16px);   /* =デザインカンプ375px：16px */
+}
 
 .range {
-  margin: 0 17px;
   padding-top: 85px;
 }
 
 h1{
-  font-size: clamp(30px, 12.8vw, 96px);   /* =デザインカンプ375px：48px */
+  font-size: clamp(30px, 12.8vw, 64px);   /* =デザインカンプ375px：48px */
 }
 
 h2{
-  font-size: clamp(24px, 8.53vw, 52px);   /* =デザインカンプ375px：32px */
+  font-size: clamp(24px, 8.53vw, 32px);   /* =デザインカンプ375px：32px */
 }
 
 h3{
@@ -877,12 +879,116 @@ header {
 }
 /* ------------------------ここからabout-us------------------------ */
 
+/* ーーーー */
+/* hero */
+/* ファーストビュー */
+/* ーーーー */
+
+.hero__inner{
+  margin-top: -72px;
+}
+
+.breadcrumb{
+  padding-top: 17px;
+}
+
+
+/* ーーーー */
+/* value */
+/* 達が大切にしていること開始 */
+/* ーーーー */
+
+.value__inner{
+  margin-top: auto;
+}
+
+.value__content{
+  margin-top: 35px;  /* .headline-textと同じレイアウト */
+  gap: 50px;
+}
+
+.value__box{
+  padding: 30px;
+}
+
+.value__box-head{
+  gap: 14px;
+}
+
+.value__box-title{
+  font-size: clamp(14px, 4.27vw, 20px);   /* =デザインカンプ375px：16px想定 */
+}
 
 
 
 
 
 
+.message__inner{
+  margin-top: auto;
+}
+
+.message__content{
+  flex-direction: column;
+  margin-top: 35px;  /* .headline-textと同じレイアウト */
+}
+
+.message__image{
+  max-width: 100%;
+}
+
+.message__writing{
+  max-width: 100%;
+}
+
+.message-titile{
+  margin-left: auto;
+  font-size: clamp(16px, 5.87vw, 32px);  /* =デザインカンプ375px：22px想定 */
+}
+
+
+
+
+
+.business__inner{
+  margin-top: auto;
+}
+
+.business__content{
+  margin-top: 43px;  /* .TOPページのblogと同じレイアウト */
+  gap: 50px;
+}
+
+.business__box{
+  grid-template-columns: 1fr; /* 縦一列に変更 */
+  gap: 20px;
+}
+
+.business__box-image{
+  max-width: 100%;
+}
+
+.business__box-writing{
+  max-width: 100%;
+  gap: 10px;
+}
+
+.business__box-title{
+  font-size: clamp(10px, 5.33vw, 20px);
+}
+
+
+.profile__inner{
+  margin-top: auto;
+}
+
+.profile__content{
+  margin-top: 30px;
+}
+
+.profile__box{
+  column-gap: 20px;
+}
 
 /* ------------------------ここまでabout-us------------------------ */
 
