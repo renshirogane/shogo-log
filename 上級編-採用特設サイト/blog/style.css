@@ -461,6 +461,7 @@ header._emergent {
   font-size: 14px;
   gap: 4px;
   align-items: center;
+  white-space: nowrap;
 }
 
 .blog__box-topic img{
@@ -856,6 +857,10 @@ header {
   margin-top: auto;
 }
 
+.splide__slide{
+  gap: 3vw;
+}
+
 .blog__headline{
   margin: 0;
 }
@@ -864,34 +869,36 @@ header {
   margin:43px 0 0;
 }
 
-.splide__slide{
-  margin-left: 0;
-  grid-template-columns: 1fr; /* 縦一列に設定 */
-  grid-template-rows: repeat(4, auto); /* 4行に設定 */
-}
-
 .blog__box {
-  max-width: none;
+  flex-direction: column;
   aspect-ratio: unset;
 }
 
-.blog__box-image img {
-  width: 121px;
-  aspect-ratio: 121 / 121;
-  border-radius: 10px 0 0 10px;
+.blog__box-image{
+  overflow: hidden;
 }
+
+.blog__box-image img {
+  max-width: 100%;
+  width: 100%;
+  height: 121px; /* 高さを121pxに固定 */
+  object-fit: cover; /* 画像を要素にフィットさせる。はみ出た部分は自動的にクリップされる */
+  object-position: center; /* 画像を中央に配置 */
+  border-radius: 10px;
+}
+
 .blog__box-writing {
   padding: 4px 16px;
   height: 121px; /* グリット内の余分な余白をなくすため */
 }
 
 .blog__box-topic{
-  font-size: 12px;
+  font-size: clamp(8px, 3.2vw, 16px);
 }
 
 .blog__box-title {
   margin-top: 8px;
-  font-size: clamp(10px, 3.73vw, 18px);  /* =デザインカンプ375px：14px */
+  font-size: clamp(8px, 3.2vw, 16px);  /* =デザインカンプ375px：12px 14pxだとはみ出るため*/
 }
 
 .blog__headline-button-normal{
