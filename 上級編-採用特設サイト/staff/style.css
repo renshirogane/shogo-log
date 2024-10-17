@@ -1,0 +1,959 @@
+@charset "UTF-8";
+
+/* ーーーー */
+/* 共通要素 */
+/* ーーーー */
+
+html{
+  background-color: #fff; /* HTML全体の背景色を白に設定 */
+}
+
+body {
+  font-size: 16px; /* ボディ全体のフォントサイズを16pxに設定 */
+  color: #222222;
+}
+
+*{
+  font-family: Noto Sans Jp, Viga, sans-serif; /* 全体のフォントをNoto Sans JPに設定 */
+  box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
+  margin: 0; /* 全要素のマージンをリセット */
+  padding: 0; /* 全要素のパディングをリセット */
+}
+
+.range{
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 22px; /* カンプは19pxだが他のWEBページに合わせる。 */
+}
+
+.headline_left{
+  text-align: left;
+}
+
+.headline_center{
+  text-align: center;
+}
+
+.headline-text{
+  margin-top: 37px;
+}
+
+h1{
+  font-family: Viga, sans-serif;
+  font-size: 64px;
+  text-align: left;
+}
+
+h2{
+  font-size: 32px;
+  font-weight: 700;
+  }
+
+h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: #988C2C;
+  }
+
+a {
+  color:#222222; /* リンクのテキスト色を青に設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+}
+
+.link-title {
+  font-family: Viga;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+.link-button {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+}
+
+.logo{
+  max-width: 251px;
+  aspect-ratio: 251/66;
+}
+
+.normal{
+  display: block;
+}
+
+.sp{
+  display: none;
+}
+
+/* ーーーー */
+/* ハンバーガーメニュー */
+/* ーーーー */
+
+.menu-container {
+  display: block;
+  justify-content: center; /* Center the hamburger menu horizontally */
+  align-items: center; /* Center the hamburger menu vertically */
+}
+
+.hamburger {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  flex-direction: column; /* Stack the lines vertically */
+  justify-content: center; /* Center the lines vertically */
+  align-items: center; /* Center the lines horizontally */
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger span {
+  position: absolute;
+  background: #222222; /* #222222 for the bars */
+  border-radius: .125rem;
+  display: block;
+  height: 2px; /* Thickness of the bars */
+  width: 52px; /* Width of the bars */
+  margin-top: -2px;
+  transition: all 0.4s; /* Animation transition */
+}
+
+.hamburger p {
+  color: #222222; /* #222222 for the text */
+  font-size: 12px; /* Adjust font size for better visibility */
+  text-align: center;
+  margin-top: 37px;
+}
+
+.hamburger span:nth-of-type(1) {
+  top: 0%;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 30%;
+}
+
+.hamburger span:nth-of-type(3) {
+  top: 60%;
+}
+
+.hamburger._emergent span{
+  margin:0;
+}
+
+/* clickedクラスが付与されると線が回転して×に */
+.hamburger._emergent span:nth-of-type(1) {
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hamburger._emergent span:nth-of-type(2),
+.hamburger._emergent p{
+  opacity: 0; /*真ん中の線は透過*/
+}
+
+.hamburger._emergent span:nth-of-type(3) {
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* メニューのスタイル */
+.hamburger__inner {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 2列 */
+  padding: 88px 0 208px 406px;
+  position: absolute;
+  top: 0;
+  left: 0; /* 左端に揃える */
+  width: 100%; /* ヘッダーの横幅に合わせる */
+  color: #fff;
+  background-color: #FAF7F1;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1; /* ハンバーガーアイコンの下に表示されるようにする */
+}
+
+@media screen and (max-width: 1319px) {
+
+  /* hamburger__inner右の余白が無くなってくるから */
+  .hamburger__inner {
+    padding: 88px 0 208px 0;
+    grid-template-columns: 1fr 2fr;
+    place-items: center; /* 要素をグリッドの中央に配置 */
+  }
+
+}
+
+
+/* メニュー表示時のスタイル */
+.hamburger__inner._emergent {
+  align-items: center;
+  transform: translateY(0);
+  margin-top: 118px;/* ヘッダーの高さ*/
+}
+
+.hamburger__inner._emergent > *:nth-child(2) {
+  border-left: 1px solid #AFA86F; /* 2列目の左側に境界線を追加 */
+}
+
+/* 左右の列にパディングを追加 */
+.hamburger__inner._emergent > *:nth-child(1) {
+  padding-right: 63px; /* 左列の右側に63pxのスペース */
+}
+
+.hamburger__inner._emergent > *:nth-child(2) {
+  padding-left: 63px; /* 右列の左側に63pxのスペース */
+}
+
+.hamburger__menu-area{
+  max-width: 589px;
+}
+
+.menu {
+  display: grid;
+  max-width: 526px;
+  grid-template-columns: 1fr 1fr; /* 2列 */
+  grid-template-rows: repeat(3, auto); /* 3行 */
+  column-gap: 30px
+}
+
+.hamburger-item {
+  padding: 19px 0;
+  text-align: center;
+  border-bottom: 1px solid #AFA86F; /* 横線を下に追加 */
+}
+
+.hamburger-item:nth-child(2n) {
+  border-left: 1px solid transparent; /* 縦の線は透明にする */
+}
+
+.hamburger-item:nth-child(-n+2) {
+  border-top: 1px solid #AFA86F; /* 最上部のアイテムに横線を追加 */
+}
+
+
+
+
+/* メニューのリスト項目のスタイル */
+.menu a {
+  display: block;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  text-align: left; /* メニュー項目を左に配置 */
+  font-size: 16px;
+}
+
+.menu a:last-child {
+  font-size: 16px;
+  border-bottom: none;
+}
+
+.item_e{
+  font-family: Viga;
+  font-size: 32px;
+}
+
+.hamburger__infobox{
+  display: flex;
+  column-gap: 30px;
+  width: 100%;
+}
+
+.hamburger__infobox-title {
+  display: flex;
+  margin-top: 50px;
+  width: 248px;
+  aspect-ratio: 248/42;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.hamburger__link-details{
+  background: #222222;
+}
+
+.hamburger__link-entry{
+  background: #AFA86F;
+}
+
+.hamburger__link-entry:hover {
+  background: #988C2C;
+}
+
+
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+
+header{
+  padding: 26px 30px;
+}
+
+/* メニューが開いたときにheaderの背景色を変更 */
+header._emergent {
+  background-color: #FAF7F1;
+  transition: background-color 0.5s ease;
+}
+
+.header__inner {
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  justify-content: space-between;
+}
+
+.header-symbol a{
+  display: flex;
+  height: 100%;
+}
+
+.header__content{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__info{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.infobox__title{
+  display: flex;
+  font-size: 14px;
+  width: 126px;
+  aspect-ratio: 126/42;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.info-details{
+  background: #222222;
+}
+
+.info-entry{
+  background: #AFA86F;
+}
+
+.info-entry:hover {
+  background: #988C2C;
+}
+
+/* ------------------------ここからabout-us------------------------ */
+
+
+
+
+/* ーーーー */
+/* hero */
+/* ファーストビュー */
+/* ーーーー */
+
+.hero__box{
+    display: flex;
+    flex-direction: column;
+    padding-top: 71px;
+    padding-bottom: 95px;
+    gap: 16px
+}
+
+.background-section {
+  background-image: url("./img/staffファーストビュー.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-titile_e,
+.hero-titile_j,
+.hero-text{
+  font-weight: normal;
+  background-color: #fff;
+  width: max-content;
+  padding: 0 11px;
+  line-height: 1.2; /* 行の高さを調整してテキストの縦の間隔を減らす */
+}
+
+.hero-titile_j{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.hero-text{
+  font-weight: bold;
+  font-size: 16px;
+  color: #988C2C;
+  line-height: 2.2;
+}
+
+.breadcrumb__area{
+  background-color: #F0F0F0;
+}
+
+.breadcrumb{
+  font-size: 14px;
+  display: flex;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  list-style: none; /* 番号を消す */
+  gap: 4px;
+}
+
+
+/* ーーーー */
+/* staff */
+/* 社員について */
+/* ーーーー */
+
+.staff__inner {
+  padding-top: 130px;
+  padding-bottom: 133px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横に3列 */
+  grid-template-rows: repeat(2, auto); /* 縦に2行 */
+  gap: 45px 40px;
+}
+
+
+.staff__box{
+  max-width: 300px;
+}
+
+.staff-image{
+  width: 100%;
+}
+
+.staff-image img{
+  width: 100%;
+  aspect-ratio: 300/379;
+  border-radius: 30px;
+  position: relative;
+}
+
+.staff__content{
+  margin-top: 26px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.staff-title{
+  display: block;
+  font-size: 20px;
+  margin-top: 26px;
+  position: absolute;
+  transform: translate(0, -160%);
+  white-space: nowrap;
+}
+
+.staff-title p{
+  background-color: #AFA86F;
+  /* 要素の幅を、コンテンツの幅に合わせる */
+  width: max-content;
+  padding: 0px 6px;
+}
+
+.staff-title p:nth-of-type(2) {
+  margin-top: 6px;
+}
+
+.staff-text{
+  font-size: 16px;
+}
+
+.staff-name{
+  margin-top: 6px;
+  font-size: 24px;
+}
+
+.staff__staff:nth-child(odd) {
+  margin-bottom: 36px;
+}
+
+.staff__staff:nth-child(even) {
+  margin-top: 36px;
+}
+
+
+
+
+/* ------------------------ここまでabout-us------------------------ */
+
+/* ーーーー */
+/* footer */
+/* フッター */
+/* ーーーー */
+
+.footer__image{
+  position: relative;
+}
+
+.footer__image img{
+  aspect-ratio: 1440/488.32;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer__content{
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 完全に中央に配置 */
+}
+
+.footer__content-inner{
+  display: block;
+  text-align: center;
+  padding: 50px 200px;
+}
+
+.footer__content-text{
+  font-weight: bold;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.entrybox{
+  margin-top: 31px;
+}
+
+.entrybox__area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #AFA86F;
+  padding: 0 253px;
+  position: relative;
+  max-width: 556px;
+  aspect-ratio: 556/70;
+}
+
+.entrybox__area:hover{
+  background-color: #222222; /* 背景を黒に */
+  color: #fff; /* テキストを白に */
+}
+
+.entrybox__area p{
+  font-size: 16px;
+}
+
+.footer__info{
+  padding: 0 64px 64px;
+}
+
+.footer__info-inner{
+  padding:198px 178px 61px;
+  background-color:#FAF7F1;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.footer__list {
+  display: flex;
+  column-gap: 22px;
+  justify-content: flex-start;
+  font-weight: bold;
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding-top: 22px;
+  padding-left: 108px;
+}
+
+.footer-item {
+  margin-bottom: 35px; /* 下部にマージンを追加 */
+}
+
+.footer__icon-text{
+  margin-top: 24px;
+  font-family: Viga;
+  font-size: 12px;
+  text-align: left;
+  color: #999999;
+}
+
+.footer__icon-app{
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.footer__icon-app img{
+  max-width: 24px;
+  aspect-ratio: 24/24;
+}
+
+@media screen and (max-width: 1040px) {
+  /* 1024から余白が無くなるから */
+
+body{
+  font-size: clamp(14px, 4.27vw, 16px);   /* =デザインカンプ375px：16px */
+}
+
+.range {
+  padding-top: 85px;
+}
+
+h1{
+  font-size: clamp(30px, 12.8vw, 64px);   /* =デザインカンプ375px：48px */
+}
+
+h2{
+  font-size: clamp(24px, 8.53vw, 32px);   /* =デザインカンプ375px：32px */
+}
+
+h3{
+  font-size: clamp(16px, 6.4vw, 32px);  /* =デザインカンプ375px：24px */
+}
+
+.link-title,.link-button{
+  font-size: clamp(14px, 4.27vw, 20px);   /* =デザインカンプ375px：16px */
+}
+
+.logo {
+  max-width:clamp(151px, 40vw, 230px);  /* =デザインカンプ375px：151px */
+}
+
+.headline_left{
+  margin-left: 0;
+}
+
+.headline-backtitle{
+  font-size: clamp(50px, 21.33vw, 96px);   /* =デザインカンプ375px：80px */
+}
+
+.headline-backtitle_left,
+.headline-backtitle_center {
+  transform: translate(1%, -70%);
+}
+
+.headline-backtitle_center{
+  left: 0;
+  transform: translate(6%, -70%);
+
+   /* 以下、採用ブログ「recruitment」がはみ出るため*/
+   width: 93%;
+   overflow: hidden;
+}
+
+.headline-text {
+  margin-top: 35px;
+}
+
+.normal{
+  display: none;
+}
+
+.sp{
+  display: block;
+}
+
+.controls {
+  max-width: 42px;
+}
+
+.linkbox{
+  max-width: 277px;
+}
+
+/* ーーーー */
+/* ハンバーガーメニュー */
+/* ーーーー */
+
+.hamburger{
+  margin-top: -3px;
+  max-width: 32px;
+  max-height: 34px;
+}
+
+.hamburger span{
+  max-width: 32px;
+}
+
+.hamburger span:nth-of-type(1) {
+  top: 0%;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 25%;
+}
+
+.hamburger span:nth-of-type(3) {
+  top: 50%;
+}
+
+.hamburger p{
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+.hamburger__inner{
+    padding:36px 0 192px 0;
+}
+
+.hamburger__inner._emergent {
+  margin-top:clamp(54px, 13vw, 68px)
+}
+
+.hamburger__inner {
+  padding-left: 0;
+}
+
+.hamburger__inner._emergent > *:nth-child(2) {
+  padding: 0 12px;
+}
+
+.hamburger-symbol{
+  display: none;
+}
+
+.menu{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  max-width: 1016px;
+  width: 92vw;
+}
+
+.hamburger-item{
+  padding: 10px 0 12px;
+}
+
+/* カンプに従い順序入れ替え */
+.hamburger-item:nth-child(1) { order: 1; } /* ABOUT US */
+.hamburger-item:nth-child(3) { order: 2; } /* STAFF */
+.hamburger-item:nth-child(5) { order: 3; } /* BLOG */
+.hamburger-item:nth-child(2) { order: 4; } /* BENEFITS */
+.hamburger-item:nth-child(4) { order: 5; } /* CARRER */
+.hamburger-item:nth-child(6) { order: 6; } /* FAQ */
+
+.item_e{
+  font-size: clamp(10px, 4.8vw, 32px);  /* =デザインカンプ375px：18px */
+}
+
+.item_j{
+  font-size: clamp(8px, 3.2vw, 16px);  /* =デザインカンプ375px：12px */
+}
+
+.hamburger__infobox{
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px ;
+  margin-top: 53px;
+}
+
+.hamburger__infobox-title{
+  margin: 0;
+  width: 100%; /* 幅の制限を解除 */
+  max-width: 248px; /* 最大幅を248pxに設定 */
+}
+
+.hamburger__inner._emergent > *:nth-child(2) {
+  border-left: none;
+}
+
+.hamburger-item:nth-child(-n+2) {
+  border-top: none;
+}
+
+.hamburger-item:nth-child(1) {
+  border-top: 1px solid black;
+}
+
+.hamburger-item:nth-child(5),
+ .hamburger-item:nth-child(6) {
+  border-bottom: 1px solid black;;
+}
+
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+
+header {
+  padding: 8px 12px;
+  padding-bottom: 80px;/* hamburger__innerとの間に隙間ができるため */
+}
+
+
+.header__info{
+  display: none;
+}
+/* ------------------------ここからabout-us------------------------ */
+
+/* ーーーー */
+/* hero */
+/* ファーストビュー */
+/* ーーーー */
+
+.hero__inner{
+  margin-top: -72px;
+}
+
+.hero-titile_j{
+  font-size: clamp(12px, 4.8vw, 24px);/* =デザインカンプ375px：18px想定 */
+}
+
+.hero-text{
+  font-size: clamp(8px, 3.2vw, 16px);/* =デザインカンプ375px：12px想定 */
+}
+
+.breadcrumb{
+  padding-top: 17px;
+}
+
+
+/* ーーーー */
+/* staff */
+/* 社員について */
+/* ーーーー */
+
+.staff__inner{
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;    /* 各グリッドアイテムを横方向で中央に */
+}
+
+@media screen and (max-width: 690px) {
+  /* ２行の余白がないため */
+  .staff__inner{
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    justify-items: center;    /* 各グリッドアイテムを横方向で中央に */
+    }
+  }
+
+.staff__staff:nth-child(odd) {
+  margin-bottom: 25px;
+}
+
+.staff__staff:nth-child(even) {
+  margin-top: 25px;
+}
+
+.staff__content{
+  margin-top: 26px;
+}
+
+/* グリッドの調節によりVW調節は無し */
+
+.staff-title{
+  font-size: 16px;  /* =デザインカンプ375px：16px */
+  margin-top: 32px;
+}
+
+.staff-title p{
+  padding: 4px 7px;
+}
+
+.staff-text{
+  font-size: 12px;  /* =デザインカンプ375px：12px */
+}
+
+.staff-name{
+  margin-top: 8px;
+  font-size: 20px;  /* =デザインカンプ375px：20px */
+}
+
+/* ------------------------ここまでabout-us------------------------ */
+
+/* ーーーー */
+/* footer */
+/* フッター */
+/* ーーーー */
+
+.footer__image img {
+  aspect-ratio: 375 / 250;
+}
+
+.footer__content {
+  max-width: clamp(10px, 91.47vw, 956px);  /* =デザインカンプ375px：343px */
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+}
+
+.footer__content-inner {
+  padding: 24px;
+}
+
+.footer__content-text{
+  font-size: clamp(10px, 3.73vw, 16px);  /* =デザインカンプ375px：14px */
+  line-height: 2.5;
+}
+
+.entrybox{
+  max-width: 200px;
+  aspect-ratio: 200 / 54;
+  margin: 24px auto 0;
+}
+
+.entrybox__area {
+  padding: 0;
+  max-width: 200px;
+  aspect-ratio: 200 / 54;
+}
+
+.footer__info{
+  background-color: #FAF7F1;
+  padding: 166px 0 0;
+}
+
+.footer__info-inner {
+  padding: 0;
+  grid-template-columns: 1fr; /* 縦一列に設定 */
+  grid-template-rows: repeat(4, auto); /* 4行に設定 */
+  row-gap: 29px;
+}
+
+/* footer-symbol logo */
+.footer__info-inner > :nth-child(1) {
+  grid-area: 3 / 1 / 4 / 2; /* 1番目のアイテムを3行目に配置 */
+  margin: 0 auto;
+  max-width: 251px;
+}
+
+.footer-symbol .logo{
+  max-width: clamp(251px, 40vw, 300px);
+}
+
+/* footer__list */
+.footer__info-inner > :nth-child(2) {
+  grid-area: 1 / 1 / 2 / 2; /* 2番目のアイテムを1行目に配置 */
+  flex-direction: column; /* 縦並びにする */
+  text-align: center;
+  padding: 0;
+  font-size: clamp(10px, 3.73vw, 16px);  /* =デザインカンプ375px：14px */
+}
+
+.footer-item{
+  margin-bottom: 14px;
+}
+
+.footer__info-inner > :nth-child(3) {
+  grid-area: 4 / 1 / 5 / 2; /* 3番目のアイテムを4行目に配置 */
+  margin: 0 auto;
+}
+
+/* footer__icon-app */
+.footer__info-inner > :nth-child(4) {
+  grid-area: 2 / 1 / 3 / 2; /* 4番目のアイテムを2行目に配置 */
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
+}
