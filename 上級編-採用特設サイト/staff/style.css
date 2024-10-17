@@ -45,14 +45,12 @@ h1{
 }
 
 h2{
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 20px;
   }
 
 h3{
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
-  color: #988C2C;
   }
 
 a {
@@ -446,21 +444,20 @@ header._emergent {
 
 .staff-title{
   display: block;
-  font-size: 20px;
   margin-top: 26px;
   position: absolute;
   transform: translate(0, -160%);
   white-space: nowrap;
 }
 
-.staff-title p{
+.staff-title h2{
   background-color: #AFA86F;
   /* 要素の幅を、コンテンツの幅に合わせる */
   width: max-content;
   padding: 0px 6px;
 }
 
-.staff-title p:nth-of-type(2) {
+.staff-title h2:nth-of-type(2) {
   margin-top: 6px;
 }
 
@@ -470,7 +467,6 @@ header._emergent {
 
 .staff-name{
   margin-top: 6px;
-  font-size: 24px;
 }
 
 .staff__staff:nth-child(odd) {
@@ -609,11 +605,11 @@ h1{
 }
 
 h2{
-  font-size: clamp(24px, 8.53vw, 32px);   /* =デザインカンプ375px：32px */
+  font-size: 16px;
 }
 
 h3{
-  font-size: clamp(16px, 6.4vw, 32px);  /* =デザインカンプ375px：24px */
+  font-size: 20px;
 }
 
 .link-title,.link-button{
@@ -849,11 +845,10 @@ header {
 /* グリッドの調節によりVW調節は無し */
 
 .staff-title{
-  font-size: 16px;  /* =デザインカンプ375px：16px */
   margin-top: 32px;
 }
 
-.staff-title p{
+.staff-title h2{
   padding: 4px 7px;
 }
 
@@ -863,7 +858,6 @@ header {
 
 .staff-name{
   margin-top: 8px;
-  font-size: 20px;  /* =デザインカンプ375px：20px */
 }
 
 /* ------------------------ここまでabout-us------------------------ */
