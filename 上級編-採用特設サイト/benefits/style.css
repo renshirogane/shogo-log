@@ -456,6 +456,7 @@ header._emergent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 46px;
+  justify-items: center;
 }
 
 .voices__box{
@@ -618,7 +619,7 @@ h2{
 }
 
 h3{
-  font-size: clamp(16px, 6.4vw, 32px);  /* =デザインカンプ375px：24px */
+  font-size: clamp(16px, 6.4vw, 24px);  /* =デザインカンプ375px：24px */
 }
 
 .link-title,.link-button{
@@ -833,11 +834,6 @@ header {
   column-gap: 20px;
 }
 
-/* ーーーー */
-/* system */
-/* 各種制度 */
-/* ーーーー */
-
 
 /* ーーーー */
 /* voices */
@@ -846,6 +842,16 @@ header {
 .voices__inner{
   margin: 0 auto;
   padding-bottom: 85px;
+}
+
+.voices__inner .headline{
+  text-align: center;
+}
+
+.voices__writing{
+  margin-top: 50px;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 46px;
 }
 
 /* ------------------------ここまでabout-us------------------------ */
