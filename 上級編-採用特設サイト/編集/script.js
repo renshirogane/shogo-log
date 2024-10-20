@@ -20,7 +20,7 @@ $(document).ready(function() {
   });
 
   // <html> タグのクラスを確認してSplideの設定を分ける
-  if ($("html").hasClass("page-archive-blog")) {
+  if ($("section").hasClass("page-archive-blog")) {
     // page-archive-blog 用の Splide.js 設定
     const splide = new Splide(".splide", {
       pauseOnHover: false, // カーソルが乗っても停止しない

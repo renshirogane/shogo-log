@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" class="page-top">
+<html lang="ja">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- ページのタイトルを設定 -->
@@ -17,11 +17,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <!-- jQueryの読み込み -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+      <!-- 他の<head>の内容 -->
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              if (window.location.pathname.endsWith('top.html')) {
+                  document.querySelectorAll('.hamburger span').forEach(span => {
+                      span.style.background = '#fff'; /* top.htmlの時だけ変更 */
+                  });
+                  document.querySelectorAll('.hamburger p').forEach(p => {
+                      p.style.color = '#fff'; /* top.htmlの時だけ変更 */
+                  });
+                  document.querySelector('.main').classList.add('top-background'); /* top.htmlの時だけ、<section class="main">にクラス名にtop-backgroundを追加 */
+              }
+          });
+      </script>
   </head>
 
   <body>
     <!-- ファーストビュー開始 -->
-    <section class="main top-background">
+    <section class="main">
       <!-- ヘッダー開始 -->
       <header class="hamburger_action_clicked">
         <div class="header__inner">

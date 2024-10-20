@@ -168,10 +168,7 @@ a {
   transition: all 0.4s; /* Animation transition */
 }
 
-/* index.html 用のスタイル */
-.page-top .hamburger span {
-  background: #fff; /* Background for index.html */
-}
+
 
 .hamburger p {
   color: #222222; /* White color for the text */
@@ -180,10 +177,6 @@ a {
   margin-top: 40px;
 }
 
-/* index.html 用のスタイル */
-.page-top .hamburger p {
-  color: #fff; /* White color for the text */
-}
 .hamburger span:nth-of-type(1) {
   top: 0%;
 }
@@ -198,7 +191,7 @@ a {
 
 .hamburger._emergent span{
   margin:0;
-  background: #222222;
+  background: #222222 !important;
 }
 
 /* clickedクラスが付与されると線が回転して×に */
@@ -374,11 +367,6 @@ a {
 
 header{
   padding: 26px 30px;
-  background-color: #fff;
-}
-
-/* index.html 用のスタイル */
-.page-top header {
   background:none; /* Background for index.html */
 }
 
@@ -1043,6 +1031,13 @@ background-repeat: no-repeat;
   background-image: url("./img/archive-blogファーストビュー.png");
 }
 
+.page-career .background-section{
+  background-image: url("./img/careerファーストビュー.png");
+}
+
+
+
+
 .page-faq .background-section{
   background-image: url("./img/faqファーストビュー.png");
 }
@@ -1432,6 +1427,12 @@ margin-left: 20px;
 .splide__arrow_blog img:hover {
   max-width: 70px; /* ホバー時にサイズを70pxに */
 }
+
+/* ------------------------ここからarchive-blog------------------------ */
+
+
+
+
 
 /* ーーーー */
 /* footer */
@@ -2265,6 +2266,14 @@ header {
 .voices-name{
   font-size: clamp(16px, 6.4vw, 24px);  /* =デザインカンプ375px：24px */
 }
+
+
+/* ------------------------ここからarchive-blog------------------------ */
+
+
+
+/* ------------------------ここからcareer------------------------ */
+
 
 
 
