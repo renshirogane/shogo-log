@@ -1566,6 +1566,129 @@ margin-left: 20px;
 }
 
 
+/* ------------------------ここからfaq------------------------ */
+
+
+/* ーーーー */
+/* faq */
+/* 募集要項 */
+/* ーーーー */
+
+
+.faq__index .headline__list{
+  margin-top: 146px;
+}
+
+
+.faq__list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  margin-bottom: 139px; 
+  row-gap: 80px;
+}
+
+.faq__content{
+  margin-top: 104px;
+  display: grid;
+  grid-template-rows: repeat(8, auto);
+}
+
+.faq__content > *:first-child {
+  border-top: 1px solid #AFA86F;
+}
+
+.faq__content > * {
+  border-bottom: 1px solid #AFA86F;
+}
+
+.faq__box{
+  padding-top: 28px;
+  padding-bottom: 27px;
+}
+
+.faq__title{
+  width: 100%;  
+}
+
+.faq__box-title{
+  font-weight: bold;
+}
+
+.faq__question{
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  justify-content: space-between; /* 子要素を左右に均等に配置 */
+}
+
+.left-element{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.faq__question._emergent{
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  justify-content: space-between; /* 子要素を左右に均等に配置 */
+  border-top-left-radius: 10px; /* 左上の角を10px丸める */
+  border-top-right-radius: 10px; /* 右上の角を10px丸める */
+}
+
+.faq__answer {
+  display: none; /* デフォルトで非表示に設定 */
+  line-height: 180%;
+  padding: 8px 36px 0;
+  border-bottom-left-radius: 10px; /* 左下の角を10px丸める */
+  border-bottom-right-radius: 10px; /* 右下の角を10px丸める */
+}
+
+.faq__answer._emergent {
+  display: block; /* 表示状態に変更 */
+}
+
+.faq__answer ol{
+  margin-left: 16px;
+}
+
+.question__btn span{
+  background: #988C2C;
+  border-radius: .125rem;
+  letter-spacing: normal;
+  display: block; 
+  width: 16px;
+  height: 2px;
+}
+
+.question__btn span:nth-child(2) {
+  transform: translateY(-50%) rotate(90deg); /* 縦棒にする */
+}
+
+.question__btn_plus._emergent{
+  display: none; /* 非表示に設定 */
+}
+
+.question__btn_minus{
+  display: none; /* 非表示に設定 */
+}
+
+.question__btn_minus._emergent {
+  display: block; /* 表示状態に変更 */
+}
+
+.question__mark{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  font-family: Viga,sans-serif;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  color: #988C2C;
+}
+
 
 
 
@@ -2456,6 +2579,11 @@ header {
 
 /* ------------------------ここからdetails------------------------ */
 
+/* ーーーー */
+/* DETAILS */
+/* 募集要項 */
+/* ーーーー */
+
 
 .details__inner{
   margin: 0 auto;
@@ -2469,6 +2597,26 @@ header {
 .details__content{
   margin-top: 30px;
 }
+
+/* ------------------------ここからfaq------------------------ */
+
+
+.faq__inner{
+  margin: 0 auto;
+}
+
+.faq__index .headline__list{
+  margin-top: 0;
+}
+
+.faq__content{
+  margin-top: 30px;
+}
+
+
+
+
+
 
 /* ------------------------ここまで------------------------ */
 
