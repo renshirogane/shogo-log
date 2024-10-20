@@ -72,6 +72,26 @@ body {
   margin-top: 52px;
 }
 
+.headline__list {
+  margin-top: 67px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 1fr; 
+  column-gap: 47px;
+  justify-items: center;
+  align-items: center; 
+}
+
+.index-title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.headline-mark{
+  font-size: 24px;
+}
+
+
 a {
   color:#222222; /* リンクのテキスト色を青に設定 */
   text-decoration: none; /* リンクの下線を削除 */
@@ -1035,6 +1055,10 @@ background-repeat: no-repeat;
   background-image: url("./img/careerファーストビュー.png");
 }
 
+.page-details .background-section{
+  background-image: url("./img/detailsファーストビュー.png");
+}
+
 
 
 
@@ -1492,8 +1516,61 @@ margin-left: 20px;
   line-height: 1.8;
 }
 
+/* ------------------------ここからdetails------------------------ */
+
+/* ーーーー */
+/* DETAILS */
+/* 募集要項 */
+/* ーーーー */
+
+.details__inner{
+  margin-top: 136px;
+  margin-bottom: 139px;
+}
+
+.details .headline-text{
+  margin-top: 100px;
+}
 
 
+.headline__box{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 294px;
+  aspect-ratio: 294/56;
+  background-color: #FAF7F1;
+  border: 1px solid #222222;
+  border-radius: 40px;
+}
+
+.headline__box a{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-weight: bold;
+}
+
+/* 他WEBベージのレイアウトに従う */
+.details__list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 86px;
+  row-gap: 80px;
+}
+
+.details__content{
+  margin-top: 72px;
+}
+
+
+
+
+
+
+/* ------------------------ここまで------------------------ */
 
 /* ーーーー */
 /* footer */
@@ -1654,6 +1731,22 @@ margin-left: 20px;
 
 .headline-text {
   margin-top: 35px;
+}
+
+.headline__list {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 5vw;
+}
+
+.index-title{
+  font-size: clamp(12px, 6.4vw, 20px); 
+}
+
+.headline-mark{
+  font-size: clamp(16px, 4.8vw, 22px);
 }
 
 .normal{
@@ -2361,9 +2454,23 @@ header {
   margin-top: 24px;
 }
 
-/* ------------------------ここから------------------------ */
+/* ------------------------ここからdetails------------------------ */
 
 
+.details__inner{
+  margin: 0 auto;
+  padding-bottom: 85px;
+}
+
+.headline__index .headline{
+  text-align: center;
+}
+
+.details__content{
+  margin-top: 30px;
+}
+
+/* ------------------------ここまで------------------------ */
 
 /* ーーーー */
 /* footer */
