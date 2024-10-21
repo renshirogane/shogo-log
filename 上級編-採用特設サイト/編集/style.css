@@ -664,13 +664,13 @@ header._emergent {
   border-radius: 30px;
 }
 
-.slide__content{
+.staff__content{
   margin-top: 32px;
   font-weight: bold;
   text-align: left;
 }
 
-.slide-title{
+.staff-title{
   display: block;
   font-size: 20px;
   margin-top: 26px;
@@ -680,22 +680,22 @@ header._emergent {
   white-space: nowrap;
 }
 
-.slide-title p{
+.staff-title p{
   background-color: #AFA86F;
   /* 要素の幅を、コンテンツの幅に合わせる */
   width: max-content;
   padding: 0px 6px;
 }
 
-.slide-title p:nth-of-type(2) {
+.staff-title p:nth-of-type(2) {
   margin-top: 6px;
 }
 
-.slide-text{
+.staff-text{
   font-size: 16px;
 }
 
-.slide-name{
+.staff-name{
   margin-top: 6px;
   font-size: 24px;
 }
@@ -1050,6 +1050,10 @@ background-repeat: no-repeat;
 
 .page-archive-blog .background-section{
   background-image: url("./img/archive-blogファーストビュー.png");
+}
+
+.page-archive-staff .background-section{
+  background-image: url("./img/archive-staffファーストビュー.png");
 }
 
 .page-career .background-section{
@@ -1453,9 +1457,47 @@ margin-left: 20px;
   max-width: 70px; /* ホバー時にサイズを70pxに */
 }
 
-/* ------------------------ここからarchive-blog------------------------ */
+/* ------------------------ここからarchive-staff------------------------ */
 
+/* ーーーー */
+/* archive-staff */
+/* 社員について */
+/* ーーーー */
 
+.archive-staff__inner {
+  padding-top: 130px;
+  padding-bottom: 133px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横に3列 */
+  grid-template-rows: repeat(2, auto); /* 縦に2行 */
+  gap: 45px 40px;
+}
+
+.staff__box_archive{
+  max-width: 300px;
+}
+
+.staff-image_archive img{
+  width: 100%;
+  border-radius: 30px;
+}
+
+.staff__content_archive{
+  margin-top: -26px;
+}
+
+.staff-title_archive{
+  margin-top: 0;
+  position: static;
+  background-color: #AFA86F;
+  /* 要素の幅を、コンテンツの幅に合わせる */
+  width: max-content;
+  padding: 0px 6px;
+}
+
+.staff-title:nth-of-type(2) {
+  margin-top: 6px;
+}
 
 
 /* ------------------------ここからcareer------------------------ */
@@ -2145,24 +2187,24 @@ header {
   margin-top: 25px;
 }
 
-.slide__content{
+.staff__content{
   margin-top: 28px;
 }
 
-.slide-title{
+.staff-title{
   font-size: clamp(12px, 4.27vw, 16px);  /* =デザインカンプ375px：16px */
   margin-top: 32px;
 }
 
-.slide-title p{
+.staff-title p{
   padding: 4px 7px;
 }
 
-.slide-text{
+.staff-text{
   font-size: clamp(8px, 3.2vw, 16px);  /* =デザインカンプ375px：12px */
 }
 
-.slide-name{
+.staff-name{
   margin-top: 8px;
   font-size: clamp(10px, 5.33vw, 20px);  /* =デザインカンプ375px：20px */
 }
@@ -2603,6 +2645,46 @@ header {
   top: 90% !important;
 }
 
+/* ------------------------ここからarchive-staff------------------------ */
+
+/* ーーーー */
+/* staff */
+/* 社員について */
+/* ーーーー */
+
+.archive-staff__inner{
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;    /* 各グリッドアイテムを横方向で中央に */
+}
+
+@media screen and (max-width: 690px) {
+  /* ２行の余白がないため */
+  .archive-staff__inner{
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    justify-items: center;    /* 各グリッドアイテムを横方向で中央に */
+    }
+  }
+
+.staff__content_archive{
+  margin-top: -26px;
+}
+
+/* グリッドの調節によりVW調節は無し */
+
+.staff-title_archive{
+  margin-top: -12px;
+}
+
+.staff-title_archive{
+  padding: 4px 7px;
+}
+
+
+
 
 /* ------------------------ここからcareer------------------------ */
 
@@ -2667,6 +2749,21 @@ header {
 .faq__content{
   margin-top: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
