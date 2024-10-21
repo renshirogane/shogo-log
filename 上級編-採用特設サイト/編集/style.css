@@ -640,16 +640,16 @@ header._emergent {
   max-width: 1254px;/* slideの右側は画面の端まで伸ばすため */
 }
 
-.splide__track{
+.splide__track_staff{
   margin-top: 52px;
   margin-left: -8px;/* カンプではスライドとheadlineが左揃えのため */
 }
 
-.splide__list{
+.splide__list_staff{
   gap: 43px;
 }
 
-.splide__slide{
+.splide__slide_staff{
   max-width: 300px;
 }
 
@@ -947,6 +947,7 @@ header._emergent {
   font-size: 14px;
   gap: 4px;
   align-items: center;
+  white-space: nowrap;
 }
 
 .blog__box-topic img{
@@ -2124,15 +2125,15 @@ header {
   margin: 0 auto;
 }
 
-.splide__track{
+.splide__track_staff{
   margin-left: -14px;
 }
 
-.splide__list{
+.splide__list_staff{
   gap: 23px;
 }
 
-.splide__slide{
+.splide__slide_staff{
   max-width: 246px;
 }
 
@@ -2547,6 +2548,60 @@ header {
 
 /* ------------------------ここからarchive-blog------------------------ */
 
+/* ーーーー */
+/* blog */
+/* 採用ブログについて */
+/* ーーーー */
+
+.splide__track_staff{
+  margin-top: auto;
+}
+
+.splide__slide_staff{
+  gap: 3vw;
+}
+
+.splide__list_staff{
+  margin:43px 0 0;
+}
+
+/* TOPページとは別のレスポンシブ対応 */
+.blog__box_archive {
+  flex-direction: column;
+  aspect-ratio: unset;
+}
+
+.blog__box-image_archive{
+  overflow: hidden;
+}
+
+.blog__box-image_archive img {
+  max-width: 100%;
+  width: 100%;
+  height: 121px; /* 高さを121pxに固定 */
+  object-fit: cover; /* 画像を要素にフィットさせる。はみ出た部分は自動的にクリップされる */
+  object-position: center; /* 画像を中央に配置 */
+  border-radius: 10px;
+}
+
+.blog__box-writing_archive {
+  padding: 4px 16px;
+  height: 121px; /* グリット内の余分な余白をなくすため */
+}
+
+.blog__box-topic_archive{
+  font-size: clamp(8px, 3.2vw, 16px);
+}
+
+.blog__box-title_archive {
+  margin-top: 8px;
+  font-size: clamp(8px, 3.2vw, 16px);  /* =デザインカンプ375px：12px 14pxだとはみ出るため*/
+}
+
+.splide__button_blog{
+  display: flex;
+  top: 90% !important;
+}
 
 
 /* ------------------------ここからcareer------------------------ */
