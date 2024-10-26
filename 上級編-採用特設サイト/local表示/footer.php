@@ -22,15 +22,15 @@
             </a>
           </div><!-- /.footer_symbol -->
           <ul class="footer__list">
-            <li class="footer-item"><a href="#"><p>ホーム</p></a></li>
-            <li class="footer-item"><a href="#"><p>TETOTEについて</p></a></li>
-            <li class="footer-item"><a href="#"><p>人を知る</p></a></li>
-            <li class="footer-item"><a href="#"><p>研修制度とキャリアパス</p></a></li>
-            <li class="footer-item"><a href="#"><p>福利厚生</p></a></li>
-            <li class="footer-item"><a href="#"><p>採用ブログ</p></a></li>
-            <li class="footer-item"><a href="#"><p>募集要項</p></a></li>
-            <li class="footer-item"><a href="#"><p>よくある質問</p></a></li>
-            <li class="footer-item"><a href="#"><p>会社概要</p></a></li>
+            <li class="footer-item"><a href="<?php echo home_url(); ?>"><p>ホーム</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>"><p>TETOTEについて</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/archive-staff' ) ); ?>"><p>人を知る</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/career' ) ); ?>"><p>研修制度とキャリアパス</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/benefits' ) ); ?>"><p>福利厚生</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/archive-blog' ) ); ?>"><p>採用ブログ</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/details' ) ); ?>"><p>募集要項</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/faq' ) ); ?>"><p>よくある質問</p></a></li>
+            <li class="footer-item"><a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>"><p>会社概要</p></a></li>
           </ul><!-- /.footer__list -->
           <div class="footer__icon-text">
             <p>© 2024 TETOTE All Right Reserved.</p>

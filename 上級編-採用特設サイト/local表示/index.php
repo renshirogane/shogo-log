@@ -317,19 +317,19 @@
         <div class="recruitment__content">
           <div class="recruitment__content-area">
             <div class="recruitment__content-details gridbox">
-              <a href="" class="gridbox__area">
+              <a href="<?php echo esc_url( home_url( '/details' ) ); ?>" class="gridbox__area">
                 <p class="link-title">募集要項</p>
                 <p class="link-button">＞</p>
               </a>  
             </div><!-- /.recruitment__content_details -->
             <div class="recruitment__content-faq gridbox">
-              <a href="" class="gridbox__area">
+              <a href="<?php echo esc_url( home_url( '/faq' ) ); ?>" class="gridbox__area">
                 <p class="link-title">よくある質問</p>
                 <p class="link-button">＞</p>
               </a>
             </div><!-- /.recruitment__content_faq -->
             <div class="recruitment__content-overview gridbox"><!-- about-usページの下の方にある項目 -->
-              <a href="" class="gridbox__area">
+              <a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>" class="gridbox__area">
                 <p class="link-title">会社概要</p>
                 <p class="link-button">＞</p>
               </a>
@@ -338,4 +338,7 @@
         </div><!-- /.recruitment__content -->
       </div><!-- /.recruitment__inner range -->
     </section><!-- 採用情報について終了 -->
+
+
+    
     <?php get_footer(); ?> 
