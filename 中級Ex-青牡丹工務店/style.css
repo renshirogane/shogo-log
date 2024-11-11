@@ -460,40 +460,49 @@ header {
   margin-top: 20px;
 }
 
-.service__content-box{
-  display: flex;
-  column-gap: 56px;
-}
 
-.service__content-image{
-  max-width: 516px;
-  max-height: 464px;
-}
 
 .service__content-image img{
   max-width: 100%;
   aspect-ratio: 516/464;
 }
 
-.service__content-number{
+.service__content-box {
+  display: flex;
+  position: relative; /* 追加 */
+}
+
+.service__content-writing{
+  margin-left: 56px;
+}
+
+.service__content-number {
   font-family: Kanit;
   font-size: 168px;
   font-weight: bold;
   line-height: 168px;
   color: #B1C6DC;
+  position: absolute; /* 修正: 絶対配置で位置調整 */
+  top: 20%; /* 適宜調整 */
+  left: 49%; /* 適宜調整 */
+  transform: translate(-50%, -50%); /* 中心に配置 */
   z-index: -1;
-  position: relative;/* 重ね順を編集するため */
 }
 
-.service__content-number_right{
-  margin-left: -80px;
+.service__content-image {
+  max-width: 516px;
+  max-height: 464px;
+  position: relative; /* 画像より下にするために親に相対位置を設定 */
+  z-index: 1; /* 画像を上に */
 }
+
 
 .service__content-number_left{
-
+  left: 34%; /* 適宜調整 */
 }
 
 .service__content-title{
+  margin-top: 170px;
   font-size: 24px;
   font-weight: bold;
   width: max-content;
