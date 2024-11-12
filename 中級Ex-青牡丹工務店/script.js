@@ -2,6 +2,55 @@
 
 $(document).ready(function() {
 
+
+  const modalControls = [
+    {
+      closeButton: document.querySelector('#modal1 .close-button'), // close-buttonを参照
+      close: document.querySelector('#modal1 .close'), // closeを参照
+      modal: document.getElementById('modal1'),
+      mask: document.getElementById('mask1'),
+      newsContentBox: document.getElementById('newsContentBox1')
+    },
+    {
+      closeButton: document.querySelector('#modal2 .close-button'),
+      close: document.querySelector('#modal2 .close'),
+      modal: document.getElementById('modal2'),
+      mask: document.getElementById('mask2'),
+      newsContentBox: document.getElementById('newsContentBox2')
+    },
+    {
+      closeButton: document.querySelector('#modal3 .close-button'),
+      close: document.querySelector('#modal3 .close'),
+      modal: document.getElementById('modal3'),
+      mask: document.getElementById('mask3'),
+      newsContentBox: document.getElementById('newsContentBox3')
+    }
+  ];
+  
+  modalControls.forEach(control => {
+    // モーダルを表示
+    control.newsContentBox.addEventListener('click', function () {
+      control.modal.classList.remove('hidden');
+      control.mask.classList.remove('hidden');
+    });
+  
+    // close-buttonでモーダルを閉じる
+    control.closeButton.addEventListener('click', function (event) {
+      event.stopPropagation(); // 他のクリックイベントへの伝播を防止
+      control.modal.classList.add('hidden');
+      control.mask.classList.add('hidden');
+    });
+  
+    // closeでモーダルを閉じる
+    control.close.addEventListener('click', function (event) {
+      event.stopPropagation(); // 他のクリックイベントへの伝播を防止
+      control.modal.classList.add('hidden');
+      control.mask.classList.add('hidden');
+    });
+  });
+  
+
+
   // ハンバーガーメニューのクリックイベント
   $(".hamburger_force_clicked").click(function() {
     $(".hamburger_action_clicked").toggleClass('_open');

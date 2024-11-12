@@ -18,7 +18,11 @@ html{
   line-height: 1.8;
 }
 
-
+.headline{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
 
 .headline__title{
   font-size: 24px;
@@ -109,8 +113,6 @@ a {
 }
 
 
-
-
 /* ーーーー */
 /* header */
 /* ヘッダー */
@@ -118,7 +120,7 @@ a {
 
 
 header {
-  max-width: 250px;
+  max-width: 280px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -170,6 +172,12 @@ header {
   align-items: center;
   column-gap: 16px;
   justify-content: space-between;
+}
+
+/* 特定のエレメントだけに適用する場合 */ 
+.header__box[data-header-id="4"] 
+.header__topic {
+   justify-content: flex-start; /* 要素を左揃えにする */ 
 }
 
 .header__topic-title {
@@ -235,15 +243,10 @@ header {
    margin-top: 32px; /* 最初の要素にだけ適用 */ 
 }
 
-
-
-
-
-
 /* メインコンテンツの設定 */
 .main-content {
-  margin-left: 250px; /* サイドバーの幅に合わせる */
-  width: calc(100% - 250px);
+  margin-left: 280px; /* サイドバーの幅に合わせる */
+  width: calc(100% - 280px);
   transition: margin-left 0.3s;
 }
 
@@ -434,7 +437,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  width: 968px;
+  width: 67.2vw;
   height: 100%;
   border-radius: 50px 0px 0px 50px;
   background-color: #F8F8F8; /* 塗りたい色 */
@@ -458,35 +461,7 @@ header {
   flex-direction: column;
   row-gap: 92px;
   margin-top: 20px;
-}
-
-
-
-.service__content-image img{
-  max-width: 100%;
-  aspect-ratio: 516/464;
-}
-
-.service__content-box {
-  display: flex;
-  position: relative; /* 追加 */
-}
-
-.service__content-writing{
-  margin-left: 56px;
-}
-
-.service__content-number {
-  font-family: Kanit;
-  font-size: 168px;
-  font-weight: bold;
-  line-height: 168px;
-  color: #B1C6DC;
-  position: absolute; /* 修正: 絶対配置で位置調整 */
-  top: 20%; /* 適宜調整 */
-  left: 49%; /* 適宜調整 */
-  transform: translate(-50%, -50%); /* 中心に配置 */
-  z-index: -1;
+  padding-bottom: 100px; /* 灰色の背景を下部分まで適応させるため */
 }
 
 .service__content-image {
@@ -496,9 +471,51 @@ header {
   z-index: 1; /* 画像を上に */
 }
 
+.service__content-image img{
+  max-width: 100%;
+  aspect-ratio: 516/464;
+}
+
+/* service__content-boxを調整 */
+.service__content-box {
+  display: flex;
+  flex-wrap: nowrap; /* 子要素が一行に収まるように */
+}
+
+/* service__content-writingを縮まないように最大幅を固定 */
+.service__content-writing {
+  max-width: 430px; /* 必要に応じて調整 */
+  flex-shrink: 0; /* 縮まないように指定 */
+  position: relative;
+}
+
+.service__content-writing_right{
+  margin-left: 56px;
+}
+
+.service__content-writing_left{
+  margin-right:56px ;
+}
+
+
+
+.service__content-number {
+  font-family: Kanit;
+  font-size: 168px;
+  font-weight: bold;
+  line-height: 168px;
+  color: #B1C6DC;
+  position: absolute; /* 修正: 絶対配置で位置調整 */
+  top: 0px; /* 適宜調整 */
+  left: -80px; /* 適宜調整 */
+  z-index: -1;
+}
+
+
+
 
 .service__content-number_left{
-  left: 34%; /* 適宜調整 */
+  left: 300px; /* 適宜調整 */
 }
 
 .service__content-title{
@@ -524,14 +541,259 @@ header {
 /* お知らせ */
 /* ーーーー */
 
+.newe{
+  padding-top: 107px;
+}
+
+.news__content {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr; /* 1列 */
+  grid-template-rows: repeat(3, 1fr); /* 3行 */
+}
+
+.news__content > div { 
+  border-bottom: 1px solid #B1C6DC; /* 各行の下に線を追加 */ 
+} 
+
+.news__content > div:first-child {
+   border-top: 1px solid #B1C6DC; /* 最初の行の上に線を追加 */
+}
+
+.news__content-box{
+  display: flex;
+  max-width: 1120px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.news__content-writing{
+  font-weight: bold;
+}
+
+.news__content-info{
+  display: flex;
+  font-size: 14px;
+  color: #4282B8;
+  column-gap: 16px;
+}
+
+.news__content-topic{
+  color: #4282B8;
+  border: 1px solid #4282B8;
+  padding: 0 16px;
+}
+
+.news__content-date{
+  color: #4282B8;
+}
+
+.news__content-text{
+  margin-top: 24px;
+}
+
+.news__content-arrow{
+  margin-right: 27px;
+  color: #4282B8;
+  -webkit-text-stroke: 3px #4282B8; /* テキストアウトラインを追加 */
+}
+
+
+/* ーーーー */
+/* macromodal */
+/* モーダル */
+/* ーーーー */
+
+#mask1,#mask2,#mask3 {
+  background: rgba(0, 0, 0, 0.4); /* 背景を薄暗くする */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal1,#modal2,#modal3 {
+  background: #fff;
+  color: #555;
+  width: 100%;
+  max-width: 860px; /* 最大幅を設定 */
+  padding: 16px 102px 24px;
+  border-radius: 4px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* hiddenクラスはモーダルとマスクが非表示になるために使います */
+.hidden {
+  display: none;
+}
+
+.news__content-text_modal{
+  margin-top: 16px;
+  font-size: 24px;
+}
+
+.news__content-imaga{
+  max-width: 656px;
+  margin-top: 16px;
+}
+
+.news__content-imaga img{
+  max-width: 100%;
+  aspect-ratio: 656/366;
+}
+
+.news__content-sentence{
+  font-weight: normal;
+  margin-top: 16px;
+}
+
+/* li 要素の不要なマージンをリセット
+ insideだと改行の際にmarkerの下に文字が来るため */
+.news__content-sentence ul {
+  padding-left: 16px; /* 必要であれば ul に余白を調整 */
+}
+
+.news__content-sentence ul li {
+  margin-left: 0; /* li の余計なマージンをリセット */
+}
+
+.close{
+  margin: 61px auto 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 0px;
+  right: -35px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.close-button span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 32px;
+  height: 4px;
+  background-color: #fff;
+  transform-origin: center;
+}
+
+.line1 {
+  transform: translate(-50%, -50%) rotate(45deg); /* 45度回転 */
+}
+
+.line2 {
+  transform: translate(-50%, -50%) rotate(-45deg); /* -45度回転 */
+}
+
+
 
 /* ーーーー */
 /* contact */
 /* お問い合わせ */
 /* ーーーー */
 
+.contact{
+  margin-top: 132px;
+}
+
+.contact__inner{
+  padding-top: 32px;
+  background: #F8F8F8;
+  border-radius: 50px 0px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__headline{
+  padding-left: 24px;
+}
+
+.contact__image{
+  max-width: 175px;
+  margin-right: 40px;
+}
+
+.contact__image img{
+  max-width: 100%;
+  aspect-ratio: 175/256;
+}
+
+.contact__content {
+  display: grid;
+  grid-auto-columns: min-content; /* 各列の幅を内容に合わせる */
+  grid-auto-flow: column; /* 自動的に列に配置 */
+  margin-top: 34px;
+  margin-bottom: 53px; /* 灰色の余白を広げるため */
+}
 
 
+.contact__content-box{
+  white-space: nowrap;
+  
+}
+
+.contact__content-box1, .contact__content-box2 {
+  border-right: 1px solid #000000;
+}
+
+
+
+.contact__content-box1{
+  margin-left: 24px;
+  padding-right: 32px;
+}
+
+.contact__content-box2{
+  padding: 0 32px;
+}
+
+.contact__content-box3{
+  margin-left: 64px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0 40px;
+}
+
+.contact__content-title{
+  font-family: Kanit;
+  font-size: 32px;
+}
+
+.contact__content-text{
+  margin-top: -9px;
+  font-size: 12px;
+}
+
+.contact__content-logo {
+  width: 20px; /* 必要に応じて調整 */
+  height: 20px; /* 必要に応じて調整 */
+}
+
+.contact__content-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* 画像のサイズが変更されても比率を維持 */
+}
+
+.contact__content-mail{
+  font-weight: bold;
+}
 
 /* ------------------------ここからsingle-about------------------------ */
 
@@ -575,13 +837,96 @@ header {
 /* フッター */
 /* ーーーー */
 
+footer{
+  margin-top: 87px;
+}
+
+.footer__inner {
+  padding: 33px 56px 26px 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* 2列 */
+  grid-template-rows: repeat(2, auto); /* 2行 */
+  column-gap: 40px; /* 列間の間隔を適宜設定 */
+  row-gap: 8px; /* 行間の間隔を適宜設定 */
+}
+
+.footer__image{
+  max-width: 222px;
+}
+
+.footer__image img{
+  max-width: 100%;
+  aspect-ratio: 222/133;
+}
+
+
+.footer__index {
+  max-width: 484px;
+  margin-top: 20px;
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap; /* 要素を改行させるために追加 */
+  gap: 26px 16px; /* 必要に応じて要素間の余白を設定 */
+}
+
+.footer-item { 
+  font-weight: bold;
+  list-style-type: none; /* リストマーカーを削除 */
+}
+
+.footer__mail{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.footer__mail-logo{
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.footer__mail-logo img{
+  max-width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  margin-bottom: 21px;
+}
+
+.footer__info-item {
+  display: flex;
+  column-gap: 16px;
+}
+
+.footer__icon{
+  display: flex; justify-content: flex-end; /* 右揃え */ align-items: flex-end; /* 下揃え */
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------レスポンシブ対応------------------------ */
+
+
 
 @media screen and (max-width: 1080px) {
 
-  /* （0000pxで切り替える理由記載） */
+  /* （） */
 
   *{
-    font-size: clamp(14px, 4.27vw, 20px);   /* =デザインカンプ375px：16px */
+    font-size: clamp(10px, 4.27vw, 16px);   /* =デザインカンプ375px：16px */
   }
 
 .range {
