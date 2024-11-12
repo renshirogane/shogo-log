@@ -53,7 +53,7 @@ $(document).ready(function() {
 
   // ハンバーガーメニューのクリックイベント
   $(".hamburger_force_clicked").click(function() {
-    $(".hamburger_action_clicked").toggleClass('_open');
+    $(".hamburger_action_clicked").toggleClass('_emergent');
   });
 
   // header__inner のスクロール追従

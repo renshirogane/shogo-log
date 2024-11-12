@@ -107,10 +107,137 @@ a {
 /* ハンバーガーメニュー */
 /* ーーーー */
 
-.menu-container{
+
+.menu-container {
   display: none;
+  justify-content: center; /* Center the hamburger menu horizontally */
+  align-items: center; /* Center the hamburger menu vertically */
 }
 
+.hamburger {
+  width: 56px;
+  height: 48px;
+  display: flex;
+  flex-direction: column; /* Stack the lines vertically */
+  justify-content: center; /* Center the lines vertically */
+  align-items: center; /* Center the lines horizontally */
+  cursor: pointer;
+  position: relative;
+  background-color: #4282B8;
+}
+
+.hamburger span {
+  position: absolute;
+  background: #FFFFFF; /* White color for the bars */
+  border-radius: .125rem;
+  display: block;
+  height: 2px; /* Thickness of the bars */
+  width: 32px; /* Width of the bars */
+  margin-top: -2px;
+  transition: all 0.4s; /* Animation transition */
+}
+
+.hamburger p {
+  color: #fff; /* White color for the text */
+  font-size: 12px; /* Adjust font size for better visibility */
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hamburger span:nth-of-type(1) {
+  top: 30%;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 50%;
+}
+
+.hamburger span:nth-of-type(3) {
+  top: 70%;
+}
+
+.hamburger._emergent span{
+  margin:0;
+  background: #FFFFFF;
+}
+
+/* clickedクラスが付与されると線が回転して×に */
+.hamburger._emergent span:nth-of-type(1) {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hamburger._emergent span:nth-of-type(2),
+.hamburger._emergent p{
+  opacity: 0; /*真ん中の線は透過*/
+}
+
+.hamburger._emergent span:nth-of-type(3) {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* メニューのスタイル */
+.hamburger__inner {
+  grid-template-columns: 1fr 3fr; /* 2列 */
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0; /* 左端に揃える */
+  width: 100%; /* ヘッダーの横幅に合わせる */
+  background-color: #FFFFFF;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1; /* ハンバーガーアイコンの下に表示されるようにする */
+}
+
+/* メニュー表示時のスタイル */
+.hamburger__inner._emergent {
+  align-items: center;
+  transform: translateY(0);
+  margin-top: 87px;
+}
+
+.hamburger__menu-area{
+  max-width: 375px ;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;/* hamburger-itemでtext-align: center;するため */
+  flex-direction: column;
+}
+
+.hamburger-item {
+  font-weight: bold;
+  display: flex;
+  margin: 0 auto;
+  padding: 16px 0;
+  text-align: center;
+  list-style-type: none; /* リストマーカーを削除 */
+}
+
+.hamburger-item a{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.item_e{
+  font-size: 12px;
+}
+
+.item__image{
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.item__image img{
+  max-width: 100%;
+  aspect-ratio: 1/1;
+}
 
 /* ーーーー */
 /* header */
@@ -284,6 +411,13 @@ header {
   height: 873px;
   border-radius: 50px;
   max-width: 1120px;
+}
+
+/* 600pxで画像内のイラストが見切れ始めるため */
+@media screen and (max-width: 600px) {
+  .hero__inner {
+    background-image: url("./img/ファーストビュー_SP.png");
+  }
 }
 
 .hero__headline {
@@ -928,9 +1062,9 @@ footer{
 
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1180px) {
 
-  /* （） */
+  /* （contact__imageが小さすぎるため） */
 
   *{
     font-size: clamp(10px, 4.27vw, 16px);   /* =デザインカンプ375px：16px */
@@ -1026,10 +1160,9 @@ footer{
 /* ハンバーガーメニュー */
 /* ーーーー */
 
-.hamburger {
-  display: block; /* ハンバーガーメニューを表示 */
+.menu-container {
+  display: flex; /* ハンバーガーメニューを表示 */
 }
-
 
 /* ーーーー */
 /* header */
@@ -1039,8 +1172,16 @@ footer{
 header {
   max-width: 100vw; /* 幅を画面幅に設定 */
   width: 100%;
-  height: 80px; /* 高さを80pxに設定 */
-  padding: 20px; /* 上部と下部に適当なパディングを設定 */
+  height: unset;
+  padding: 0;
+  background-color: #fff;
+  position: unset;/* 追従キャンセル */
+}
+
+.header__inner{
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: space-between; 
 }
 
 .header__content {
@@ -1049,6 +1190,11 @@ header {
 .main-content {
   margin-left: 0;
   width: 100%;
+}
+
+.header-symbol {
+  padding: 10px 0;
+  max-width: 98px;
 }
 
 /* ------------------------ここからhero------------------------ */
@@ -1060,6 +1206,56 @@ header {
 /* TOPページのファーストビュー */
 /* ーーーー */
 
+.hero{
+  padding: 23px 0 0 10px;
+}
+
+.hero__inner{
+  height: 589px;
+}
+
+.hero::before { 
+  display: none; /* 非表示 */
+}
+
+.hero__title {
+  font-size: clamp(22px, 4.44vw, 24px);/* =デザインカンプ375px：24px */
+}
+
+.hero__text {
+  font-size: clamp(10px, 3.2vw, 16px);   /* =デザインカンプ375px：12px */
+  /* 画像左下の黒いズボンと色が被るため */
+  background-color: rgba(255, 255, 255, 0.5); /* 半透明の白い背景 */
+  padding: 10px; /* 必要に応じて内側の余白を追加 */
+  border-radius: 5px; /* 必要に応じて角を丸くする */
+  width: max-content; /* 白背景を文字と同じ長さにする */
+}
+
+/* SP用に画像を切り替えるため白背景リセット */
+@media (max-width: 600px) {
+  .hero__text {
+      background-color: transparent; /* 背景を透明に */
+      padding: 0; /* パディングをリセット */
+      border-radius: 0; /* ボーダーの角丸をリセット */
+      width: auto; /* 長さをリセット */
+  }
+}
+
+
+.hero__headline{
+  padding-top: 408px;
+  padding-left: 9px;
+  row-gap: 21px;
+}
+
+.hero__info{
+  margin-top: 15px;
+}
+
+.vertical-line {
+  height: 52px;
+}
+
 
 
 /* ーーーー */
@@ -1067,6 +1263,9 @@ header {
 /* 私達について */
 /* ーーーー */
 
+.about__slide {
+  padding: 16px 0 58px;
+}
 
 /* ーーーー */
 /* service */
@@ -1084,6 +1283,15 @@ header {
 /* お問い合わせ */
 /* ーーーー */
 
+.contact__content {
+  grid-auto-flow: row;
+}
+
+.contact__content-box{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
 
 
