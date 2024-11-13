@@ -252,7 +252,7 @@ header {
   top: 0;
   left: 0;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 10;/* モーダルの次に、一番上にするため2桁。 */
   padding: 74px 40px 25px;
 }
 
@@ -507,7 +507,7 @@ header {
   column-gap: 20px;
   margin-top: -242px;
   margin-left: 43.4vw;
-  z-index: 999; /* 重ね順を最前面に設定 */ 
+  z-index: 9; /* 重ね順を最前面に設定 */ 
   position: absolute; /* z-indexを有効にするために必要 */
 }
 
@@ -752,7 +752,7 @@ header {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 #modal1,#modal2,#modal3 {
@@ -769,7 +769,7 @@ header {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   margin: 0 auto;
-  z-index: 2;
+  z-index: 11;
 }
 
 /* hiddenクラスはモーダルとマスクが非表示になるために使います */
@@ -838,6 +838,7 @@ header {
   transform: translate(-50%, -50%) rotate(-45deg); /* -45度回転 */
 }
 
+/* 1340pxでフッターのプラスボタンが */
 
 
 /* ーーーー */
@@ -847,12 +848,12 @@ header {
 
 .contact{
   margin-top: 132px;
+  background: #F8F8F8;
+  border-radius: 50px 0px 0px 50px;
 }
 
 .contact__inner{
   padding-top: 23px;
-  background: #F8F8F8;
-  border-radius: 50px 0px 0px 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -1254,7 +1255,6 @@ header {
 .about__headline{
   width: max-content;
   margin: 53px auto 0;
-  padding-right: 20px;
 }
 
 .about__headline-text {
@@ -1337,6 +1337,26 @@ header {
   margin-right: unset;
 }
 
+/* ーーーー */
+/* macromodal */
+/* モーダル */
+/* ーーーー */
+
+.close-button{
+  display: none;
+}
+
+#modal1, #modal2, #modal3 {
+  padding: 16px 10vw 24px;
+}
+
+.news__content-sentence{
+  font-size: clamp(10px, 3.2vw, 16px); /* ビューポート375pxのとき12pxに設定されるように調整 */
+}
+
+.close {
+  margin: 6vw auto 0;
+}
 
 /* ーーーー */
 /* contact */
@@ -1354,6 +1374,7 @@ header {
 /* ビューポートが1180px以下の場合に順番を入れ替える */
 .contact__writing {
   order: 2;
+  margin-top: -20px;
 }
 .contact__image {
   order: 1;
@@ -1468,6 +1489,9 @@ header {
   justify-content: center;
 }
 
+.footer__info-item{
+  column-gap: 8px;
+}
 
 .footer__info-item p{
   justify-content: center;
