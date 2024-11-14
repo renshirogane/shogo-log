@@ -145,7 +145,7 @@ a {
 }
 
 .hamburger span:nth-of-type(1) {
-  top: 30%;
+  top: 25%;
 }
 
 .hamburger span:nth-of-type(2) {
@@ -153,7 +153,7 @@ a {
 }
 
 .hamburger span:nth-of-type(3) {
-  top: 70%;
+  top: 75%;
 }
 
 .hamburger._emergent span{
@@ -486,7 +486,7 @@ header {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -683,7 +683,7 @@ header {
   margin-top: 48px;
   display: grid;
   grid-template-columns: 1fr; /* 1列 */
-  grid-template-rows: repeat(3, 1fr); /* 3行 */
+  grid-template-rows: repeat(3, auto); /* 3行 autoで行数ごとに高さが変化 */
 }
 
 .news__content > div { 
@@ -717,6 +717,7 @@ header {
   color: #4282B8;
   border: 1px solid #4282B8;
   padding: 0 15px;
+  line-height: 1.5;
 }
 
 .news__content-update{
@@ -729,7 +730,7 @@ header {
 }
 
 .news__content-text{
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .news__content-arrow{
@@ -921,6 +922,7 @@ header {
 .contact__content-text{
   margin-top: -9px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 .contact__content-logo {
@@ -1087,14 +1089,13 @@ footer{
 
 
 .headline__title {
-  font-size: clamp(20px, 6.4vw, 24px); /* ビューポートが375pxの時24pxに設定されるように調整 */
+  font-size: clamp(20px, 5.33vw, 20px); /* ビューポートが375pxの時20pxに設定されるように調整 */
 }
 
 .headline__backtitle {
-  font-size: clamp(62px, 9.6vw, 128px); /* 375pxで72pxに設定されるように調整 */
-  margin-top: -20px;  
+  font-size: clamp(68px, 19.2vw, 128px); /* ビューポート375pxのとき72pxに設定されるように調整 */
+  margin-top: -21px;  
 }
-
 
 .headline-text {
   margin-top: 35px;
@@ -1134,6 +1135,7 @@ footer{
 
 .linkbox{
   max-width: 240px;
+  margin-top: 30px;
 }
 
 /* ーーーー */
@@ -1187,11 +1189,12 @@ header {
 /* ーーーー */
 
 .hero{
-  padding: 23px 0 0 10px;
+  padding: 15px 0 0 10px;
 }
 
 .hero__inner{
   height: 589px;
+  border-radius: unset;
 }
 
 .hero::before { 
@@ -1199,7 +1202,7 @@ header {
 }
 
 .hero__title {
-  font-size: clamp(22px, 4.44vw, 24px);/* =デザインカンプ375px：24px */
+  font-size: 24px;
 }
 
 .hero__text {
@@ -1223,17 +1226,19 @@ header {
 
 
 .hero__headline{
-  padding-top: 408px;
+  padding-top: 412px;
   padding-left: 9px;
-  row-gap: 21px;
+  row-gap: 25px;
 }
 
 .hero__info{
-  margin-top: 15px;
+  margin-top: 12px;
+  margin-left: 9px;
 }
 
 .vertical-line {
   height: 52px;
+  margin-left: 32px;
 }
 
 
@@ -1244,47 +1249,79 @@ header {
 /* ーーーー */
 
 .about__slide {
-  padding: 16px 0 58px;
+  padding: 13px 0 58px;
+}
+
+.about__slide-image {
+  max-width: 53.33vw; /* 375pxのときに200pxになるように設定 */
 }
 
 .about__attention {
   position: relative;
-  margin-left: 20vw;
+  margin-top: -44vw;
+  margin-left: 44.5vw;
+  column-gap: 8px;
+}
+
+.about__thumbnail{
+  max-width: 16vw; /* 375pxのときに60pxになるように設定 */
+  margin-bottom: 68px;
+}
+
+.about__philosophy {
+    padding: 6vw 5vw; /* 16px 24pxに相当するvw値を設定 */
+}
+
+.philosophy__text, 
+.philosophy__text span {
+  font-size: clamp(24px, 6.4vw, 40px); /* ビューポート375pxのとき24pxに設定されるように調整 */
+  letter-spacing: 3.2vw;
 }
 
 .about__headline{
   width: max-content;
-  margin: 53px auto 0;
+  margin: -21px auto 0;
 }
 
 .about__headline-text {
-  margin-top: 0;
-  max-width: 94vw;
+  margin-top: 13px;
+  max-width: 89vw;
 }
+
+.about__headline-text p {
+  font-size: 14px;
+}
+
+
 
 /* ーーーー */
 /* service */
 /* 事業内容 */
 /* ーーーー */
 
+.service__inner{
+  margin-top: 33px;
+}
+
 .service__inner::before {
   width: 73.34vw;
 }
 
 .service__image {
-  max-width: 69px;
-  margin-left: 60vw;
-  margin-top: -200px;
+  max-width: 165px;
+  margin-left: 70.934vw;
+  margin-top: -210px;
 }
 
 .service__content {
-  margin-top: 113px;
+  margin-top: 103px;
   row-gap: 50px;
+  padding-bottom: 90px;
 }
 
 .service__content-box {
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: 18px;
 }
 
 .service__content-writing,
@@ -1294,9 +1331,16 @@ header {
 
 .service__content-number {
   top: -23px;
-  left: clamp(200px, 75vw, 290px);
   line-height: unset;
   font-size: 48px;
+}
+
+.service__content-number_right {
+  left: clamp(200px, 76vw, 290px);
+}
+
+.service__content-number_left {
+  left: clamp(200px, 74vw, 290px);
 }
 
 .service__content-text {
@@ -1322,7 +1366,11 @@ header {
 /* ーーーー */
 
 .newe {
-  padding-top: 80px;
+  padding-top: 78px;
+}
+
+.news__content{
+  margin-top: 18px;
 }
 
 .news__content-box {
@@ -1348,6 +1396,12 @@ header {
 
 #modal1, #modal2, #modal3 {
   padding: 16px 10vw 24px;
+  max-height: 100vh; /* ビューポートの高さを超えないように設定 */ 
+  overflow-y: auto; /* 縦スクロールを有効に */
+}
+
+.news__content-text_modal{
+  font-size: clamp(16px, 5.33vw, 24px); /* ビューポート375pxのとき20pxに設定されるように調整 */
 }
 
 .news__content-sentence{
@@ -1374,20 +1428,21 @@ header {
 /* ビューポートが1180px以下の場合に順番を入れ替える */
 .contact__writing {
   order: 2;
-  margin-top: -20px;
+  margin-top: -47px;
+  margin-left: -24px;
 }
 .contact__image {
   order: 1;
   margin: unset;
   margin-top: -28px;
-  margin-left: 70vw;
-  max-width: 59px;
+  margin-left: 73.6vw;
 }
 
 .contact__content {
   grid-auto-flow: row;
-  margin-top: unset;
-  justify-content: center;
+  margin-top: 7px;
+  margin-left: 24px;
+  margin-bottom: 35px;
 }
 
 .contact__content-box{
@@ -1396,17 +1451,24 @@ header {
   border: none;
 }
 
+.contact__content-box1 .contact__content-text{
+  margin-top: 7px;
+  margin-left: 17px;
+}
+
 .contact__content-box1{
-  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 11px;
   border-bottom:1px solid #000000;
 }
 
 .contact__content-box2 {
-  padding-top: 24px;
+  padding-top: 11px;
 }
 
 .contact__content-box3 {
-  margin-top: 36px;
+  margin-top: 26px;
   padding: 20px 20px 20px 40px;
 }
 
@@ -1453,11 +1515,15 @@ header {
 /* フッター */
 /* ーーーー */
 
+footer{
+  margin-top: 24px;
+}
+
 .footer__inner {
   display: grid;
   grid-template-columns: unset;
   grid-template-rows: repeat(4, auto);
-  row-gap: 40px;
+  row-gap: 24px;
   padding-bottom: 24px;
 }
 
@@ -1469,20 +1535,24 @@ header {
 .footer__info{
   order: 2  ;
   margin-bottom: unset;
+  row-gap: 11px;
 }
 .footer__index{
   order: 3;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .footer__icon{
   order: 4;
   align-items: center;
   justify-content: center;
+  margin-top: -6px;
+  font-size: 12px;
 }
 
 .footer__list{
   flex-direction: column;
   text-align: center;
+  row-gap: 19px;
 }
 
 .footer__mail{
@@ -1490,7 +1560,7 @@ header {
 }
 
 .footer__info-item{
-  column-gap: 8px;
+  column-gap: 16px;
 }
 
 .footer__info-item p{
@@ -1501,6 +1571,7 @@ header {
 
 .footer__info-address{
   flex-direction: column;
+  row-gap: 11px;
 }
 
 .footer__info-hours,
